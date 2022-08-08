@@ -34,11 +34,8 @@ public class AppointmentPage {
     @FindBy(name = "appoDate")
     public WebElement dateTextbox;
 
-    @FindBy(xpath = "//*[text()='Send an Appointment Request']")
-    public WebElement requestButton;
 
 
-    @FindBy(xpath = "//*[text()='Appointment registration saved!']")
-    public WebElement successMessageToastContainer;
+
 
 }
