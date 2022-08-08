@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.301">
-    <testcase classname="US" name="09" time="0.111">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given deneme................................................................undefined
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.357">
+    <testcase classname="US012 Physician (Doktor) test isteyebilmeli" name="Doktorun hasta icin test isteyebilmeli" time="8.021">
+        <failure message="The scenario has pending or undefined step(s)" type="io.cucumber.java.PendingException">
+            <![CDATA[Given Kullanici  Medunna sayfasina gider....................................passed
+Then Kullanici  giris simgesini tiklar......................................pending
+And Kullanici  acilan menuden sign in i tiklar..............................skipped
+And Kullanici  Kullanici ismini girer.......................................skipped
+And Kullanici  Kullanici sifresini girer....................................skipped
+And Kullanici  sign in i butonunu tiklayarak kullanici sayfasina baglanir...skipped
+And Cikan sayfadan My Pages basligini tiklar................................skipped
+And Kullanici My Appointments sekmesini tiklayarak rendevu sayfasina gecis yapar.skipped
+And Kullanici  Edit buttonuna tiklar........................................skipped
+And Kullanici Acilan pencerede Request A Test butonu tiklayarak est istenilebliriligi test eder.skipped
 ]]>
         </failure>
     </testcase>
