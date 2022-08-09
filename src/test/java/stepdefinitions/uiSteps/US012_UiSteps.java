@@ -4,7 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.apache.http.util.Asserts;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import pages.US012_Pages;
@@ -14,6 +16,7 @@ import utilities.Driver;
 import java.awt.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class US012_UiSteps {
 
@@ -24,34 +27,41 @@ public class US012_UiSteps {
     public void kullanici_medunna_sayfasina_gider() {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
     }
+
     @Then("Kullanici  giris simgesini tiklar")
     public void kullanici_giris_simgesini_tiklar() {
 
         pages.signeIn.click();
     }
+
     @Then("Kullanici  acilan menuden sign in i tiklar")
     public void kullanici_acilan_menuden_sign_in_i_tiklar() {
         pages.login.click();
 
     }
+
     @Then("Kullanici  Kullanici ismini girer")
     public void kullanici_kullanici_ismini_girer() {
         pages.userName.sendKeys("doktor67");
     }
+
     @Then("Kullanici  Kullanici sifresini girer")
     public void kullanici_kullanici_sifresini_girer() {
         pages.password.sendKeys("Doktor67");
     }
+
     @Then("Kullanici  sign in i butonunu tiklayarak kullanici sayfasina baglanir")
     public void kullanici_sign_in_i_butonunu_tiklayarak_kullanici_sayfasina_baglanir() {
         Driver.clickWithJS(pages.signIn_boutton);
     }
+
     @Then("Cikan sayfadan My Pages basligini tiklar")
     public void cikan_sayfadan_my_pages_basligini_tiklar() {
 
         Driver.wait(3);
         pages.myPage.click();
     }
+
     @Then("Kullanici My Appointments sekmesini tiklayarak rendevu sayfasina gecis yapar")
     public void kullanici_my_appointments_sekmesini_tiklayarak_rendevu_sayfasina_gecis_yapar() {
 
@@ -59,6 +69,7 @@ public class US012_UiSteps {
         pages.myAppointments.click();
 
     }
+
     @Then("Kullanici  Edit buttonuna tiklar")
     public void kullanici_edit_buttonuna_tiklar() {
         Driver.wait(3);
@@ -66,15 +77,53 @@ public class US012_UiSteps {
 
 
     }
+
     @Then("Kullanici Acilan pencerede Request A Test butonu tiklayarak test istenilebliriligi test eder")
     public void kullanici_acilan_pencerede_request_a_test_butonu_tiklayarak_est_istenilebliriligi_test_eder() {
         Driver.wait(3);
         pages.requestATest.click();
-        String expectedmsj="Test Items";
-        String actualmsj=pages.testItemsTextVisible.getText();
-        assertEquals(expectedmsj,actualmsj);
+        String expectedmsj = "Test Items";
+        String actualmsj = pages.testItemsTextVisible.getText();
+        assertEquals(expectedmsj, actualmsj);
 
     }
 
+    @Then("Kullanici Acilan pencerede Request A Test butonu tiklar")
+    public void kullanici_acilan_pencerede_request_a_test_butonu_tiklar() {
+        Driver.wait(3);
+        pages.requestATest.click();
+    }
+
+    @Then("Acilan listede  Glucose testinin bulundugunu kontrol eder")
+    public void acilan_listede_glucose_testinin_bulundugunu_kontrol_eder() {
+        Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Glucose")));
+
+
+
+    }
+
+    @Then("Listede Glucose testinin secilebilirligini test eder")
+    public void listede_glucose_testinin_secilebilirligini_test_eder() {
+        Driver.wait(3);
+        Driver.clickWithJS(pages.glucoseTest);
+        Assert.assertTrue(pages.glucoseTest.isSelected());
+        Driver.clickWithJS(pages.saveButton);
+
+    }
+
+    @Then("Acilan listede  Urea testinin bulundugunu kontrol eder")
+    public void acilan_listede_urea_testinin_bulundugunu_kontrol_eder() {
+        Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Urea")));
+
+
+    }
+    @Then("Listede Urea testinin secilebilirligini test eder")
+    public void listede_urea_testinin_secilebilirligini_test_eder() {
+        Driver.wait(3);
+        Driver.clickWithJS(pages.ureaTest);
+        Assert.assertTrue(pages.ureaTest.isSelected());
+        Driver.clickWithJS(pages.saveButton);
+
+    }
 
 }

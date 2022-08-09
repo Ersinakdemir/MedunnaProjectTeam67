@@ -5,9 +5,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class US012_Pages {
 
-    public US012_Pages(){
+    public US012_Pages() {
 
         PageFactory.initElements(Driver.getDriver(), this);
 
@@ -17,17 +19,17 @@ public class US012_Pages {
     @FindBy(xpath = "//li[@id='account-menu']")
     public WebElement signeIn;
 
-   @FindBy(id = "login-item")
-   public WebElement login;
+    @FindBy(id = "login-item")
+    public WebElement login;
 
-   @FindBy(name = "username")
-   public WebElement userName;
+    @FindBy(name = "username")
+    public WebElement userName;
 
-   @FindBy(name = "password")
-   public WebElement password;
+    @FindBy(name = "password")
+    public WebElement password;
 
-   @FindBy(xpath = "//button[@type='submit']")
-   public WebElement signIn_boutton;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement signIn_boutton;
 
     @FindBy(xpath = "//li[@id='entity-menu']")
     public WebElement myPage;
@@ -74,7 +76,10 @@ public class US012_Pages {
     @FindBy(xpath = "//input[@name='1407']")
     public WebElement albuminTest;
 
-    @FindBy(xpath = "//input[@name='1401']")
+    @FindBy(xpath = "//tr//td[2]")
+    public List<WebElement> testList;
+
+    @FindBy(xpath = "//input[@name='129700']")
     public WebElement glucoseTest;
 
     @FindBy(xpath = "//button[@type='submit']")
@@ -97,10 +102,6 @@ public class US012_Pages {
 
     @FindBy(xpath = "(//span[text()='View Results'])[4]")
     public WebElement viewResults;
-
-
-
-
 
 
 }

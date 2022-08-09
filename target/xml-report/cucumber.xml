@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="54.719">
-    <testcase classname="US012 Physician (Doktor) test isteyebilmeli" name="Doktorun hasta icin test isteyebilmeli" time="54.44">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.277">
+    <testcase classname="US012 Physician (Doktor) test isteyebilmeli" name="TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" time="23.814">
+        <failure message="" type="java.lang.AssertionError">
             <![CDATA[Given Kullanici  Medunna sayfasina gider....................................passed
 Then Kullanici  giris simgesini tiklar......................................passed
 And Kullanici  acilan menuden sign in i tiklar..............................passed
@@ -11,8 +11,18 @@ And Kullanici  sign in i butonunu tiklayarak kullanici sayfasina baglanir...pass
 And Cikan sayfadan My Pages basligini tiklar................................passed
 And Kullanici My Appointments sekmesini tiklayarak rendevu sayfasina gecis yapar.passed
 And Kullanici  Edit buttonuna tiklar........................................passed
-And Kullanici Acilan pencerede Request A Test butonu tiklayarak est istenilebliriligi test eder.passed
+And Kullanici Acilan pencerede Request A Test butonu tiklar.................passed
+And Acilan listede  Urea testinin bulundugunu kontrol eder..................failed
+And Listede Urea testinin secilebilirligini test eder.......................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.uiSteps.US012_UiSteps.acilan_listede_urea_testinin_bulundugunu_kontrol_eder(US012_UiSteps.java:116)
+	at ✽.Acilan listede  Urea testinin bulundugunu kontrol eder(file:///Users/pc/IdeaProjects/MedunnaProjectTeam67/./src/test/resources/features/uIFeatures/US012_UiTest.feature:43)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
