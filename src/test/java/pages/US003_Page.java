@@ -2,11 +2,20 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import utilities.Driver;
 
 public class US003_Page {
+    public US003_Page()
+    {
+        PageFactory.initElements(Driver.getDriver(),this);
+    }
 
-    @FindBy(xpath = "(//*[.='Register'])[1]")
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
     public WebElement accountMenuRegisterButton;
+
+    @FindBy(xpath = "//li[@id='account-menu']")
+    public WebElement humanIcon;
 
     @FindBy(id = "firstPassword")
     public WebElement registerPagePasswordBox;
@@ -23,8 +32,6 @@ public class US003_Page {
     @FindBy(xpath = "(//li[@style='background-color: rgb(0, 255, 0);'])[5]")
     public WebElement passwordStrength5;
 
-    @FindBy(xpath = "//li[@id='account-menu']")
-    public WebElement humanIcon;
 
 
 }
