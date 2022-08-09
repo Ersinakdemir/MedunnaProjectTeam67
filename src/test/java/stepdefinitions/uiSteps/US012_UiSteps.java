@@ -2,9 +2,18 @@ package stepdefinitions.uiSteps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.apache.http.util.Asserts;
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import pages.US012_Pages;
 import utilities.ConfigurationReader;
 import utilities.Driver;
+
+import java.awt.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class US012_UiSteps {
 
@@ -35,26 +44,36 @@ public class US012_UiSteps {
     }
     @Then("Kullanici  sign in i butonunu tiklayarak kullanici sayfasina baglanir")
     public void kullanici_sign_in_i_butonunu_tiklayarak_kullanici_sayfasina_baglanir() {
-        pages.signIn_boutton.click();
+        Driver.clickWithJS(pages.signIn_boutton);
     }
     @Then("Cikan sayfadan My Pages basligini tiklar")
     public void cikan_sayfadan_my_pages_basligini_tiklar() {
-        pages.myPages.click();
+
+        Driver.wait(3);
+        pages.myPage.click();
     }
     @Then("Kullanici My Appointments sekmesini tiklayarak rendevu sayfasina gecis yapar")
     public void kullanici_my_appointments_sekmesini_tiklayarak_rendevu_sayfasina_gecis_yapar() {
+
+        Driver.wait(3);
         pages.myAppointments.click();
 
     }
     @Then("Kullanici  Edit buttonuna tiklar")
     public void kullanici_edit_buttonuna_tiklar() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Driver.wait(3);
+        pages.Edit.click();
+
+
     }
-    @Then("Kullanici Acilan pencerede Request A Test butonu tiklayarak est istenilebliriligi test eder")
+    @Then("Kullanici Acilan pencerede Request A Test butonu tiklayarak test istenilebliriligi test eder")
     public void kullanici_acilan_pencerede_request_a_test_butonu_tiklayarak_est_istenilebliriligi_test_eder() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Driver.wait(3);
+        pages.requestATest.click();
+        String expectedmsj="Test Items";
+        String actualmsj=pages.testItemsTextVisible.getText();
+        assertEquals(expectedmsj,actualmsj);
+
     }
 
 

@@ -10,4 +10,4 @@ Feature: US012 Physician (Doktor) test isteyebilmeli
   And Cikan sayfadan My Pages basligini tiklar
   And Kullanici My Appointments sekmesini tiklayarak rendevu sayfasina gecis yapar
   And Kullanici  Edit buttonuna tiklar
-  And  Kullanici Acilan pencerede Request A Test butonu tiklayarak est istenilebliriligi test eder
+  And  Kullanici Acilan pencerede Request A Test butonu tiklayarak test istenilebliriligi test eder
