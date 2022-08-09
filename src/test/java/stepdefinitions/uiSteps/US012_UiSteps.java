@@ -96,6 +96,7 @@ public class US012_UiSteps {
 
     @Then("Acilan listede  Glucose testinin bulundugunu kontrol eder")
     public void acilan_listede_glucose_testinin_bulundugunu_kontrol_eder() {
+        Driver.wait(3);
         Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Glucose")));
 
 
@@ -113,6 +114,7 @@ public class US012_UiSteps {
 
     @Then("Acilan listede  Urea testinin bulundugunu kontrol eder")
     public void acilan_listede_urea_testinin_bulundugunu_kontrol_eder() {
+        Driver.wait(3);
         Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Urea")));
 
 
