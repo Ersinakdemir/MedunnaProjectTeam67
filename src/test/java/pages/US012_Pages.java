@@ -97,11 +97,52 @@ public class US012_Pages {
     @FindBy(xpath = "//span[text()='Show Appointments']")
     public WebElement showAppointments;
 
-    @FindBy(xpath = "(//span[text()='Show Tests'])[2]")
+    @FindBy(xpath = "//*[text()='Show Test Results']")
     public WebElement showTests;
 
-    @FindBy(xpath = "(//span[text()='View Results'])[4]")
+    @FindBy(xpath = "(//span[text()='View Results'])[19]")
     public WebElement viewResults;
 
+    @FindBy(xpath = "(//tr//th)[01]")
+    public WebElement id;
+
+    @FindBy(xpath = "(//tr//th)[02]")
+    public WebElement name;
+
+    @FindBy(xpath = "(//tr//th)[04]")
+    public WebElement default_max_value;
+
+    @FindBy(xpath = "(//tr//th)[05]")
+    public WebElement default_min_value;
+
+    @FindBy(xpath = "(//tr//th)[06]")
+    public WebElement test;
+
+    @FindBy(xpath = "(//tr//th)[07]")
+    public WebElement description ;
+
+    @FindBy(xpath = "(//tr//th)[08]")
+    public WebElement date ;
+
+    @FindBy(xpath = "((//tbody//tr)[1]//td)[1]")
+    public WebElement testId;
+
+    @FindBy(xpath = "//tbody//tr//td[2]")
+    public List<WebElement> testName;
+
+    @FindBy(xpath = "((//tbody//tr)[1]//td)[4]")
+    public WebElement testDefault_max_value;
+
+    @FindBy(xpath = "((//tbody//tr)[1]//td)[5]")
+    public WebElement testDefault_min_value;
+
+    @FindBy(xpath = "((//tbody//tr)[1]//td)[6]")
+    public WebElement testTest;
+
+    @FindBy(xpath = "((//tbody//tr)[1]//td)[7]")
+    public WebElement testDescription;
+
+    @FindBy(xpath = "((//tbody//tr)[1]//td)[8]")
+    public WebElement testDate;
 
 }

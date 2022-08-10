@@ -58,7 +58,7 @@ public class US012_UiSteps {
     @Then("Cikan sayfadan My Pages basligini tiklar")
     public void cikan_sayfadan_my_pages_basligini_tiklar() {
 
-        Driver.wait(3);
+
         pages.myPage.click();
     }
 
@@ -127,5 +127,70 @@ public class US012_UiSteps {
         Driver.clickWithJS(pages.saveButton);
 
     }
+    @Then("Acilan listede  Creatinine testinin bulundugunu kontrol eder")
+    public void acilan_listede_creatinine_testinin_bulundugunu_kontrol_eder() {
+        Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Creatinine")));
+
+    }
+    @Then("Listede Creatinine testinin secilebilirligini test eder")
+    public void listede_creatinine_testinin_secilebilirligini_test_eder() {
+        Driver.clickWithJS(pages.creatinineTes);
+        Assert.assertTrue(pages.creatinineTes.isSelected());
+        Driver.clickWithJS(pages.saveButton);
+    }
+
+    @Then("Acilan listede   Sodium testinin bulundugunu kontrol eder")
+    public void acilan_listede_sodium_potassium_testinin_bulundugunu_kontrol_eder() {
+        Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Sodium")));
+    }
+    @Then("Listede Sodium testinin secilebilirligini test eder")
+    public void listede_sodium_potassium_testinin_secilebilirligini_test_eder() {
+        Driver.clickWithJS(pages.sodiumTest);
+        Assert.assertTrue(pages.sodiumTest.isSelected());
+        Driver.clickWithJS(pages.saveButton);
+    }
+    @Then("Acilan listede  Total protein testinin bulundugunu kontrol eder")
+    public void acilan_listede_total_protein_testinin_bulundugunu_kontrol_eder() {
+        Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Total protein")));
+    }
+    @Then("Listede Total protein testinin secilebilirligini test eder")
+    public void listede_total_protein_testinin_secilebilirligini_test_eder() {
+        Driver.clickWithJS(pages.totalproteinTest);
+        Assert.assertTrue(pages.totalproteinTest.isSelected());
+        Driver.clickWithJS(pages.saveButton);
+    }
+    @Then("Acilan listede  Albumin testinin bulundugunu kontrol eder")
+    public void acilan_listede_albumin_testinin_bulundugunu_kontrol_eder() {
+        Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Albumin")));
+    }
+    @Then("Listede Albumin testinin secilebilirligini test eder")
+    public void listede_albumin_testinin_secilebilirligini_test_eder() {
+        Driver.clickWithJS(pages.albuminTest);
+        Assert.assertTrue(pages.albuminTest.isSelected());
+        Driver.clickWithJS(pages.saveButton);
+    }
+    @Then("Acilan listede  Hemoglobin testinin bulundugunu kontrol eder")
+    public void acilan_listede_hemoglobin_testinin_bulundugunu_kontrol_eder() {
+        Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Hemoglobin")));
+    }
+    @Then("Listede Hemoglobin testinin secilebilirligini test eder")
+    public void listede_hemoglobin_testinin_secilebilirligini_test_eder() {
+        Driver.clickWithJS(pages.hemoglobinTest);
+        Assert.assertTrue(pages.hemoglobinTest.isSelected());
+        Driver.clickWithJS(pages.saveButton);
+    }
+
+    @Then("Acilan listede  Potassium testinin bulundugunu kontrol eder")
+    public void acilan_listede_potassium_testinin_bulundugunu_kontrol_eder() {
+        Assert.assertTrue(pages.testList.stream().anyMatch(t->t.getText().contains("Potassium")));
+    }
+    @Then("Listede Potassium testinin secilebilirligini test eder")
+    public void listede_potassium_testinin_secilebilirligini_test_eder() {
+        Driver.clickWithJS(pages.sodiumTest);
+        Assert.assertTrue(pages.sodiumTest.isSelected());
+        Driver.clickWithJS(pages.saveButton);
+    }
+
+
 
 }
