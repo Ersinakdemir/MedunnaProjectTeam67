@@ -7,9 +7,9 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class US012_Pages {
+public class US012_13_Pages {
 
-    public US012_Pages() {
+    public US012_13_Pages() {
 
         PageFactory.initElements(Driver.getDriver(), this);
 
@@ -100,7 +100,7 @@ public class US012_Pages {
     @FindBy(xpath = "//*[text()='Show Test Results']")
     public WebElement showTests;
 
-    @FindBy(xpath = "(//span[text()='View Results'])[19]")
+    @FindBy(xpath = "(//a[@class='btn btn-info btn-sm'])[19]")
     public WebElement viewResults;
 
     @FindBy(xpath = "(//tr//th)[01]")
@@ -124,25 +124,31 @@ public class US012_Pages {
     @FindBy(xpath = "(//tr//th)[08]")
     public WebElement date ;
 
-    @FindBy(xpath = "((//tbody//tr)[1]//td)[1]")
-    public WebElement testId;
+    @FindBy(xpath = "//tbody//tr//td[1]")
+    public List<WebElement> testId;
 
     @FindBy(xpath = "//tbody//tr//td[2]")
     public List<WebElement> testName;
 
-    @FindBy(xpath = "((//tbody//tr)[1]//td)[4]")
-    public WebElement testDefault_max_value;
+    @FindBy(xpath = "//tbody//tr//td[5]")
+    public List<WebElement> testDefault_max_value;
 
-    @FindBy(xpath = "((//tbody//tr)[1]//td)[5]")
-    public WebElement testDefault_min_value;
+    @FindBy(xpath = "//tbody//tr//td[4]")
+    public List<WebElement> testDefault_min_value;
 
-    @FindBy(xpath = "((//tbody//tr)[1]//td)[6]")
-    public WebElement testTest;
+    @FindBy(xpath = "//tbody//tr//td[6]")
+    public List<WebElement> testTest;
 
-    @FindBy(xpath = "((//tbody//tr)[1]//td)[7]")
-    public WebElement testDescription;
+    @FindBy(xpath = "//tbody//tr//td[7]")
+    public List<WebElement> testDescription;
 
-    @FindBy(xpath = "((//tbody//tr)[1]//td)[8]")
-    public WebElement testDate;
+    @FindBy(xpath = "//tbody//tr//td[8]")
+    public List<WebElement> testDate;
+
+   @FindBy(xpath = "//*[text()='Request Inpatient']")
+    public WebElement requestInpatient;
+
+   @FindBy(xpath = "//*[text()='InPatient request already done for this appointment']")
+    public WebElement inpatienMsj;
 
 }

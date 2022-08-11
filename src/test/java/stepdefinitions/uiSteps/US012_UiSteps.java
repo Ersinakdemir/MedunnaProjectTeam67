@@ -2,25 +2,17 @@ package stepdefinitions.uiSteps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.apache.http.util.Asserts;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
-import pages.US012_Pages;
+import pages.US012_13_Pages;
 import utilities.ConfigurationReader;
 import utilities.Driver;
-
-import java.awt.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class US012_UiSteps {
 
-    US012_Pages pages = new US012_Pages();
+    US012_13_Pages pages = new US012_13_Pages();
 
 
     @Given("Kullanici  Medunna sayfasina gider")
