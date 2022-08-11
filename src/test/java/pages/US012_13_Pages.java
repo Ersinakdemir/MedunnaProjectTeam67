@@ -148,7 +148,7 @@ public class US012_13_Pages {
    @FindBy(xpath = "//*[text()='Request Inpatient']")
     public WebElement requestInpatient;
 
-   @FindBy(xpath = "//*[text()='InPatient request already done for this appointment']")
+   @FindBy(xpath = "//div[@class='Toastify__toast-body']")
     public WebElement inpatienMsj;
 
 }

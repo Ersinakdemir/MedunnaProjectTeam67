@@ -119,5 +119,5 @@ Feature: US013 Physician (Doktor) "Test Results" işlemleri yapabilmeli
     And Kullanici My Appointments sekmesini tiklayarak rendevu sayfasina gecis yapar
     And Kullanici  Edit buttonuna tiklar
     And Kullanici acilan pencerede Request Inpatient butonunu tiklar
-    And InPatient request already done for this appointment yazisinin gorundugu test edilir
+    And InPatient request already done for this appointment yazisinin guruldugu test edilir
 

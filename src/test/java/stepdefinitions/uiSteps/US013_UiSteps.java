@@ -115,13 +115,15 @@ public class US013_UiSteps {
     @Then("Kullanici acilan pencerede Request Inpatient butonunu tiklar")
     public void kullanici_acilan_pencerede_request_inpatient_butonunu_tiklar() {
 
+        pages.requestInpatient.click();
 
     }
-    @Then("InPatient request already done for this appointment yazisinin gorundugu test edilir")
-    public void yazisinin_gorundugu_test_edilir(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @Then("InPatient request already done for this appointment yazisinin guruldugu test edilir")
+    public void in_patient_request_already_done_for_this_appointment_yazisinin_guruldugu_test_edilir() {
+        String expecteddata="InPatient request already done for this appointment";
+        Driver.wait(3);
+        String actualData=pages.inpatienMsj.getText();
+        Assert.assertEquals(expecteddata,actualData);
     }
-
-
 }
