@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/Api3Utills.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/Autentication67.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +44,15 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="JQLSearcherProjectManager">
+    <selected>-1</selected>
+    <searchers />
+  </component>
+  <component name="JiraServerManager">
+    <servers>
+      <JiraServer type="API_TOKEN" url="https://team67healtproject.atlassian.net/" />
+    </servers>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -61,16 +70,55 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.Runner">
-    <configuration name="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir">
+    <configuration name="Feature: US012_UiTest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC001 Doktorun hasta icin test isteyebilmeli$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC001 Doktorun hasta icin test isteyebilmeli$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: US012_UiTest" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Delet request roomlar icin" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" />
+      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="MedunnaSon" />
+      <option name="NAME_FILTER" value="^Delet request roomlar icin$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Delet request roomlar icin$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Delet request roomlar icin" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Post request validation" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" />
+      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="MedunnaSon" />
+      <option name="NAME_FILTER" value="^Post request validation$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Post request validation$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Post request validation" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -102,15 +150,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: put request roomlar icin" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" />
+      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC003 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC003 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+      <option name="NAME_FILTER" value="^put request roomlar icin$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^put request roomlar icin$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: put request roomlar icin" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -118,41 +166,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC008 Doktor \&quot;Request Impatient\&quot; \(hastanın yatılı tedavi görmesi\) isteğinde bulunabilmeli$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC008 Doktor \&quot;Request Impatient\&quot; \(hastanın yatılı tedavi görmesi\) isteğinde bulunabilmeli$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MedunnaSon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runner" />
-      <option name="MAIN_CLASS_NAME" value="runner.Runner" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" />
-        <item itemvalue="Cucumber Java.Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
         <item itemvalue="Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
-        <item itemvalue="Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+        <item itemvalue="Cucumber Java.Feature: US012_UiTest" />
+        <item itemvalue="Cucumber Java.Scenario: Delet request roomlar icin" />
+        <item itemvalue="Cucumber Java.Scenario: put request roomlar icin" />
+        <item itemvalue="Cucumber Java.Scenario: Post request validation" />
       </list>
     </recent_temporary>
   </component>
