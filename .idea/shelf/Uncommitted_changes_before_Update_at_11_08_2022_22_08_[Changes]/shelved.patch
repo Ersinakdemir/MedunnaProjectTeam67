@@ -1,0 +1,63 @@
+Index: src/test/java/pages/US007_Page.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/pages/US007_Page.java b/src/test/java/pages/US007_Page.java
+new file mode 100644
+--- /dev/null	(date 1660163501700)
++++ b/src/test/java/pages/US007_Page.java	(date 1660163501700)
+@@ -0,0 +1,33 @@
++package pages;
++
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.support.FindBy;
++
++public class US007_Page {
++
++
++    @FindBy(xpath = "//input[@id='firstName']")
++    public WebElement AppointmentFirstNameTextBox;
++
++    @FindBy(xpath = "//input[@id='lastName']")
++    public WebElement AppointmentLastNameTextBox;
++
++    @FindBy(xpath = "//input[@id='ssn']")
++    public WebElement AppointmentSSNTextBox;
++
++    @FindBy(xpath = "//input[@id='email']")
++    public WebElement AppointmentEmailTextBox;
++
++    @FindBy(xpath = "//input[@id='phone']")
++    public WebElement AppointmentPhoneTextBox;
++
++    @FindBy(xpath = "//input[@id='appoDate']")
++    public WebElement AppointmentDateTimeTextBox;
++
++    @FindBy(xpath = "//button[@id='register-submit']")
++    public WebElement AppointmentRegisterButton;
++
++    @FindBy(xpath = "//*[contains(text(), 'Appointment registration saved!')]")
++    public WebElement AppointmentToastContainerMassage;
++
++}
+Index: src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java b/src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java
+new file mode 100644
+--- /dev/null	(date 1660163145313)
++++ b/src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java	(date 1660163145313)
+@@ -0,0 +1,4 @@
++package stepdefinitions.apiSteps;
++
++public class US007_ApiSteps {
++}
+diff --git a/src/test/resources/features/dBFeatures/US007_DBTest.feature b/src/test/resources/features/dBFeatures/US007_DBTest.feature
+new file mode 100644
+diff --git a/src/test/resources/features/uIFeatures/US007_UITest.feature b/src/test/resources/features/uIFeatures/US007_UITest.feature
+new file mode 100644
+diff --git a/src/test/resources/features/apiFeatures/US007_Api.feature b/src/test/resources/features/apiFeatures/US007_Api.feature
+new file mode 100644
