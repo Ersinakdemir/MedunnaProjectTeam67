@@ -17,7 +17,6 @@ public class Hooks {
     @Before
     public void setUp(){
 
-
     }
 
     //
@@ -67,7 +66,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png","screenshots");
         }
 
-//        Driver.closeDriver();
+       Driver.closeDriver();
 
     }
 
