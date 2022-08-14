@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/US001_PageZ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/US001_PageZ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US001_UiSteps_Zakir.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US001_UiSteps_Zakir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testdata/ApiRegistrantData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testdata/ApiRegistrantData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="okan" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,7 +60,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.Runner">
+  <component name="RunManager" selected="Cucumber Java.Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli">
     <configuration name="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
@@ -172,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Runner" />
         <item itemvalue="Cucumber Java.Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" />
+        <item itemvalue="Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+        <item itemvalue="JUnit.Runner" />
         <item itemvalue="Cucumber Java.Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
         <item itemvalue="Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
-        <item itemvalue="Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
       </list>
     </recent_temporary>
   </component>
