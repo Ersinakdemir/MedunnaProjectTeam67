@@ -5,21 +5,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/US004_Pages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US004_UISteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/04.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/RoomGet.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US09_TC01.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dBFeatures/US09_DBTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/04.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US003_UITest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US004.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US012_UiTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US013_UiTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/AppointmentPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US003_Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US004_Pages.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US012_13_Pages.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Appointment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Physician.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Registrant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Room1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Room1Post.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/TestItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/apiSteps/RoomApiGet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/apiSteps/US09_ApiSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/dbSteps/US09_DBSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US003_UiSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US004_UISteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US013_UiSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/AppointmentData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/DatabaseRegistrantData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/DoktorID.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/DoktorName.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/MedunnaLogo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ApiUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/Authentication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ConfigurationReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/DBUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/DatabaseUtility.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/DateUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/PDFGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ReadTxt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/WriteToTxt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/US001_PageZ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/US001_PageZ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US001_UiSteps_Zakir.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US001_UiSteps_Zakir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testdata/ApiRegistrantData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testdata/ApiRegistrantData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,6 +103,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2D7xV3Roi9RJoKU9V6osnpqlTUG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -61,16 +120,15 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.Runner">
-    <configuration name="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario) (1)">
+    <configuration name="Feature: US004" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004.feature" />
       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC001 Doktorun hasta icin test isteyebilmeli$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC001 Doktorun hasta icin test isteyebilmeli$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: US004" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -82,15 +140,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC01 There should be a valid username and password validating the success message to login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004.feature" />
       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC002 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC002 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+      <option name="NAME_FILTER" value="^TC01 There should be a valid username and password validating the success message to login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 There should be a valid username and password validating the success message to login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC01 There should be a valid username and password validating the success message to login" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -102,15 +160,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario) (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/04.feature" />
       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC003 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC003 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+      <option name="NAME_FILTER" value="^TC02 There should be a valid username and password validating the success message to login \(Negative Scenario\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 There should be a valid username and password validating the success message to login \(Negative Scenario\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -122,15 +180,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004.feature" />
       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC008 Doktor \&quot;Request Impatient\&quot; \(hastanın yatılı tedavi görmesi\) isteğinde bulunabilmeli$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC008 Doktor \&quot;Request Impatient\&quot; \(hastanın yatılı tedavi görmesi\) isteğinde bulunabilmeli$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" />
+      <option name="NAME_FILTER" value="^TC02 There should be a valid username and password validating the success message to login \(Negative Scenario\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 There should be a valid username and password validating the success message to login \(Negative Scenario\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -172,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario) (1)" />
+        <item itemvalue="Cucumber Java.Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" />
+        <item itemvalue="Cucumber Java.Scenario: TC01 There should be a valid username and password validating the success message to login" />
+        <item itemvalue="Cucumber Java.Feature: US004" />
         <item itemvalue="JUnit.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" />
-        <item itemvalue="Cucumber Java.Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
-        <item itemvalue="Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
-        <item itemvalue="Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
       </list>
     </recent_temporary>
   </component>

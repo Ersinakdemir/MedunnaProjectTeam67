@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="157.666">
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC01 There should be a valid username and password validating the success message to login" time="22.973">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+Then The user clicks on the sign-in button..................................passed
+And The user fills the Username box.........................................passed
+And The user fills the Password box.........................................passed
+And The user clicks on the sign-in button below the page....................passed
+Then The user verifies sign-in is done successfully.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" time="17.489">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+Then The user clicks on the sign-in button..................................passed
+And The user fills the Username with a wrong data...........................passed
+And The user fills the Password box.........................................passed
+And The user clicks on the sign-in button below the page....................passed
+Then The user verifies sign-in isn't done successfull.......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC03 There should be a &quot;Remember me&quot; option where user can always use their existing credentials" time="13.443">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+Then The user clicks on the sign-in button..................................passed
+And The user fills the Username box.........................................passed
+And The user fills the Password box.........................................passed
+Then The user tests that the remember me button can be clicked..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC04 There should be an option to update password if it is  forgotten ' Did you forget your password'" time="10.266">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+Then The user clicks on the sign-in button..................................passed
+Then The user verifies that the phrase of the "Did you forget your password?"  exists.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC05 There should be an option to navigate to registration page if not registered yet" time="9.604">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+Then The user clicks on the sign-in button..................................passed
+Then The user verifies that the phrase of the "You don't have an account yet? Register a new account" exists.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC06 There should be an option to cancel login" time="12.326">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+Then The user clicks on the sign-in button..................................passed
+Then The user verifies that "cancel" button exists on the page..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC01 There should be a valid username and password validating the success message to login" time="14.539">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+And The user clicks on the sign-in button...................................passed
+And The user fills the Username box.........................................passed
+And The user fills the Password box.........................................passed
+And The user clicks on the sign-in button below the page....................passed
+Then The user verifies sign-in is done successfully.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" time="12.949">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+And The user clicks on the sign-in button...................................passed
+And The user fills the Username with a wrong data...........................passed
+And The user fills the Password box.........................................passed
+And The user clicks on the sign-in button below the page....................passed
+Then The user verifies sign-in isn't done successfull.......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC03 There should be a &quot;Remember me&quot; option where user can always use their existing credentials" time="12.749">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+And The user clicks on the sign-in button...................................passed
+And The user fills the Username box.........................................passed
+And The user fills the Password box.........................................passed
+Then The user tests that the remember me button can be clicked..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC04 There should be an option to update password if it is  forgotten ' Did you forget your password'" time="8.527">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+And The user clicks on the sign-in button...................................passed
+Then The user verifies that the phrase of the "Did you forget your password?"  exists.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC05 There should be an option to navigate to registration page if not registered yet" time="9.013">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+And The user clicks on the sign-in button...................................passed
+Then The user verifies that the phrase of the "You don't have an account yet? Register a new account" exists.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US004 Login page should accessible only with valid credentials" name="TC06 There should be an option to cancel login" time="11.922">
+        <system-out>
+            <![CDATA[Given The User goes to Medunna URL..........................................passed
+Then The user navigates the sign in the page................................passed
+And The user clicks on the sign-in button...................................passed
+Then The user verifies that "cancel" button exists on the page..............passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
