@@ -93,17 +93,4 @@ public class US004_UISteps {
         Assert.assertTrue(expectedCancelButton.contains(actuelCancelButton));
     }
 
-    @Then("The user fills the {string} with a wrong data")
-    public void the_user_fills_the_with_a_wrong_data(String username) {
-      //***
-        ui004.userNameUI.sendKeys(username);
-
-    }
-    @Then("The user fills the {string} box")
-    public void the_user_fills_the_box(String password) {
-        //***
-        ui004.passwordUI.sendKeys(password);
-    }
-
-
 }
