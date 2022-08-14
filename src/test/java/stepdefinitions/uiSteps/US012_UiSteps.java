@@ -33,7 +33,8 @@ public class US012_UiSteps {
     }
 
     @Then("Kullanici  Kullanici ismini girer")
-    public void kullanici_kullanici_ismini_girer() {
+    public void kullanici_kullanici_ismini_girer()
+    {
         pages.userName.sendKeys("doktor67");
     }
 
