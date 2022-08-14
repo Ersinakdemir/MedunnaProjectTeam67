@@ -1,6 +1,7 @@
 package utilities;
 
 import pojos.Appointment;
+import pojos.AppointmentRequest;
 import pojos.Physician;
 import pojos.Registrant;
 
@@ -145,7 +146,24 @@ public class WriteToTxt {
         } catch (IOException e){
         }
     }
+    public static void saveAppointmentData(AppointmentRequest appointmentCreate){
 
+        try {
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("appointmentFile"), true);
+            //src/resource/feature/testdata/PatientData
+
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+//            writer.append(registrant.getFirstName() + "," + registrant.getLastName() + ","
+//                            + registrant.getUsername() + "," + registrant.getEmail() + ","
+//                            + registrant.getPassword() + "," + registrant.getSSN() + ", \n");
+
+            writer.append(appointmentCreate.toString() + ", \n");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }

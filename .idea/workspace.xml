@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US007_Api.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojos/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojos/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/WriteToTxt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/WriteToTxt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/AppointmentData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata/AppointmentData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Cucumber Java.Feature: US003_UITest">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Appointment Api Testing">
     <configuration name="Feature: US003_UITest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US003_UITest.feature" />
@@ -79,6 +81,26 @@
       <module name="MedunnaSon" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: US007_UITest" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Appointment Api Testing" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US007_Api.feature" />
+      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="MedunnaSon" />
+      <option name="NAME_FILTER" value="^Appointment Api Testing$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Appointment Api Testing$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Appointment Api Testing" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -130,21 +152,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MedunnaSon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runner" />
-      <option name="MAIN_CLASS_NAME" value="runner.Runner" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="untitled" />
       <method v="2">
@@ -160,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Appointment Api Testing" />
         <item itemvalue="Cucumber Java.Feature: US003_UITest" />
         <item itemvalue="Cucumber Java.Scenario: " />
         <item itemvalue="Cucumber Java.Feature: US007_UITest" />
         <item itemvalue="Cucumber Java.Scenario: Appointment Testing" />
-        <item itemvalue="JUnit.Runner" />
       </list>
     </recent_temporary>
   </component>
