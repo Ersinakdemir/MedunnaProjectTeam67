@@ -166,4 +166,19 @@ public class WriteToTxt {
     }
 
 
+    public static void saveAppointmentDataBaseList(String dosyaYolu, List<Object> list) {
+        try {
+
+
+            BufferedWriter writer = new BufferedWriter(new FileWriter(dosyaYolu,false));
+
+            for(Object w: list ){
+                writer.append(w+",\n");
+            }
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
