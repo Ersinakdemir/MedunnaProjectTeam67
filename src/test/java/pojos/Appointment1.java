@@ -25,8 +25,8 @@ public class Appointment1 {
     private String prescription;
     private String description;
     private Physician physician;
-    private Patient patient;
-    private Test []ctests;
+    private Patient1 patient;
+    private Test1 []ctests;
 
 
 

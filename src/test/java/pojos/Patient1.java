@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Patient {
+public class Patient1 {
 
     private String createdBy;
     private String createdDate;
@@ -25,7 +25,7 @@ public class Patient {
     private String description;
     private Country1 country;
     private InPatients [] inPatients;
-    private State cstate;
+    private State1 cstate;
 
 
 
