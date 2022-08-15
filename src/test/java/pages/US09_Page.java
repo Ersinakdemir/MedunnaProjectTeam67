@@ -33,9 +33,27 @@ public class US09_Page {
     @FindBy (xpath = "//*[@id=\"entity-menu\"]/div/a[2]")
     public WebElement inPatient;
 
+    @FindBy (xpath = "//*[@id=\"entity-menu\"]/div/a[1]")
+    public WebElement searchPatient;
+
     @FindBy (xpath = "//*[@id=\"app-view-container\"]/div/div/div/div/div/table/tbody/tr")
     public List<WebElement> patientDatenList;
 
     @FindBy (xpath = "//*[@id=\"app-view-container\"]/div/div/div/div/div/table/tbody/tr/td/div")
     public List<WebElement> patientEditList;
+
+    @FindBy (xpath = "//*[@id=\"app-view-container\"]/div/div/div/div[2]/div/table/tbody/tr[2]/td[16]/div/a[2]")
+    public WebElement editikinciSira;
+
+    @FindBy(xpath = "//input[@id='patient-firstName']")
+    public WebElement firstNameEdit;
+
+    @FindBy (name = "user.id")
+    public WebElement userDropdown;
+
+    @FindBy (id = "save-entity")
+    public WebElement saveEntity;
+
+    @FindBy (xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/div[1]")
+    public WebElement updateerfolg;
 }
