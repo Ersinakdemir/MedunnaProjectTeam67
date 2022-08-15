@@ -23,7 +23,7 @@ public class Patient {
     private String adress;
     private String email;
     private String description;
-    private Country country;
+    private Country1 country;
     private InPatients [] inPatients;
     private State cstate;
 

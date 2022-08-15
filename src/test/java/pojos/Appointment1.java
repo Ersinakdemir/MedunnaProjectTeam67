@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 
-public class Appointment {
+public class Appointment1 {
 
     private String createdBy;
     private String createdDate;

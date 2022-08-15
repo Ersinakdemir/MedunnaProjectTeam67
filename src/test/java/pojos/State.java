@@ -13,7 +13,7 @@ public class State {
 
     private int id;
     private String name;
-    private Country country;
+    private Country1 country;
 // private State [] cstate;
 
     //  "cstate": {
