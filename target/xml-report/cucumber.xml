@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="10.384">
+    <testcase classname="appointement test" name="appointement data read" time="9.576">
+        <system-out>
+            <![CDATA[Given Kullanici appointement icin get request yapar.........................passed
+And Kullanici appointement bilgileri de-serialisation eder..................passed
+Then Kullanici appointment bilgilerini valide eder..........................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
