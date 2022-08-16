@@ -1,0 +1,97 @@
+Index: src/test/resources/features/uIFeatures/US014_UiTest.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature :US_014\tPhysician (Doctor) \"Edit Inpatient\"(Yatili Tedavi) islemleri yapabilmeli\r\n\r\n  @Test001\r\n  Scenario :US_014_TC_01_ \"Doktor\"\"ID, start and end dates, description, created date  appointment id, status, room and patient\"\" bilgilerini görüntülüyebilmeli ve günceleyebilmeli\"\r\n\r\n    Given Kullanici Medunna ana sayfasina giris yapar\r\n    Then Kullanici dropdowna tiklar\r\n    And Kullanici sign in e tiklar\r\n    And Kullanici gecerli bir username girer\r\n    And Kullanici gecerli bir password girer\r\n    And Kullanici sign in e tiklar\r\n    Then Kullanici MY PAGES sayfasına tiklar\r\n    Then Kullanici My Inpatients'e tiklar\r\n    And Kullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder\r\n\r\n  Scenario:US_014_TC_02_ \"Status\" doktor tarafindan \"UNAPPROVED, DISCHARGED, STILL STAYING veya CANCELLED\" olarak güncellenebilmeli\r\n\r\n    Given Kullanici Medunna ana sayfasina giris yapar\r\n    Then Kullanici dropdowna tiklar\r\n    And Kullanici sign in e tiklar\r\n    And Kullanici gecerli bir username girer\r\n    And Kullanici gecerli bir password girer\r\n    And Kullanici sign in e tiklar\r\n    Then Kullanici MY PAGES sayfasina tiklar\r\n    Then Kullanici My Inpatients'e tiklar\r\n    Then Kullanici Edit butonuna tiklar\r\n    Then Kullanici acilan sayfadan status bolumunden \"UNAPPROVED\" olarak secip kaydeder\r\n    And Kullanici acilan sayfadan status bolumunden \"UNAPPROVED\" olarak guncellenebilir oldugunu test eder\r\n    Then Kullanici acilan sayfadan status bolumunden \"DISCHARGED\" olarak secip kaydeder\r\n    And Kullanici acilan sayfadan status bolumunden \"DISCHARGED\" olarak guncellenebilir oldugunu test eder\r\n    Then Kullanici acilan sayfadan status bolumunden \"STILL STAYING\" olarak secip kaydeder\r\n    And Kullanici acilan sayfadan status bolumunden \"STILL STAYING\" olarak guncellenebilir oldugunu test eder\r\n    Then Kullanici acilan sayfadan status bolumunden \"CANCELLED\" olarak olarak secip kaydeder\r\n    And Kullanici acilan sayfadan status bolumunden \"CANCELLED\" olarak guncellenebilir oldugunu test eder\r\n\r\n  Scenario :US_014_TC_03_ Doktor rezerve edilmis odayi guncelleyebilmeli\r\n    Given Kullanici Medunna ana sayfasına giris yapar\r\n    Then Kullanici dropdowna tiklar\r\n    And Kullanici sign in e tiklar\r\n    And Kullanici gecerli bir username girer\r\n    And Kullanici gecerli bir password girer\r\n    And Kullanici sign in e tiklar\r\n    Then Kullanici MY PAGES sayfasina tiklar\r\n    Then Kullanici My Inpatients'e tiklar\r\n    Then Kullanici Edit butonuna tiklar\r\n    Then Kullanici acilan sayfadan Room bolumunden oda secip kaydeder\r\n    And Kullanici acilan sayfadan Room bolumunun guncellenebilir oldugunu test eder
+===================================================================
+diff --git a/src/test/resources/features/uIFeatures/US014_UiTest.feature b/src/test/resources/features/uIFeatures/US014_UiTest.feature
+--- a/src/test/resources/features/uIFeatures/US014_UiTest.feature	
++++ b/src/test/resources/features/uIFeatures/US014_UiTest.feature	
+@@ -1,47 +1,47 @@
+ Feature :US_014	Physician (Doctor) "Edit Inpatient"(Yatili Tedavi) islemleri yapabilmeli
+ 
+-  @Test001
++  @Testus14
+   Scenario :US_014_TC_01_ "Doktor""ID, start and end dates, description, created date  appointment id, status, room and patient"" bilgilerini görüntülüyebilmeli ve günceleyebilmeli"
+ 
+-    Given Kullanici Medunna ana sayfasina giris yapar
+-    Then Kullanici dropdowna tiklar
+-    And Kullanici sign in e tiklar
+-    And Kullanici gecerli bir username girer
+-    And Kullanici gecerli bir password girer
+-    And Kullanici sign in e tiklar
+-    Then Kullanici MY PAGES sayfasına tiklar
+-    Then Kullanici My Inpatients'e tiklar
+-    And Kullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder
+-
++    Given DocKullanici Medunna ana sayfasina giris yapar
++    Then DocKullanici dropdowna tiklar
++    And DocKullanici sign in e tiklar
++    And DocKullanici gecerli bir username girer
++    And DocKullanici gecerli bir password girer
++    And DocKullanici sign in e tiklar
++    Then DocKullanici MY PAGES sayfasına tiklar
++    Then DocKullanici My Inpatients'e tiklar
++    And DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder
++    And ("Dockullanici sayfayi kapatir")
+   Scenario:US_014_TC_02_ "Status" doktor tarafindan "UNAPPROVED, DISCHARGED, STILL STAYING veya CANCELLED" olarak güncellenebilmeli
+ 
+-    Given Kullanici Medunna ana sayfasina giris yapar
+-    Then Kullanici dropdowna tiklar
+-    And Kullanici sign in e tiklar
+-    And Kullanici gecerli bir username girer
+-    And Kullanici gecerli bir password girer
+-    And Kullanici sign in e tiklar
+-    Then Kullanici MY PAGES sayfasina tiklar
+-    Then Kullanici My Inpatients'e tiklar
+-    Then Kullanici Edit butonuna tiklar
+-    Then Kullanici acilan sayfadan status bolumunden "UNAPPROVED" olarak secip kaydeder
+-    And Kullanici acilan sayfadan status bolumunden "UNAPPROVED" olarak guncellenebilir oldugunu test eder
+-    Then Kullanici acilan sayfadan status bolumunden "DISCHARGED" olarak secip kaydeder
+-    And Kullanici acilan sayfadan status bolumunden "DISCHARGED" olarak guncellenebilir oldugunu test eder
+-    Then Kullanici acilan sayfadan status bolumunden "STILL STAYING" olarak secip kaydeder
+-    And Kullanici acilan sayfadan status bolumunden "STILL STAYING" olarak guncellenebilir oldugunu test eder
+-    Then Kullanici acilan sayfadan status bolumunden "CANCELLED" olarak olarak secip kaydeder
+-    And Kullanici acilan sayfadan status bolumunden "CANCELLED" olarak guncellenebilir oldugunu test eder
++    Given DocKullanici Medunna ana sayfasina giris yapar
++    Then DocKullanici dropdowna tiklar
++    And DocKullanici sign in e tiklar
++    And DocKullanici gecerli bir username girer
++    And DocKullanici gecerli bir password girer
++    And DocKullanici sign in e tiklar
++    Then DocKullanici MY PAGES sayfasına tiklar
++    Then DocKullanici My Inpatients'e tiklar
++    Then DocKullanici Edit butonuna tiklar
++    Then DocKullanici acilan sayfadan status bolumunden "UNAPPROVED" olarak secip kaydeder
++    And DocKullanici acilan sayfadan status bolumunden "UNAPPROVED" olarak guncellenebilir oldugunu test eder
++    Then DocKullanici acilan sayfadan status bolumunden "DISCHARGED" olarak secip kaydeder
++    And DocKullanici acilan sayfadan status bolumunden "DISCHARGED" olarak guncellenebilir oldugunu test eder
++    Then DocKullanici acilan sayfadan status bolumunden "STILL STAYING" olarak secip kaydeder
++    And DocKullanici acilan sayfadan status bolumunden "STILL STAYING" olarak guncellenebilir oldugunu test eder
++    Then DocKullanici acilan sayfadan status bolumunden "CANCELLED" olarak olarak secip kaydeder
++    And DocKullanici acilan sayfadan status bolumunden "CANCELLED" olarak guncellenebilir oldugunu test eder
+ 
+   Scenario :US_014_TC_03_ Doktor rezerve edilmis odayi guncelleyebilmeli
+-    Given Kullanici Medunna ana sayfasına giris yapar
+-    Then Kullanici dropdowna tiklar
+-    And Kullanici sign in e tiklar
+-    And Kullanici gecerli bir username girer
+-    And Kullanici gecerli bir password girer
+-    And Kullanici sign in e tiklar
+-    Then Kullanici MY PAGES sayfasina tiklar
+-    Then Kullanici My Inpatients'e tiklar
+-    Then Kullanici Edit butonuna tiklar
+-    Then Kullanici acilan sayfadan Room bolumunden oda secip kaydeder
+-    And Kullanici acilan sayfadan Room bolumunun guncellenebilir oldugunu test eder
+\ No newline at end of file
++    Given DocKullanici Medunna ana sayfasina giris yapar
++    Then DocKullanici dropdowna tiklar
++    And DocKullanici sign in e tiklar
++    And DocKullanici gecerli bir username girer
++    And DocKullanici gecerli bir password girer
++    And DocKullanici sign in e tiklar
++    Then DocKullanici MY PAGES sayfasına tiklar
++    Then DocKullanici My Inpatients'e tiklar
++    Then DocKullanici Edit butonuna tiklar
++    Then DocKullanici acilan sayfadan Room bolumunden oda secip kaydeder
++    And DocKullanici acilan sayfadan Room bolumunun guncellenebilir oldugunu test eder
+\ No newline at end of file

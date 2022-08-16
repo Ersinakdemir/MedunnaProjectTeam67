@@ -1,0 +1,1607 @@
+Index: src/test/resources/features/uIFeatures/Us14_UITest.feature
+===================================================================
+diff --git a/src/test/resources/features/uIFeatures/Us14_UITest.feature b/src/test/resources/features/uIFeatures/Us14_UITest.feature
+deleted file mode 100644
+--- a/src/test/resources/features/uIFeatures/Us14_UITest.feature	
++++ /dev/null	
+@@ -1,40 +0,0 @@
+-
+-Feature: US14_Edit_Inpatient_Islemleri
+-@TC01
+-  Scenario: TC01_BA_Physician_olarak_giris_yapar
+-    Given BA Physician medunna url gider
+-    And   BA Account butonuna tiklar
+-    And   BA Sign in butonuna tiklar
+-    And   BA Physician username ve password girer
+-    Then  BA Sign in butonuna tiklar ve giris yapar
+-  @TC02
+-  Scenario: TC02_BA_MyInpatients_sayfasinda_In_Patients_basligi_gorur
+-    When  BA MY PAGES butonuna tiklar
+-    And   BA My Inpatients butonuna tiklar
+-    Then  BA In Patients basligi gorulur
+-  @TC03
+-  Scenario: TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler
+-    And  BA DoctorID goruntuler
+-    And  BA StartDate goruntuler
+-    And  BA EndDate goruntuler
+-    And  BA Status durumunu goruntuler
+-    And  BA CreatedDate goruntuler
+-    And  BA Room bilgisini goruntuler
+-    And  BA AppointmentID goruntuler
+-    And  BA Patient bilgisini goruntuler
+-  @TC04
+-  Scenario: TC04_BA_Description_CreatedDate_Status_Room_guncellenir
+-    Then   BA Edit butonuna tiklar
+-    And   BA Description bolumunu gunceller
+-    And   BA Created Date bolumunu gunceller
+-    And   BA Status durumunu gunceller
+-    When  BA Room bolumu guncellenir
+-
+-
+-  Scenario: TC05_BA_Save_Butona_Tiklar_Yeni_Sayfa_Acar
+-    Then   BA Save butonuna tiklar
+-    Then   Ba Yeni giris yapmak icin sayfayi kapatir
+-
+-  Scenario: TC06_BA_ID_StartDate_EndDate_Appointment_Patient_gunceller
+-    Given BA Create or edit sayfasinda ID StartDate EndDate Appointment Patient bolumunu gunceller
+-    Then  BA Sayfayi kapatir
+\ No newline at end of file
+Index: src/test/java/stepdefinitions/uiSteps/MyInfo14_uiSteps.java
+===================================================================
+diff --git a/src/test/java/stepdefinitions/uiSteps/MyInfo14_uiSteps.java b/src/test/java/stepdefinitions/uiSteps/MyInfo14_uiSteps.java
+new file mode 100644
+--- /dev/null	
++++ b/src/test/java/stepdefinitions/uiSteps/MyInfo14_uiSteps.java	
+@@ -0,0 +1,411 @@
++package stepdefinitions.uiSteps;
++
++
++
++    import io.cucumber.java.en.And;
++import io.cucumber.java.en.Given;
++import io.cucumber.java.en.Then;
++import io.cucumber.java.en.When;
++
++    import org.junit.Assert;
++import org.openqa.selenium.By;
++import org.openqa.selenium.Keys;
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.interactions.Actions;
++import org.openqa.selenium.interactions.SourceType;
++import org.openqa.selenium.support.ui.Select;
++
++    import pages.US014_Page;
++import utilities.Driver;
++import utilities.ReusableMethods;
++
++import java.io.IOException;
++
++    import java.sql.Date;
++    import java.util.List;
++
++public class MyInfo14_uiSteps {
++
++        US014_Page doctorPage = new US014_Page();
++        Actions actions = new Actions(Driver.getDriver());
++
++        @Given("doctor finds the first UNAPPROVED inpatient and clicks edit button")
++        public void doctorFindsTheFirstUNAPPROVEDInpatientAndClicksEditButton() throws InterruptedException {
++            actions.sendKeys(Keys.ARROW_DOWN).perform();
++            Thread.sleep(2000);
++
++            try {
++                for (int i = 1; i < 20; i++) {
++                    String xpath = "//tbody//tr[" + i + "]//td[4]";
++                    WebElement status = Driver.getDriver().findElement(By.xpath(xpath));
++                    String xpathEdit = "//tbody//tr[" + i + "]//td[10]";
++                    Thread.sleep(2000);
++                    if (status.getText().equals("UNAPPROVED")) {
++                        Driver.getDriver().findElement(By.xpath(xpathEdit)).click();
++                        Thread.sleep(2000);
++                        break;
++                    }
++                }
++            } catch (Exception e){
++
++                System.out.println("There is not any Inpatient with UNAPPROVED Status  ");
++            }
++        }
++
++        @When("doctor deletes description box and writes a new description for the inpatient")
++        public void doctorDeletesDescriptionBoxAndWritesANewDescriptionForTheInpatient() {
++            // doctorPage.descriptionBox.sendKeys(" ");
++            doctorPage.descriptionBox.sendKeys("new description");
++        }
++
++        @Then("doctor clicks save button")
++        public void doctorClicksSaveButton() throws InterruptedException {
++            Driver.clickWithJS(doctorPage.save);
++            Thread.sleep(2000);
++        }
++
++        @Then("doctor verifies Unapproved inpatients' description can be changed")
++        public void doctorVerifiesUnapprovedInpatientsDescriptionCanBeChanged() {
++            Assert.assertTrue(doctorPage.updatedMessage.isDisplayed());
++        }
++
++        @And("doctor closes the browser")
++        public void doctorClosesTheBrowser() throws InterruptedException {
++            Driver.closeDriver();
++            Thread.sleep(2000);
++        }
++
++        @Given("doctor finds the first STAYING inpatient and clicks edit button")
++        public void doctorFindsTheFirstSTAYINGInpatientAndClicksEditButton() throws InterruptedException {
++            actions.sendKeys(Keys.ARROW_DOWN).perform();
++            Thread.sleep(2000);
++
++            try {
++                for (int i = 1; i < 20; i++) {
++
++                    String xpath = "//tbody//tr[" + i + "]//td[4]";
++                    WebElement status = Driver.getDriver().findElement(By.xpath(xpath));
++                    String xpathEdit = "//tbody//tr[" + i + "]//td[10]";
++                    Thread.sleep(2000);
++                    if (status.getText().equals("STAYING")) {
++                        Driver.getDriver().findElement(By.xpath(xpathEdit)).click();
++                        Thread.sleep(2000);
++                        break;
++                    }
++                }
++            } catch (Exception e){
++                System.out.println("There is not any Inpatient with STAYING Status  ");
++            }
++        }
++
++        @Then("doctor verifies Staying inpatients' description can be changed")
++        public void doctorVerifiesStayingInpatientsDescriptionCanBeChanged() {
++            Assert.assertTrue(doctorPage.updatedMessage.isDisplayed());
++        }
++
++        @Given("doctor finds the first DISCHARGED inpatient and clicks edit button")
++        public void doctorFindsTheFirstDISCHARGEDInpatientAndClicksEditButton() throws InterruptedException {
++            actions.sendKeys(Keys.ARROW_DOWN).perform();
++            Thread.sleep(2000);
++
++            try {
++                for (int i = 1; i < 20; i++) {
++
++                    String xpath = "//tbody//tr[" + i + "]//td[4]";
++                    WebElement status = Driver.getDriver().findElement(By.xpath(xpath));
++                    String xpathEdit = "//tbody//tr[" + i + "]//td[10]";
++                    Thread.sleep(2000);
++
++                    if (status.getText().equals("DISCHARGED")) {
++                        Driver.getDriver().findElement(By.xpath(xpathEdit)).click();
++                        Thread.sleep(2000);
++                        break;
++                    }
++                }
++            } catch (Exception e){
++
++                System.out.println("There is not any Inpatient with DISCHARGED Status  ");
++            }
++        }
++
++        @Then("doctor verifies Discharged inpatients' description can not be changed")
++        public void doctorVerifiesDischargedInpatientsDescriptionCanNotBeChanged() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Given("doctor finds the first CANCELLED inpatient and clicks edit button")
++        public void doctorFindsTheFirstCancelledInpatientAndClicksEditButton() throws InterruptedException {
++            actions.sendKeys(Keys.ARROW_DOWN).perform();
++            Thread.sleep(2000);
++
++            try {
++                for (int i = 1; i < 20; i++) {
++
++                    String xpath = "//tbody//tr[" + i + "]//td[4]";
++                    WebElement status = Driver.getDriver().findElement(By.xpath(xpath));
++                    String xpathEdit = "//tbody//tr[" + i + "]//td[10]";
++                    Thread.sleep(2000);
++                    if (status.getText().equals("CANCELLED")) {
++                        Driver.getDriver().findElement(By.xpath(xpathEdit)).click();
++                        Thread.sleep(2000);
++                        break;
++                    }
++                }
++            } catch (Exception e){
++
++                System.out.println("There is not any Inpatient with CANCELLED Status  ");
++            }
++
++        }
++
++        @Then("doctor verifies Cancelled inpatients' description can not be changed")
++        public void doctorVerifiesCancelledInpatientsDescriptionCanNotBeChanged() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor changes the created date box to an earlier date")
++        public void doctorChangesTheCreatedDateBoxToAnEarlierDate() {
++            //doctorPage.createdDateEdit.sendKeys(Date.passedDate());
++            actions.sendKeys(Keys.ARROW_DOWN).perform();
++        }
++
++        @Then("doctor verifies Staying inpatients' created date can not be changed to an earlier date")
++        public void doctorVerifiesStayingInpatientsCreatedDateCanNotBeChangedToAnEarlierDate() {
++            Assert.assertFalse(doctorPage.updatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Unapproved inpatients' created date can not be changed to an earlier date")
++        public void doctorVerifiesUnapprovedInpatientsCreatedDateCanNotBeChangedToAnEarlierDate() throws IOException {
++            Assert.assertFalse(doctorPage.updatedMessage.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC012_");
++        }
++
++        @Then("doctor verifies Discharged inpatients' created date can not be changed to an earlier date")
++        public void doctorVerifiesDischargedInpatientsCreatedDateCanNotBeChangedToAnEarlierDate() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Cancelled inpatients' created date can not be changed to an earlier date")
++        public void doctorVerifiesCancelledInpatientsCreatedDateCanNotBeChangedToAnEarlierDate() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor changes the created date box to a future date")
++        public void doctorChangesTheCreatedDateBoxToAFutureDate() {
++           // doctorPage.createdDateEdit.sendKeys(Date.futureDate());
++            actions.sendKeys(Keys.ARROW_DOWN).perform();
++        }
++
++        @Then("doctor verifies Unapproved inpatients' created date can not be changed to a future date")
++        public void doctorVerifiesUnapprovedInpatientsCreatedDateCanNotBeChangedToAFutureDate() {
++            Assert.assertFalse(doctorPage.updatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Staying inpatients' created date can not be changed to a future date")
++        public void doctorVerifiesStayingInpatientsCreatedDateCanNotBeChangedToAFutureDate() {
++            Assert.assertFalse(doctorPage.updatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Discharged inpatients' created date can not be changed to a future date")
++        public void doctorVerifiesDischargedInpatientsCreatedDateCanNotBeChangedToAFutureDate() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Cancelled inpatients' created date can not be changed to a future date")
++        public void doctorVerifiesCancelledInpatientsCreatedDateCanNotBeChangedToAFutureDate() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @When("doctor chooses an available room for the inpatient")
++        public void doctorChoosesAnAvailableRoomForTheInpatient() {
++            Select select=new Select(doctorPage.roomEdit);
++            List<WebElement> allOptions=select.getOptions();
++            for(WebElement eachOption : allOptions){
++                if(!eachOption.getText().contains("UNAVAILABLE")){
++                    eachOption.click();
++                    break;
++                }
++            }
++            actions.sendKeys(Keys.ARROW_DOWN);
++        }
++
++        @Then("doctor verifies Unapproved inpatients' room can not be updated even if it is available")
++        public void doctorVerifiesUnapprovedInpatientsRoomCanNotBeUpdatedEvenIfItIsAvailable() {
++            Assert.assertFalse(doctorPage.updatedMessage.isDisplayed());
++
++        }
++//     WE COULD NOT CREATE ANY ASSERTION FOR THIS
++//   @Then("doctor verifies Staying inpatients' room can be updated when it is available")
++//   public void doctorVerifiesStayingInpatientsRoomCanBeUpdatedWhenItIsAvailable() {
++//   }
++
++        @Then("doctor verifies Discharged inpatients' room can not be updated even if it is available")
++        public void doctorVerifiesDischargedInpatientsRoomCanNotBeUpdatedEvenIfItIsAvailable() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Cancelled inpatients' room can not be updated even if it is available")
++        public void doctorVerifiesCancelledInpatientsRoomCanNotBeUpdatedEvenIfItIsAvailable() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @When("doctor chooses an unavailable room for the inpatient")
++        public void doctorChoosesAnUnavailableRoomForTheInpatient() {
++            Select select=new Select(doctorPage.roomEdit);
++            List<WebElement> allOptions=select.getOptions();
++            for(WebElement eachOption : allOptions){
++                if(eachOption.getText().contains("UNAVAILABLE")){
++                    eachOption.click();
++                    break;
++                }
++            }
++            actions.sendKeys(Keys.ARROW_DOWN);
++        }
++
++        @Then("doctor verifies Unapproved inpatients' room can not be updated with an unavailable room")
++        public void doctorVerifiesUnapprovedInpatientsRoomCanNotBeUpdatedWithAnUnavailableRoom() {
++            Assert.assertFalse(doctorPage.updatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Staying inpatients' room can not be updated with an unavailable room")
++        public void doctorVerifiesStayingInpatientsRoomCanNotBeUpdatedWithAnUnavailableRoom() {
++            Assert.assertFalse(doctorPage.updatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Discharged inpatients' room can not be updated with an unavailable room")
++        public void doctorVerifiesDischargedInpatientsRoomCanNotBeUpdatedWithAnUnavailableRoom() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Cancelled inpatients' room can not be updated with an unavailable room")
++        public void doctorVerifiesCancelledInpatientsRoomCanNotBeUpdatedWithAnUnavailableRoom() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @When("doctor changes the status of the inpatient as Discharged")
++        public void doctorChangesTheStatusOfTheInpatientAsDischarged() {
++            Select select=new Select(doctorPage.statusEdit);
++            select.selectByVisibleText("DISCHARGED");
++        }
++
++        @Then("doctor verifies Unapproved inpatients' status can not be changed to Discharged")
++        public void doctorVerifiesUnapprovedInpatientsStatusCanNotBeChangedToDischarged() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @When("doctor changes the status of the inpatient as Cancelled")
++        public void doctorChangesTheStatusOfTheInpatientAsCancelled() {
++            Select select=new Select(doctorPage.statusEdit);
++            select.selectByVisibleText("CANCELLED");
++        }
++
++        @Then("doctor verifies Unapproved inpatients' status can be changed to Cancelled")
++        public void doctorVerifiesUnapprovedInpatientsStatusCanBeChangedToCancelled() {
++            Assert.assertTrue(doctorPage.updatedMessage.isDisplayed());
++        }
++
++        @When("doctor changes the status of the Unapproved inpatient as Staying without choosing any room")
++        public void doctorChangesTheStatusOfTheUnapprovedInpatientAsStayingWithoutChoosingAnyRoom() {
++            Select select=new Select(doctorPage.statusEdit);
++            select.selectByVisibleText("STAYING");
++        }
++
++        @Then("doctor verifies Unapproved inpatients' status can not be changed to Staying without choosing any room")
++        public void doctorVerifiesUnapprovedInpatientsStatusCanNotBeChangedToStayingWithoutChoosingAnyRoom() {
++            Assert.assertTrue(doctorPage.suchARoomNotFoundMessage.isDisplayed());
++        }
++
++        @When("doctor changes the status of the inpatient as Staying")
++        public void doctorChangesTheStatusOfTheInpatientAsStaying() {
++            Select select = new Select(doctorPage.statusEdit);
++            select.selectByVisibleText("STAYING");
++        }
++
++        @Then("doctor verifies Unapproved inpatients' status can be changed to Staying with choosing an available room")
++        public void doctorVerifiesUnapprovedInpatientsStatusCanNotBeChangedToStayingWithChoosingAnAvailableRoom() {
++            Assert.assertTrue(doctorPage.updatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Unapproved inpatients' status can not be changed to Staying with choosing an unavailable room")
++        public void doctorVerifiesUnapprovedInpatientsStatusCanNotBeChangedToStayingWithChoosingAnUnavailableRoom() {
++            Assert.assertTrue(doctorPage.theRoomAlreadyReservedMessage.isDisplayed());
++        }
++
++        @When("doctor changes the status of the inpatient as Unapproved")
++        public void doctorChangesTheStatusOfTheInpatientAsUnapproved() {
++            Select select = new Select(doctorPage.statusEdit);
++            select.selectByVisibleText("UNAPPROVED");
++        }
++
++        @Then("doctor verifies Staying inpatients' status can not be changed to Unapproved")
++        public void doctorVerifiesStayingInpatientsStatusCanNotBeChangedToUnapproved() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Staying inpatients' status can not be changed to Cancelled")
++        public void doctorVerifiesStayingInpatientsStatusCanNotBeChangedToCancelled() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Discharged inpatients' status can not be changed to Cancelled")
++        public void doctorVerifiesDischargedInpatientsStatusCanNotBeChangedToCancelled() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Discharged inpatients' status can not be changed to Unapproved")
++        public void doctorVerifiesDischargedInpatientsStatusCanNotBeChangedToUnapproved() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Discharged inpatients' status can not be changed to Staying")
++        public void doctorVerifiesDischargedInpatientsStatusCanNotBeChangedToStaying() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Cancelled inpatients' status can not be changed to Unapproved")
++        public void doctorVerifiesCancelledInpatientsStatusCanNotBeChangedToUnapproved() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Cancelled inpatients' status can not be changed to Staying")
++        public void doctorVerifiesCancelledInpatientsStatusCanNotBeChangedToStaying() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Cancelled inpatients' status can not be changed to Discharged")
++        public void doctorVerifiesCancelledInpatientsStatusCanNotBeChangedToDischarged() {
++            Assert.assertTrue(doctorPage.canNotBeUpdatedMessage.isDisplayed());
++        }
++
++        @Then("doctor verifies Staying inpatients' status can be changed to Discharged")
++        public void doctorVerifiesStayingInpatientsStatusCanBeChangedToDischarged() {
++            Assert.assertTrue(doctorPage.updatedMessage.isDisplayed());
++        }
++
++
++    }
++
++//    @Given("doctor finds the patients status {string} and clicks edit button")
++//    public void doctorFindsThePatientsStatusAndClicksEditButton(String sta) {
++//
++//        try {
++//            for (int i = 1; i < 20; i++) {
++//
++//                String xpath = "//tbody//tr[" + i + "]//td[4]";
++//                WebElement status = Driver.getDriver().findElement(By.xpath(xpath));
++//                Thread.sleep(2000);
++//                String xpathEdit = "//tbody//tr[" + i + "]//td[10]";
++//                if (status.getText().equals(sta)) {
++//                    Driver.getDriver().findElement(By.xpath(xpathEdit)).click();
++//                    Thread.sleep(2000);
++//                    break;
++//                }
++//
++//
++//            }
++//        } catch (Exception e){
++//
++//
++//            System.out.println("There is not any inpatient with this status "+sta);
++//        }
++
+Index: src/test/resources/features/uIFeatures/14_uimy.feature
+===================================================================
+diff --git a/src/test/resources/features/uIFeatures/14_uimy.feature b/src/test/resources/features/uIFeatures/14_uimy.feature
+new file mode 100644
+--- /dev/null	
++++ b/src/test/resources/features/uIFeatures/14_uimy.feature	
+@@ -0,0 +1,265 @@
++
++
++@myInpatientsUpdate
++Feature:Doctor_Updates_inPatients_info
++
++  Background:
++    Given doctor goes to Medunna Url
++    When  doctor clicks on the human icon in the upper right corner
++    Then  doctor clicks on Sign In
++    And   doctor enters a valid username
++    And   doctor enters a valid password
++    And   doctor clicks the Sign In button
++    And   doctor clicks on MY PAGES
++    And   doctor clicks on My Inpatients
++
++  Scenario:TC_011_verify_Unapproved_inpatients'_description_can_be_changed
++    Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++    When doctor deletes description box and writes a new description for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Unapproved inpatients' description can be changed
++    And doctor closes the browser
++
++  Scenario: TC_012_verify_Unapproved_Inpatients'_created _date_can_not_be_changed_to_an_earlier_date
++    Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++    Then doctor changes the created date box to an earlier date
++    Then doctor clicks save button
++    Then doctor verifies Unapproved inpatients' created date can not be changed to an earlier date
++    And doctor closes the browser
++
++  Scenario: TC_013_verify_Unapproved_Inpatients'_created _date_can_not_be_changed_to_a_future_date
++    Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++    Then doctor changes the created date box to a future date
++    Then doctor clicks save button
++    Then doctor verifies Unapproved inpatients' created date can not be changed to a future date
++    And doctor closes the browser
++
++  Scenario: TC_014_verify_Unapproved_Inpatients'_room_can_not_be_updated_even_if_it_is_available
++    Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++    When doctor chooses an available room for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Unapproved inpatients' room can not be updated even if it is available
++    And doctor closes the browser
++
++  Scenario: TC_015_verify_Unapproved_Inpatients'_room_can_not_be_updated_with_an_unavailable_room
++    Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++    When doctor chooses an unavailable room for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Unapproved inpatients' room can not be updated with an unavailable room
++    And doctor closes the browser
++
++  Scenario: TC_016_verify-Unapproved_Inpatients'_status_can_not_be_changed_to_Discharged
++    Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Discharged
++    Then doctor clicks save button
++    Then doctor verifies Unapproved inpatients' status can not be changed to Discharged
++    And doctor closes the browser
++
++  Scenario: TC_017_verify-Unapproved_Inpatients'_status_can_be_changed_to_Cancelled
++    Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Cancelled
++    Then doctor clicks save button
++    Then doctor verifies Unapproved inpatients' status can be changed to Cancelled
++    And doctor closes the browser
++
++  Scenario: TC_018_verify-Unapproved_Inpatients'_status_can_not_be_changed_to_Staying_without_choosing_any_room
++    Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++    When doctor changes the status of the Unapproved inpatient as Staying without choosing any room
++    Then doctor clicks save button
++    Then doctor verifies Unapproved inpatients' status can not be changed to Staying without choosing any room
++    And doctor closes the browser
++
++#  I DO NOT RUN IT BECAUSE WHEN IT IS RUNNED ONCE THEN PATIENT CAN NOT BE USED AGAIN
++#  Scenario: TC_019_verify-Unapproved_Inpatients'_status_can_be_changed_to_Staying_with_choosing_an_available_room
++#     Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++#     When doctor changes the status of the inpatient as Staying
++#     Then doctor chooses an available room for the inpatient
++#     Then doctor clicks save button
++#     Then doctor verifies Unapproved inpatients' status can be changed to Staying with choosing an available room
++#     And doctor closes the application
++#     And doctor closes the browser
++
++  Scenario: TC_020_verify-Unapproved_Inpatients'_status_can_not_be_changed_to_Staying_with_choosing_an_unavailable_room
++    Given doctor finds the first UNAPPROVED inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Staying
++    Then doctor chooses an unavailable room for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Unapproved inpatients' status can not be changed to Staying with choosing an unavailable room
++    And doctor closes the browser
++
++  Scenario: TC_021_verify_Staying_inpatients'_description_can_be_changed
++    Given doctor finds the first STAYING inpatient and clicks edit button
++    When doctor deletes description box and writes a new description for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Staying inpatients' description can be changed
++    And doctor closes the browser
++
++  Scenario: TC_022_verify_Staying_Inpatients'_created _date_can_not_be_changed_to_an_earlier_date
++    Given doctor finds the first STAYING inpatient and clicks edit button
++    Then doctor changes the created date box to an earlier date
++    Then doctor clicks save button
++    Then doctor verifies Staying inpatients' created date can not be changed to an earlier date
++    And doctor closes the browser
++
++  Scenario: TC_023_verify_Staying_Inpatients'_created _date_can_not_be_changed_to_a_future_date
++    Given doctor finds the first STAYING inpatient and clicks edit button
++    Then doctor changes the created date box to a future date
++    Then doctor clicks save button
++    Then doctor verifies Staying inpatients' created date can not be changed to a future date
++    And doctor closes the browser
++
++#  I COULD NOT FIND HOW TO ASSERT IT
++#  Scenario: TC_024_verify_Staying_Inpatients'_room_can_be_updated_when_it_is_available
++#      Given doctor finds the first STAYING inpatient and clicks edit button
++#      When doctor chooses an available room for the inpatient
++#      Then doctor clicks save button
++#      Then doctor verifies Staying inpatients' room can be updated when it is available
++#      And doctor closes the application
++#      And doctor closes the browser
++
++  Scenario: TC_025_verify_Staying_Inpatients'_room_can_not_be_updated_with_an_unavailable_room
++    Given doctor finds the first STAYING inpatient and clicks edit button
++    When doctor chooses an unavailable room for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Staying inpatients' room can not be updated with an unavailable room
++    And doctor closes the browser
++
++  Scenario: TC_026_verify-Staying_Inpatients'_status_can_not_be_changed_to_Unapproved
++    Given doctor finds the first STAYING inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Unapproved
++    Then doctor clicks save button
++    Then doctor verifies Staying inpatients' status can not be changed to Unapproved
++    And doctor closes the browser
++
++  Scenario: TC_027_verify-Staying_Inpatients'_status_can_not_be_changed_to_Cancelled
++    Given doctor finds the first STAYING inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Cancelled
++    Then doctor clicks save button
++    Then doctor verifies Staying inpatients' status can not be changed to Cancelled
++    And doctor closes the browser
++
++##  I DO NOT RUN IT BECAUSE WHEN IT IS RUNNED ONCE THE PATIENT DIES
++#  Scenario: TC_028_verify-Staying_Inpatients'_status_can_be_changed_to_Discharged
++#    Given doctor finds the first STAYING inpatient and clicks edit button
++#    When doctor changes the status of the inpatient as Discharged
++#    Then doctor clicks save button
++#    Then doctor verifies Staying inpatients' status can be changed to Discharged
++#    And doctor closes the application
++#    And doctor closes the browser
++
++  Scenario: TC_029_verify_Discharged_inpatients'_description_can_not_be_changed
++    Given doctor finds the first DISCHARGED inpatient and clicks edit button
++    When doctor deletes description box and writes a new description for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Discharged inpatients' description can not be changed
++    And doctor closes the browser
++
++  Scenario: TC_030_verify_Discharged_Inpatients'_created _date_can_not_be_changed_to_an_earlier_date
++    Given doctor finds the first DISCHARGED inpatient and clicks edit button
++    Then doctor changes the created date box to an earlier date
++    Then doctor clicks save button
++    Then doctor verifies Discharged inpatients' created date can not be changed to an earlier date
++    And doctor closes the browser
++
++  Scenario: TC_031_verify_Discharged_Inpatients'_created _date_can_not_be_changed_to_a_future_date
++    Given doctor finds the first DISCHARGED inpatient and clicks edit button
++    Then doctor changes the created date box to a future date
++    Then doctor clicks save button
++    Then doctor verifies Discharged inpatients' created date can not be changed to a future date
++    And doctor closes the browser
++
++  Scenario: TC_032_verify_Discharged_Inpatients'_room_can_not_be_updated_even_if_it_is_available
++    Given doctor finds the first DISCHARGED inpatient and clicks edit button
++    When doctor chooses an available room for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Discharged inpatients' room can not be updated even if it is available
++    And doctor closes the browser
++
++  Scenario: TC_033_verify_Discharged_Inpatients'_room_can_not_be_updated_with_an_unavailable_room
++    Given doctor finds the first DISCHARGED inpatient and clicks edit button
++    When doctor chooses an unavailable room for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Discharged inpatients' room can not be updated with an unavailable room
++    And doctor closes the browser
++
++  Scenario: TC_034_verify-Discharged_Inpatients'_status_can_not_be_changed_to_Unapproved
++    Given doctor finds the first DISCHARGED inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Unapproved
++    Then doctor clicks save button
++    Then doctor verifies Discharged inpatients' status can not be changed to Unapproved
++    And doctor closes the browser
++
++  Scenario: TC_035_verify-Discharged_Inpatients'_status_can_not_be_changed_to_Cancelled
++    Given doctor finds the first DISCHARGED inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Cancelled
++    Then doctor clicks save button
++    Then doctor verifies Discharged inpatients' status can not be changed to Cancelled
++    And doctor closes the browser
++
++  Scenario: TC_036_verify-Discharged_Inpatients'_status_can_not_be_changed_to_Staying
++    Given doctor finds the first DISCHARGED inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Staying
++    Then doctor clicks save button
++    Then doctor verifies Discharged inpatients' status can not be changed to Staying
++    And doctor closes the browser
++
++  Scenario: TC_037_verify_Cancelled_inpatients'_description_can_not_be_changed
++    Given doctor finds the first CANCELLED inpatient and clicks edit button
++    When doctor deletes description box and writes a new description for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Cancelled inpatients' description can not be changed
++    And doctor closes the browser
++
++  Scenario: TC_038_verify_Cancelled_Inpatients'_created _date_can_not_be_changed_to_an_earlier_date
++    Given doctor finds the first CANCELLED inpatient and clicks edit button
++    Then doctor changes the created date box to an earlier date
++    Then doctor clicks save button
++    Then doctor verifies Cancelled inpatients' created date can not be changed to an earlier date
++    And doctor closes the browser
++
++  Scenario: TC_039_verify_Cancelled_Inpatients'_created _date_can_not_be_changed_to_a_future_date
++    Given doctor finds the first CANCELLED inpatient and clicks edit button
++    Then doctor changes the created date box to a future date
++    Then doctor clicks save button
++    Then doctor verifies Cancelled inpatients' created date can not be changed to a future date
++    And doctor closes the browser
++
++  Scenario: TC_040_verify_Cancelled_Inpatients'_room_can_not_be_updated_even_if_it_is_available
++    Given doctor finds the first CANCELLED inpatient and clicks edit button
++    When doctor chooses an available room for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Cancelled inpatients' room can not be updated even if it is available
++    And doctor closes the browser
++
++  Scenario: TC_041_verify_Cancelled_Inpatients'_room_can_not_be_updated_with_an_unavailable_room
++    Given doctor finds the first CANCELLED inpatient and clicks edit button
++    When doctor chooses an unavailable room for the inpatient
++    Then doctor clicks save button
++    Then doctor verifies Cancelled inpatients' room can not be updated with an unavailable room
++    And doctor closes the browser
++
++  Scenario: TC_041_verify-Cancelled_Inpatients'_status_can_not_be_changed_to_Unapproved
++    Given doctor finds the first CANCELLED inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Unapproved
++    Then doctor clicks save button
++    Then doctor verifies Cancelled inpatients' status can not be changed to Unapproved
++    And doctor closes the browser
++
++  Scenario: TC_043_verify-Cancelled_Inpatients'_status_can_not_be_changed_to_Staying
++    Given doctor finds the first CANCELLED inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Staying
++    Then doctor clicks save button
++    Then doctor verifies Cancelled inpatients' status can not be changed to Staying
++    And doctor closes the browser
++
++  Scenario: TC_044_verify_Cancelled_Inpatients'_status_can_not_be_changed_to_Discharge
++    Given doctor finds the first CANCELLED inpatient and clicks edit button
++    When doctor changes the status of the inpatient as Discharged
++    Then doctor clicks save button
++    Then doctor verifies Cancelled inpatients' status can not be changed to Discharged
++    And doctor closes the browser
++
++
++
++
++
+Index: src/test/java/stepdefinitions/uiSteps/US0014_UiSteps.java
+===================================================================
+diff --git a/src/test/java/stepdefinitions/uiSteps/US0014_UiSteps.java b/src/test/java/stepdefinitions/uiSteps/US0014_UiSteps.java
+new file mode 100644
+--- /dev/null	
++++ b/src/test/java/stepdefinitions/uiSteps/US0014_UiSteps.java	
+@@ -0,0 +1,160 @@
++package stepdefinitions.uiSteps;
++
++
++     import io.cucumber.java.en.Given;
++        import io.cucumber.java.en.Then;
++        import io.cucumber.java.en.When;
++        import org.junit.Assert;
++        import org.openqa.selenium.WebElement;
++
++     import pages.US014_Page;
++     import utilities.ConfigurationReader;
++        import utilities.Driver;
++        import utilities.ReusableMethods;
++
++        import java.io.IOException;
++
++public class US0014_UiSteps {
++
++        US014_Page homePage = new US014_Page();
++        US014_Page loginPage = new US014_Page();
++        US014_Page doctorPage = new US014_Page();
++
++        @Given("DocKullanici Medunna ana sayfasina giris yapar")
++        public void DocKullanici_Medunna_ana_sayfasina_giris_yapar() {
++            Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
++            try{
++                doctorPage.doctorName.click();
++                Driver.waitForVisibility(doctorPage.signOut, 10);
++                doctorPage.signOut.click();
++                Thread.sleep(2000);
++            }catch(Exception e){
++
++            }
++
++        }
++
++        @When("DocKullanici dropdowna tiklar")
++        public void DocKullanici_dropdowna_tiklar() {
++            Driver.waitForVisibility(homePage.userIcon,10);
++            homePage.userIcon.click();
++        }
++
++        @Then("DocKullanici sign in e tiklar")
++        public void DocKullanici_sign_in_e_tiklar() {
++            Driver.waitForVisibility(homePage.signInButton,10);
++            homePage.signInButton.click();
++        }
++
++        @Then("DocKullanici gecerli bir username girer")
++        public void DocKullanici_gecerli_bir_username_girer() {
++            loginPage.usernameBox.sendKeys("PhysicinMurat44");
++        }
++
++        @Then("DocKullanici gecerli bir password girer")
++        public void DocKullanici_gecerli_bir_password_girer() throws InterruptedException {
++            loginPage.passwordBox.sendKeys("123qscaA...");
++            Thread.sleep(3000);
++        }
++
++        @Then("DocKullanici sign in e tiklar")
++        public void DocKullanici_ign_in_e_tikla() throws InterruptedException {
++            loginPage.signInButton.click();
++            Thread.sleep(3000);
++        }
++
++        @Then("DocKullanici MY PAGES sayfasına tiklar")
++        public void DocKullanici_MY_PAGES_sayfasına_tiklar() {
++            Driver.waitForVisibility(doctorPage.myPages, 10);
++            doctorPage.myPages.click();
++        }
++
++        @Then("DocKullanici My Inpatients'e tiklar")
++        public void DocKullanici_Inpatients_tiklar() throws InterruptedException {
++            Driver.waitForVisibility(doctorPage.myInpatients, 10);
++            doctorPage.myInpatients.click();
++            Thread.sleep(2000);
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctor_verifies_the_id_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.id, 10);
++            Assert.assertTrue(doctorPage.id.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC001_");
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctor_verifies_the_start_date_of_the_hospitalization_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.startDate, 10);
++            Assert.assertTrue(doctorPage.startDate.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC002_");
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctor_verifies_the_end_date_of_the_hospitalization_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.endDate, 10);
++            Assert.assertTrue(doctorPage.endDate.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC003_");
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctor_verifies_the_status_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.status, 10);
++            Assert.assertTrue(doctorPage.status.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC004_");
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctor_verifies_the_description_written_about_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.description, 10);
++            Assert.assertTrue(doctorPage.description.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC005_");
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctor_verifies_the_created_date_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.createdDate, 10);
++            Assert.assertTrue(doctorPage.createdDate.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC006_");
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctor_verifies_the_room_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.room, 10);
++            Assert.assertTrue(doctorPage.room.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC007_");
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctor_verifies_the_appointment_id_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.appointment, 10);
++            Assert.assertTrue(doctorPage.appointment.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC008_");
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctor_verifies_the_patient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.patient, 10);
++            Assert.assertTrue(doctorPage.patient.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC009_");
++        }
++
++        @When("DocKullanici ID, start and end dates, description, created date,appointment id, status, room and patient bilgilerinin goruntulenebilir oldugunu test eder")
++        public void doctorVerifiesSheCanSeeAllTheInfoOfPatients() throws IOException {
++            WebElement table = Driver.waitForVisibility(doctorPage.entireTable, 10);
++            System.out.println(table.getText());
++            Assert.assertTrue(doctorPage.entireTable.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC010_");
++        }
++
++        @When("doctor closes the application")
++        public void doctor_closes_the_application() throws InterruptedException {
++            doctorPage.doctorName.click();
++            Driver.waitForVisibility(doctorPage.signOut, 10);
++            doctorPage.signOut.click();
++            Thread.sleep(2000);
++        }
++    }
++
++
++
+Index: src/test/java/stepdefinitions/uiSteps/INfo14_UiSteps.java
+===================================================================
+diff --git a/src/test/java/stepdefinitions/uiSteps/INfo14_UiSteps.java b/src/test/java/stepdefinitions/uiSteps/INfo14_UiSteps.java
+new file mode 100644
+--- /dev/null	
++++ b/src/test/java/stepdefinitions/uiSteps/INfo14_UiSteps.java	
+@@ -0,0 +1,159 @@
++package stepdefinitions.uiSteps;
++
++import io.cucumber.java.en.Given;
++import pages.US014_Page;
++
++
++       import io.cucumber.java.en.Given;
++        import io.cucumber.java.en.Then;
++        import io.cucumber.java.en.When;
++        import org.junit.Assert;
++        import org.openqa.selenium.WebElement;
++        import utilities.ConfigurationReader;
++        import utilities.Driver;
++        import utilities.ReusableMethods;
++
++        import java.io.IOException;
++
++public class INfo14_UiSteps {
++
++        US014_Page homePage = new US014_Page();
++        US014_Page loginPage = new US014_Page();
++        US014_Page doctorPage = new US014_Page();
++
++        @Given("doctor goes to Medunna Url")
++        public void doctor_goes_to_medunna_url() {
++            Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
++            try{
++                doctorPage.doctorName.click();
++                Driver.waitForVisibility(doctorPage.signOut, 10);
++                doctorPage.signOut.click();
++                Thread.sleep(2000);
++            }catch(Exception e){
++
++            }
++
++        }
++
++        @When("doctor clicks on the human icon in the upper right corner")
++        public void doctor_clicks_on_the_human_icon_in_the_upper_right_corner() {
++            Driver.waitForVisibility(homePage.userIcon,10);
++            homePage.userIcon.click();
++        }
++
++        @Then("doctor clicks on Sign In")
++        public void doctor_clicks_on_sign_in() {
++            Driver.waitForVisibility(homePage.signInButton,10);
++            homePage.signInButton.click();
++        }
++
++        @Then("doctor enters a valid username")
++        public void doctor_enters_a_valid_username() {
++            loginPage.usernameBox.sendKeys("team83_filizdoctor1");
++        }
++
++        @Then("doctor enters a valid password")
++        public void doctor_enters_a_valid_password() throws InterruptedException {
++            loginPage.passwordBox.sendKeys("filizdoctor1");
++            Thread.sleep(3000);
++        }
++
++        @Then("doctor clicks the Sign In button")
++        public void doctor_clicks_the_sign_in_button() throws InterruptedException {
++            loginPage.signInButton.click();
++            Thread.sleep(3000);
++        }
++
++        @Then("doctor clicks on MY PAGES")
++        public void doctor_clicks_on_my_pages() {
++            Driver.waitForVisibility(doctorPage.myPages, 10);
++            doctorPage.myPages.click();
++        }
++
++        @Then("doctor clicks on My Inpatients")
++        public void doctor_clicks_on_my_inpatients() throws InterruptedException {
++            Driver.waitForVisibility(doctorPage.myInpatients, 10);
++            doctorPage.myInpatients.click();
++            Thread.sleep(2000);
++        }
++
++        @When("doctor verifies the ID of the inpatient is visible")
++        public void doctor_verifies_the_id_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.id, 10);
++            Assert.assertTrue(doctorPage.id.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC001_");
++        }
++
++        @When("doctor verifies the Start Date of the hospitalization of the inpatient is visible")
++        public void doctor_verifies_the_start_date_of_the_hospitalization_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.startDate, 10);
++            Assert.assertTrue(doctorPage.startDate.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC002_");
++        }
++
++        @When("doctor verifies the End Date of the hospitalization of the inpatient is visible")
++        public void doctor_verifies_the_end_date_of_the_hospitalization_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.endDate, 10);
++            Assert.assertTrue(doctorPage.endDate.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC003_");
++        }
++
++        @When("doctor verifies the Status of the inpatient is visible")
++        public void doctor_verifies_the_status_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.status, 10);
++            Assert.assertTrue(doctorPage.status.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC004_");
++        }
++
++        @When("doctor verifies the Description written about the inpatient is visible")
++        public void doctor_verifies_the_description_written_about_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.description, 10);
++            Assert.assertTrue(doctorPage.description.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC005_");
++        }
++
++        @When("doctor verifies the Created Date of the inpatient is visible")
++        public void doctor_verifies_the_created_date_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.createdDate, 10);
++            Assert.assertTrue(doctorPage.createdDate.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC006_");
++        }
++
++        @When("doctor verifies the Room of the inpatient is visible")
++        public void doctor_verifies_the_room_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.room, 10);
++            Assert.assertTrue(doctorPage.room.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC007_");
++        }
++
++        @When("doctor verifies the Appointment ID of the inpatient is visible")
++        public void doctor_verifies_the_appointment_id_of_the_inpatient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.appointment, 10);
++            Assert.assertTrue(doctorPage.appointment.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC008_");
++        }
++
++        @When("doctor verifies the Patient is visible")
++        public void doctor_verifies_the_patient_is_visible() throws IOException {
++            Driver.waitForVisibility(doctorPage.patient, 10);
++            Assert.assertTrue(doctorPage.patient.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC009_");
++        }
++
++        @When("doctor verifies she can see all the info of patients")
++        public void doctorVerifiesSheCanSeeAllTheInfoOfPatients() throws IOException {
++            WebElement table = Driver.waitForVisibility(doctorPage.entireTable, 10);
++            System.out.println(table.getText());
++            Assert.assertTrue(doctorPage.entireTable.isDisplayed());
++            ReusableMethods.getScreenshot("US014_TC010_");
++        }
++
++        @When("doctor closes the application")
++        public void doctor_closes_the_application() throws InterruptedException {
++            doctorPage.doctorName.click();
++            Driver.waitForVisibility(doctorPage.signOut, 10);
++            doctorPage.signOut.click();
++            Thread.sleep(2000);
++        }
++    }
++
+Index: src/test/resources/features/uIFeatures/14_ui.feature
+===================================================================
+diff --git a/src/test/resources/features/uIFeatures/14_ui.feature b/src/test/resources/features/uIFeatures/14_ui.feature
+new file mode 100644
+--- /dev/null	
++++ b/src/test/resources/features/uIFeatures/14_ui.feature	
+@@ -0,0 +1,61 @@
++@myInpatientsInfo
++Feature:Doctor_Views_inPatients_info
++  Background:
++    Given  doctor goes to Medunna Url
++    When   doctor clicks on the human icon in the upper right corner
++    Then   doctor clicks on Sign In
++    And    doctor enters a valid username
++    And    doctor enters a valid password
++    And    doctor clicks the Sign In button
++    And    doctor clicks on MY PAGES
++    Then   doctor clicks on My Inpatients
++
++  Scenario: TC_001_verify_id_is_visible
++    When doctor verifies the ID of the inpatient is visible
++    And doctor closes the application
++    And doctor closes the browser
++
++  Scenario: TC_002_verify_start_date_is_visible
++    When doctor verifies the Start Date of the hospitalization of the inpatient is visible
++    And doctor closes the application
++    And doctor closes the browser
++
++  Scenario: TC_003_verify_end_date_is_visible
++    When doctor verifies the End Date of the hospitalization of the inpatient is visible
++    And doctor closes the application
++    And doctor closes the browser
++
++  Scenario: TC_004_verify_status_is_visible
++    When doctor verifies the Status of the inpatient is visible
++    And doctor closes the application
++    And doctor closes the browser
++
++  Scenario: TC_005_verify_description_is_visible
++    When doctor verifies the Description written about the inpatient is visible
++    And doctor closes the application
++    And doctor closes the browser
++
++  Scenario: TC_006_verify_created_date_is_visible
++    When doctor verifies the Created Date of the inpatient is visible
++    And doctor closes the application
++    And doctor closes the browser
++
++  Scenario: TC_007_verify_room_is_visible
++    When doctor verifies the Room of the inpatient is visible
++    And doctor closes the application
++    And doctor closes the browser
++
++  Scenario: TC_008_verify_appointment_Id_is_visible
++    When doctor verifies the Appointment ID of the inpatient is visible
++    And doctor closes the application
++    And doctor closes the browser
++
++  Scenario: TC_009_verify_patient_is_visible
++    When doctor verifies the Patient is visible
++    And doctor closes the application
++    And doctor closes the browser
++
++  Scenario: TC_010_verify_entire_table_is_visible
++    When doctor verifies she can see all the info of patients
++    And doctor closes the application
++    And doctor closes the browser
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/pages/US014_Page.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/pages/Us14_Page.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US014_UiSteps.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/Us14_UiSteps.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/mehmet.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/utilities/ReusableMethods.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US014_UiTest.feature\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/Us14_UITest.feature\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/configuration.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/configuration.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/runner/Runner.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/runner/Runner.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/pages/US09_Page.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/pages/US09_Page.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/utilities/Driver.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/utilities/Driver.class\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"Interface\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2D7xV3Roi9RJoKU9V6osnpqlTUG\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Git.Branch.Popup.ShowAllRemotes\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.repository.indices\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"stepdefinitions.uiSteps\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Cucumber Java.Feature: Us14_UITest\">\r\n    <configuration name=\"Feature: US012_UiTest\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\r\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Feature: US012_UiTest\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Feature: Us14_UITest\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/Us14_UITest.feature\" />\r\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Feature: Us14_UITest\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC01_BA_Physician_olarak_giris_yapar\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/Us14_UITest.feature\" />\r\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC01_BA_Physician_olarak_giris_yapar$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01_BA_Physician_olarak_giris_yapar$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC01_BA_Physician_olarak_giris_yapar\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/Us14_UITest.feature\" />\r\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: US_014_TC_02_ &quot;Status&quot; doktor tarafindan &quot;UNAPPROVED, DISCHARGED, STILL STAYING veya CANCELLED&quot; olarak güncellenebilmeli\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US014_UiTest.feature\" />\r\n      <option name=\"GLUE\" value=\"Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"NAME_FILTER\" value=\"^US_014_TC_02_ \\&quot;Status\\&quot; doktor tarafindan \\&quot;UNAPPROVED\\, DISCHARGED\\, STILL STAYING veya CANCELLED\\&quot; olarak güncellenebilmeli$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^US_014_TC_02_ \\&quot;Status\\&quot; doktor tarafindan \\&quot;UNAPPROVED\\, DISCHARGED\\, STILL STAYING veya CANCELLED\\&quot; olarak güncellenebilmeli$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: US_014_TC_02_ &quot;Status&quot; doktor tarafindan &quot;UNAPPROVED, DISCHARGED, STILL STAYING veya CANCELLED&quot; olarak güncellenebilmeli\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"untitled\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"untitled\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Cucumber Java.Feature: Us14_UITest\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC01_BA_Physician_olarak_giris_yapar\" />\r\n        <item itemvalue=\"Cucumber Java.Feature: US012_UiTest\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: US_014_TC_02_ &quot;Status&quot; doktor tarafindan &quot;UNAPPROVED, DISCHARGED, STILL STAYING veya CANCELLED&quot; olarak güncellenebilmeli\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\" />\r\n      <created>1660063945726</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1660063945726</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -6,27 +6,15 @@
+   <component name="ChangeListManager">
+     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
+       <change afterPath="$PROJECT_DIR$/src/test/java/pages/US014_Page.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/Us14_Page.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US014_UiSteps.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/Us14_UiSteps.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/mehmet.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/ReusableMethods.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US014_UiTest.feature" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/Us14_UITest.feature" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/INfo14_UiSteps.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/MyInfo14_uiSteps.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US0014_UiSteps.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/14_ui.feature" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/14_uimy.feature" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US014_UiTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US014_UiTest.feature" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/Us14_UITest.feature" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -36,8 +24,8 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="Class" />
+         <option value="Interface" />
++        <option value="Class" />
+       </list>
+     </option>
+   </component>
+@@ -65,28 +53,28 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Git.Branch.Popup.ShowAllRemotes": "true",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
+       <recent name="stepdefinitions.uiSteps" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Cucumber Java.Feature: Us14_UITest">
+-    <configuration name="Feature: US012_UiTest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="Cucumber Java.Feature: 14_ui">
++    <configuration name="Feature: 14_ui" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/14_ui.feature" />
+       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+-      <option name="SUGGESTED_NAME" value="Feature: US012_UiTest" />
++      <option name="SUGGESTED_NAME" value="Feature: 14_ui" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -98,14 +86,14 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Feature: Us14_UITest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Feature: 14_uimy" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/Us14_UITest.feature" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/14_uimy.feature" />
+       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+-      <option name="SUGGESTED_NAME" value="Feature: Us14_UITest" />
++      <option name="SUGGESTED_NAME" value="Feature: 14_uimy" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -117,15 +105,14 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: TC01_BA_Physician_olarak_giris_yapar" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Feature: US014_UiTest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/Us14_UITest.feature" />
+-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US014_UiTest.feature" />
++      <option name="GLUE" value="Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+-      <option name="NAME_FILTER" value="^TC01_BA_Physician_olarak_giris_yapar$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01_BA_Physician_olarak_giris_yapar$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: TC01_BA_Physician_olarak_giris_yapar" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
++      <option name="SUGGESTED_NAME" value="Feature: US014_UiTest" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -137,15 +124,15 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Scenario: TC_011_verify_Unapproved_inpatients'_description_can_be_changed" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/Us14_UITest.feature" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/14_uimy.feature" />
+       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+-      <option name="NAME_FILTER" value="^TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler" />
++      <option name="NAME_FILTER" value="^TC_011_verify_Unapproved_inpatients\'_description_can_be_changed$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_011_verify_Unapproved_inpatients\'_description_can_be_changed$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: TC_011_verify_Unapproved_inpatients'_description_can_be_changed" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -157,15 +144,15 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: US_014_TC_02_ &quot;Status&quot; doktor tarafindan &quot;UNAPPROVED, DISCHARGED, STILL STAYING veya CANCELLED&quot; olarak güncellenebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Scenario: US_014_TC_01_ &quot;Doktor&quot;&quot;ID, start and end dates, description, created date  appointment id, status, room and patient&quot;&quot; bilgilerini görüntülüyebilmeli ve günceleyebilmeli&quot;" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US014_UiTest.feature" />
+-      <option name="GLUE" value="Hooks" />
++      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+-      <option name="NAME_FILTER" value="^US_014_TC_02_ \&quot;Status\&quot; doktor tarafindan \&quot;UNAPPROVED\, DISCHARGED\, STILL STAYING veya CANCELLED\&quot; olarak güncellenebilmeli$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^US_014_TC_02_ \&quot;Status\&quot; doktor tarafindan \&quot;UNAPPROVED\, DISCHARGED\, STILL STAYING veya CANCELLED\&quot; olarak güncellenebilmeli$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: US_014_TC_02_ &quot;Status&quot; doktor tarafindan &quot;UNAPPROVED, DISCHARGED, STILL STAYING veya CANCELLED&quot; olarak güncellenebilmeli" />
++      <option name="NAME_FILTER" value="^US_014_TC_01_ \&quot;Doktor\&quot;\&quot;ID\, start and end dates\, description\, created date  appointment id\, status\, room and patient\&quot;\&quot; bilgilerini görüntülüyebilmeli ve günceleyebilmeli\&quot;$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^US_014_TC_01_ \&quot;Doktor\&quot;\&quot;ID\, start and end dates\, description\, created date  appointment id\, status\, room and patient\&quot;\&quot; bilgilerini görüntülüyebilmeli ve günceleyebilmeli\&quot;$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: US_014_TC_01_ &quot;Doktor&quot;&quot;ID, start and end dates, description, created date  appointment id, status, room and patient&quot;&quot; bilgilerini görüntülüyebilmeli ve günceleyebilmeli&quot;" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -192,11 +179,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Cucumber Java.Feature: Us14_UITest" />
+-        <item itemvalue="Cucumber Java.Scenario: TC01_BA_Physician_olarak_giris_yapar" />
+-        <item itemvalue="Cucumber Java.Feature: US012_UiTest" />
+-        <item itemvalue="Cucumber Java.Scenario: TC03_BA_ID_StartDate_EndDate_Status_CreatedDate_Room_AppointmentID_goruntuler" />
+-        <item itemvalue="Cucumber Java.Scenario: US_014_TC_02_ &quot;Status&quot; doktor tarafindan &quot;UNAPPROVED, DISCHARGED, STILL STAYING veya CANCELLED&quot; olarak güncellenebilmeli" />
++        <item itemvalue="Cucumber Java.Feature: 14_ui" />
++        <item itemvalue="Cucumber Java.Feature: 14_uimy" />
++        <item itemvalue="Cucumber Java.Scenario: TC_011_verify_Unapproved_inpatients'_description_can_be_changed" />
++        <item itemvalue="Cucumber Java.Scenario: US_014_TC_01_ &quot;Doktor&quot;&quot;ID, start and end dates, description, created date  appointment id, status, room and patient&quot;&quot; bilgilerini görüntülüyebilmeli ve günceleyebilmeli&quot;" />
++        <item itemvalue="Cucumber Java.Feature: US014_UiTest" />
+       </list>
+     </recent_temporary>
+   </component>
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>org.example</groupId>\r\n    <artifactId>MedunnaSon</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n\r\n    <properties>\r\n        <maven.compiler.source>11</maven.compiler.source>\r\n        <maven.compiler.target>11</maven.compiler.target>\r\n    </properties>\r\n\r\n\r\n\r\n\r\n    <dependencies>\r\n        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->\r\n        <dependency>\r\n            <groupId>org.seleniumhq.selenium</groupId>\r\n            <artifactId>selenium-java</artifactId>\r\n            <version>4.1.1</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>com.fasterxml.jackson.core</groupId>\r\n            <artifactId>jackson-databind</artifactId>\r\n            <version>2.9.8</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>io.rest-assured</groupId>\r\n            <artifactId>rest-assured</artifactId>\r\n            <version>4.3.0</version>\r\n        </dependency>\r\n\r\n        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->\r\n        <dependency>\r\n            <groupId>io.github.bonigarcia</groupId>\r\n            <artifactId>webdrivermanager</artifactId>\r\n            <version>5.0.3</version>\r\n        </dependency>\r\n        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->\r\n        <dependency>\r\n            <groupId>org.apache.poi</groupId>\r\n            <artifactId>poi</artifactId>\r\n            <version>5.2.2</version>\r\n        </dependency>\r\n        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->\r\n        <dependency>\r\n            <groupId>org.apache.poi</groupId>\r\n            <artifactId>poi-ooxml</artifactId>\r\n            <version>5.2.2</version>\r\n        </dependency>\r\n        <!--        a library to generate fake data when needed-->\r\n        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->\r\n        <dependency>\r\n            <groupId>com.github.javafaker</groupId>\r\n            <artifactId>javafaker</artifactId>\r\n            <version>1.0.2</version>\r\n        </dependency>\r\n\r\n        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->\r\n        <dependency>\r\n            <groupId>io.cucumber</groupId>\r\n            <artifactId>cucumber-java</artifactId>\r\n            <version>7.2.3</version>\r\n        </dependency>\r\n        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->\r\n        <dependency>\r\n            <groupId>io.cucumber</groupId>\r\n            <artifactId>cucumber-junit</artifactId>\r\n            <version>7.2.3</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->\r\n        <dependency>\r\n            <groupId>org.apache.commons</groupId>\r\n            <artifactId>commons-compress</artifactId>\r\n            <version>1.20</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.apache.poi</groupId>\r\n            <artifactId>poi</artifactId>\r\n            <version>4.0.1</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.apache.poi</groupId>\r\n            <artifactId>poi-ooxml</artifactId>\r\n            <version>4.0.1</version>\r\n        </dependency>\r\n        <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->\r\n        <dependency>\r\n            <groupId>com.itextpdf</groupId>\r\n            <artifactId>itextpdf</artifactId>\r\n            <version>5.4.2</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>com.fasterxml.jackson.core</groupId>\r\n            <artifactId>jackson-databind</artifactId>\r\n            <version>2.9.8</version>\r\n        </dependency>\r\n\r\n\r\n        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;-->\r\n        <!--        <dependency>-->\r\n        <!--            <groupId>tech.grasshopper</groupId>-->\r\n        <!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->\r\n        <!--            <version>1.2.0</version>-->\r\n        <!--        </dependency>-->\r\n\r\n\r\n        <dependency>\r\n            <groupId>org.postgresql</groupId>\r\n            <artifactId>postgresql</artifactId>\r\n            <version>42.2.8</version>\r\n        </dependency>\r\n\r\n\r\n    </dependencies>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-failsafe-plugin</artifactId>\r\n                <version>3.0.0-M1</version>\r\n                <configuration>\r\n                    <testFailureIgnore>true</testFailureIgnore>\r\n                    <skipTests>false</skipTests>\r\n                    <includes>\r\n                        <include>**/runners/*TestRunner*.java</include>\r\n                    </includes>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-surefire-plugin</artifactId>\r\n                <version>3.0.0-M1</version>\r\n                <configuration>\r\n                    <parallel>classes</parallel>\r\n                    <forkMode>perthread</forkMode>\r\n                    <threadCount>2</threadCount>\r\n                    <reuseForks>false</reuseForks>\r\n                    <argLine>-Duser.language=en</argLine>\r\n                    <argLine>-Xmx1024m</argLine>\r\n                    <argLine>-XX:MaxPermSize=256m</argLine>\r\n                    <argLine>-Dfile.encoding=UTF-8</argLine>\r\n                    <useFile>false</useFile>\r\n                    <includes>\r\n                        <include>**/runners/*TestRunner*.java</include>\r\n                    </includes>\r\n                    <testFailureIgnore>true</testFailureIgnore>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>net.masterthought</groupId>\r\n                <artifactId>maven-cucumber-reporting</artifactId>\r\n                <version>5.0.0</version>\r\n                <executions>\r\n                    <execution>\r\n                        <id>execution</id>\r\n                        <phase>verify</phase>\r\n                        <goals>\r\n                            <goal>generate</goal>\r\n                        </goals>\r\n                        <configuration>\r\n                            <projectName>cucumber-framework</projectName>\r\n                            <outputDirectory>${project.build.directory}</outputDirectory>\r\n                            <!--                            <cucumberOutput>${project.build.directory}</cucumberOutput>-->\r\n                            <inputDirectory>${project.build.directory}</inputDirectory>\r\n                            <jsonFiles>\r\n                                <param>**/json-reports/*.json</param>\r\n                            </jsonFiles><classificationFiles>->\r\n                            <param>sample.properties</param>\r\n                            <param>other.properties</param>\r\n                        </classificationFiles>\r\n                        </configuration>\r\n                    </execution>\r\n                </executions>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	
++++ b/pom.xml	
+@@ -17,6 +17,57 @@
+ 
+ 
+     <dependencies>
++        <dependency>
++            <groupId>org.seleniumhq.selenium</groupId>
++            <artifactId>selenium-java</artifactId>
++            <version>4.1.3</version>
++        </dependency>
++        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
++        <dependency>
++            <groupId>io.github.bonigarcia</groupId>
++            <artifactId>webdrivermanager</artifactId>
++            <version>5.1.0</version>
++        </dependency>
++
++        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
++        <dependency>
++            <groupId>com.github.javafaker</groupId>
++            <artifactId>javafaker</artifactId>
++            <version>1.0.2</version>
++        </dependency>
++        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
++        <dependency>
++            <groupId>org.apache.poi</groupId>
++            <artifactId>poi</artifactId>
++            <version>5.2.2</version>
++        </dependency>
++        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
++        <dependency>
++            <groupId>org.apache.poi</groupId>
++            <artifactId>poi-ooxml</artifactId>
++            <version>5.2.2</version>
++        </dependency>
++        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
++        <dependency>
++            <groupId>org.apache.logging.log4j</groupId>
++            <artifactId>log4j-core</artifactId>
++            <version>2.17.1</version>
++        </dependency>
++
++        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
++        <dependency>
++            <groupId>org.testng</groupId>
++            <artifactId>testng</artifactId>
++            <version>7.5</version>
++            <scope>test</scope>
++        </dependency>
++        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
++        <dependency>
++            <groupId>com.aventstack</groupId>
++            <artifactId>extentreports</artifactId>
++            <version>4.0.9</version>
++        </dependency>
++
+         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+         <dependency>
+             <groupId>org.seleniumhq.selenium</groupId>
+Index: src/test/java/pages/US014_Page.java
+===================================================================
+diff --git a/src/test/java/pages/US014_Page.java b/src/test/java/pages/US014_Page.java
+new file mode 100644
+--- /dev/null	
++++ b/src/test/java/pages/US014_Page.java	
+@@ -0,0 +1,198 @@
++package pages;
++
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.support.FindBy;
++import org.openqa.selenium.support.PageFactory;
++import utilities.Driver;
++
++import static java.awt.SystemColor.menu;
++
++public class US014_Page {
++    public  US014_Page(){
++    PageFactory.initElements(Driver.getDriver(), this);
++
++}
++
++
++
++    /* ***************************************************************************/
++
++
++
++        //note:web elements of  doctor home page
++
++        @FindBy(xpath = "//a[@href='#']")
++        public WebElement myPages;
++
++        @FindBy(xpath = "(//a[@href='/ps-in-patient'])[1]")
++        public WebElement myInpatients;
++
++        //note:web elements of my inpatients page
++
++        @FindBy(xpath = "(//tbody/tr/td)[1]")
++        public WebElement id;
++
++        @FindBy(xpath = "(//tbody/tr/td)[2]")
++        public WebElement startDate;
++
++        @FindBy(xpath = "(//tbody/tr/td)[3]")
++        public WebElement endDate;
++
++        @FindBy(xpath = "(//tbody/tr/td)[4]")
++        public WebElement status;
++
++        @FindBy(xpath = "(//tbody/tr/td)[5]")
++        public WebElement description;
++
++        @FindBy(xpath = "(//tbody/tr/td)[6]")
++        public WebElement createdDate;
++
++        @FindBy(xpath = "(//tbody/tr/td)[7]")
++        public WebElement room;
++
++        @FindBy(xpath = "(//tbody/tr/td)[8]")
++        public WebElement appointment;
++
++        @FindBy(xpath = "(//tbody/tr/td)[9]")
++        public WebElement patient;
++
++        @FindBy(xpath = "//table[@class='table']")
++        public WebElement entireTable;
++
++        @FindBy(xpath = "(//span)[37]")
++        public WebElement edit;
++
++        @FindBy(xpath = "(//span)[15]")
++        public WebElement doctorName;
++
++        @FindBy(xpath = "//a[@href='/logout']")
++        public WebElement signOut;
++
++
++//note: web elements of updating page
++
++        @FindBy(xpath = "//input[@name='description']")
++        public WebElement descriptionBox;
++
++        @FindBy(xpath = "//input[@id='in-patient-createdDate']")
++        public WebElement createdDateEdit;
++
++        @FindBy(xpath = "//select[@id='in-patient-status']")
++        public WebElement statusEdit;
++
++        @FindBy(xpath = "//select[@id='in-patient-room']")
++        public WebElement roomEdit;
++
++        @FindBy(xpath = "//button[@id='save-entity']")
++        public WebElement save;
++
++        @FindBy(xpath = "//*[contains (text(),'The In Patient is updated with identifier')]")
++        public WebElement updatedMessage;
++
++        @FindBy(xpath = "//*[contains (text(),'InPatient status can not be changed ')]")
++        public WebElement canNotBeUpdatedMessage;
++
++        @FindBy(xpath = "//*[contains (text(),'Such a room not found')]")
++        public WebElement suchARoomNotFoundMessage;
++
++        @FindBy(xpath = "//*[contains (text(),'The room already reserved')]")
++        public WebElement theRoomAlreadyReservedMessage;
++
++
++     /* **********************************************************/
++
++    @FindBy(xpath = "//a[@class='appointment-btn scrollto']")
++    public WebElement makeAnAppointment;
++    @FindBy(xpath = "//*[@data-icon='user']")
++    public WebElement userIcon;
++    @FindBy(xpath = "//*[text()='Register']")
++    public WebElement registerButton;
++    @FindBy(xpath = "//*[text()='Sign in']")
++    public WebElement signInButton;
++    @FindBy(xpath = "//*[@id='entity-menu']")
++    public WebElement itemsAndTitlesButton;
++    @FindBy(xpath = "//a[@href='/patient']")
++    public WebElement patientButton;
++
++    @FindBy(xpath = "//*[@id='account-menu']")
++    public WebElement profil;
++
++    @FindBy(xpath = "//div[@class='invalid-feedback']")
++    public WebElement invalidmessage;
++
++    @FindBy(linkText = "SIGN IN AGAIN")
++    public WebElement signInAgain;
++    @FindBy(xpath = "//*[@id='hero']/div/h1")
++    public WebElement homePage;
++    @FindBy(xpath = "//button[@type='submit']")
++    public WebElement signInBox;
++    @FindBy(xpath = "(//span)[10]")
++    public WebElement contact;
++
++
++
++    @FindBy(xpath = "//a[@aria-haspopup=\"true\"]")
++    public WebElement icon;
++    @FindBy(xpath = "//div[@class=\"container\"]//h1")
++    public WebElement welcomeToMedunnaText;
++
++
++/* ******************************************************/
++
++
++    @FindBy(xpath = "//*[@id='login-item']/span")
++    public WebElement signInLocation;
++
++    @FindBy(xpath = "//input[@name='username']")
++    public WebElement usernameBox;
++
++    @FindBy(xpath = "//input[@name='password']")
++    public WebElement passwordBox;
++
++    @FindBy(xpath = "//button[@type='submit']")
++    public WebElement ssignInButton;
++
++    @FindBy(id="account-menu")
++    public WebElement signInAndRegistrationPortal;
++
++    @FindBy(id="login-item")
++    public WebElement signIn;
++
++
++    @FindBy(xpath = "//*[@id='account-menu']")
++    public WebElement signedInUserName;
++
++    @FindBy(xpath = "//input[@name='rememberMe']")
++    public WebElement rememberMeBox;
++
++    @FindBy(xpath = "//a[@class='dropdown-item'][3]")
++    public WebElement signOutButton;
++
++    @FindBy(xpath = "//*[text()='Team83-kubraoz']")
++    public WebElement shownUserName;
++
++    @FindBy(xpath = "//div[@class='alert alert-danger fade show']")
++    public WebElement failedToSignInAlert;
++
++    @FindBy(xpath = "//*[@id='login-page']/div/form/div[2]/div[3]/a/span")
++    public WebElement didYouForgetPasswd;
++
++    @FindBy(xpath = "//*[@id='login-page']/div/form/div[2]/div[4]/a")
++    public WebElement registerNewAccount;
++
++    @FindBy(xpath="//button[@class='btn btn-secondary']")
++    public WebElement cancelButton;
++
++    @FindBy(xpath = "//h5[@class=\"modal-title\"]//span")
++    public WebElement signInText;
++
++
++}
++
++
++
++
++
++
++
++
