@@ -30,13 +30,13 @@ public class Room1Post {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Integer getPrice() {
+    public int getPrice() {
         return price;
     }
     public void setPrice(Integer price) {
         this.price = price;
     }
-    public Integer getRoomNumber() {
+    public int getRoomNumber() {
         return roomNumber;
     }
     public void setRoomNumber(Integer roomNumber) {
