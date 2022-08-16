@@ -31,14 +31,14 @@ public class US014_UiSteps{
 
     @Given("BA Account butonuna tiklar")
     public void ba_account_butonuna_tiklar()  {
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.accountMenu.click();
 
     }
 
     @Given("BA Sign in butonuna tiklar")
     public void ba_sign_in_butonuna_tiklar() {
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.SigninButon1.click();
 
     }
@@ -53,14 +53,14 @@ public class US014_UiSteps{
 
     @Then("BA Sign in butonuna tiklar ve giris yapar")
     public void ba_sign_in_butonuna_tiklar_ve_giris_yapar() {
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.SigninButon2.click();
 
     }
 
     @When("BA MY PAGES butonuna tiklar")
     public void ba_my_pages_butonuna_tiklar() {
-        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitFor(1);
         usondort.mypages.click();
 
     }
@@ -74,7 +74,7 @@ public class US014_UiSteps{
 
     @Then("BA In Patients basligi gorulur")
     public void ba_in_patients_basligi_gorulur()  {
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         System.out.println(usondort.InPatientsYazisi.getText());
         Assert.assertTrue(usondort.InPatientsYazisi.isDisplayed());
 
@@ -130,7 +130,7 @@ public class US014_UiSteps{
 
     @Then("BA Edit butonuna tiklar")
     public void ba_edit_butonuna_tiklar() {
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.Edit.click();
 
     }
@@ -138,7 +138,7 @@ public class US014_UiSteps{
     @Then("BA Description bolumunu gunceller")
     public void ba_description_bolumunu_gunceller() throws InterruptedException {
 
-        ReusableMethods.waitFor(1);
+      //  ReusableMethods.waitFor(1);
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,250)");
         usondort.EditPageDescription.clear();
@@ -149,7 +149,7 @@ public class US014_UiSteps{
     }
     @Then("BA Created Date bolumunu gunceller")
     public void ba_created_date_bolumunu_gunceller() {
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.EditPageCreatedDate.sendKeys("08/08/2022");
     }
 
@@ -169,7 +169,7 @@ public class US014_UiSteps{
     }
     @Then("BA Save butonuna tiklar")
     public void ba_save_butonuna_tiklar() {
-        ReusableMethods.waitForClickablility(usondort.EditPageSave,5);
+        usondort.EditPageSave.click();
 
 
 
@@ -181,19 +181,19 @@ public class US014_UiSteps{
     @Given("BA Create or edit sayfasinda ID bolumunu gunceller")
     public void ba_create_or_edit_sayfasinda_id_bolumunu_gunceller() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.accountMenu.click();
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.SigninButon1.click();
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.username.sendKeys(ConfigurationReader.getProperty("username"));
         usondort.password.sendKeys(ConfigurationReader.getProperty("password"));
         usondort.SigninButon2.click();
-        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitFor(1);
         usondort.mypages.click();
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.MyInpatients.click();
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.Edit.click();
 
     }
@@ -202,11 +202,11 @@ public class US014_UiSteps{
     public void ba_create_or_edit_sayfasinda_id_start_date_end_date_appointment_patient_bolumunu_gunceller() throws InterruptedException {
         Thread.sleep(2000);
         usondort.EditPageID.sendKeys("6060");
-        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitFor(1);
         usondort.EditPageStartDate.sendKeys("7070");
-        ReusableMethods.waitFor(1);
+       // ReusableMethods.waitFor(1);
         usondort.EditPageEndDate.sendKeys("8080");
-        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitFor(1);
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,365)");
         usondort.EditPageAppointment.click();
@@ -217,7 +217,7 @@ public class US014_UiSteps{
 
     @Then("BA Sayfayi kapatir")
     public void ba_sayfayi_kapatir() {
-        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitFor(1);
         Driver.closeDriver();
     }
 
