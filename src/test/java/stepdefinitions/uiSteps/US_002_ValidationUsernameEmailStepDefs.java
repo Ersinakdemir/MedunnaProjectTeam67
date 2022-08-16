@@ -24,7 +24,7 @@ public class US_002_ValidationUsernameEmailStepDefs {
 
     @Given("user navigates to url US002")
     public void user_navigates_to_url_US002() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
         try{
             adminHomePage.adminAdminLast.click();
             adminHomePage.signOut.click();

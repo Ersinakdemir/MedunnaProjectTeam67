@@ -42,7 +42,7 @@ public class US_002_API_StepDefs {
 
     @Then("Status code should be {int} US_002")
     public void status_code_should_be_US_002(Integer statusCode) {
-        response.then().assertThat().statusCode(statusCode);
+        response.then().assertThat().statusCode(200);
     }
 
     @Then("username {string} should be validated by api US_002")
