@@ -24,7 +24,7 @@ public class US_002_DB_StepDefs {
 
         string= readFile(ConfigurationReader.getProperty("US_002_applicant_data"));
         String [] registrantData= string.split("'");
-        String email= registrantData[5];
+        String email= registrantData[20];
         List<Object> expectedData=new ArrayList<>();
         expectedData.add(email.toLowerCase());
 //        expectedData.add(email);

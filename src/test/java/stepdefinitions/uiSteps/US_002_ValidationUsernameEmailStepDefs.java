@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.HomePage;
 import pages.US_002_RegistrationPage;
-import pages.US_028_AdminHomePage;
+import pages.US_02_AdminHomePage;
 import pojos.US_002_RegistrantPojo;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -20,7 +20,7 @@ public class US_002_ValidationUsernameEmailStepDefs {
     US_002_RegistrationPage registerPage= new US_002_RegistrationPage();
     US_002_RegistrantPojo registrant= new US_002_RegistrantPojo(); //Pojo class
     Faker faker= new Faker();
-    US_028_AdminHomePage adminHomePage= new US_028_AdminHomePage();
+    US_02_AdminHomePage adminHomePage= new US_02_AdminHomePage();
 
     @Given("user navigates to url US002")
     public void user_navigates_to_url_US002() {
