@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
 
-    <list default="true" id="a33cb613-bb5c-4852-9653-bce919bbd6b3" name="Changes" comment="">
-
-    <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
-
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="okan" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,6 +33,11 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/utilities/Authentication.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/utilities/ApiUtils.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JQLSearcherProjectManager">
     <selected>-1</selected>
@@ -51,6 +52,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2D7xV3Roi9RJoKU9V6osnpqlTUG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,18 +69,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
 
-    <configuration name="Feature: US006_UITest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MedunnaSon" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-
-      <option name="SUGGESTED_NAME" value="Feature: US09_UITest" />
-
-      <option name="SUGGESTED_NAME" value="Feature: US006_UITest" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
 
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
@@ -90,25 +93,6 @@
       </method>
     </configuration>
 
-    <configuration name="Scenario: Kullanici tüm hasta bilgilerini test edebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US09_UITest.feature" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^Kullanici tüm hasta bilgilerini test edebilmeli$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Kullanici tüm hasta bilgilerini test edebilmeli$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Kullanici tüm hasta bilgilerini test edebilmeli" />
-
-    <configuration name="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir" />
-
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -121,44 +105,6 @@
       </method>
     </configuration>
 
-    <configuration name="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-
-    <configuration name="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir." type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MedunnaSon" />
-
-      <option name="NAME_FILTER" value="^TC001 Doktorun hasta icin test isteyebilmeli$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC001 Doktorun hasta icin test isteyebilmeli$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
-
-      <option name="NAME_FILTER" value="^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir\.$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir\.$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir." />
-
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: TC02 &quot;Firstname, Lastname ve Email&quot; guncelleme secenegi olmalidir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC02 \&quot;Firstname\, Lastname ve Email\&quot; guncelleme secenegi olmalidir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 \&quot;Firstname\, Lastname ve Email\&quot; guncelleme secenegi olmalidir$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC02 &quot;Firstname, Lastname ve Email&quot; guncelleme secenegi olmalidir" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -200,17 +146,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: TC02 &quot;Firstname, Lastname ve Email&quot; guncelleme secenegi olmalidir" />
-        <item itemvalue="Cucumber Java.Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir" />
-        <item itemvalue="Cucumber Java.Feature: US006_UITest" />
-        <item itemvalue="Cucumber Java.Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir." />
-        <item itemvalue="JUnit.Runner" />
-
-        <item itemvalue="Cucumber Java.Feature: US09_UITest" />
-        <item itemvalue="Cucumber Java.Scenario: Kullanici tüm hasta bilgilerini test edebilmeli" />
-        <item itemvalue="Cucumber Java.Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" />
-        <item itemvalue="Cucumber Java.Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
-
 
       </list>
     </recent_temporary>
@@ -218,7 +153,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a33cb613-bb5c-4852-9653-bce919bbd6b3" name="Changes" comment="" />
+
       <created>1660063945726</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
