@@ -1,4 +1,4 @@
-@DBAppointmentTest
+@DBAppointmentTest @E2E
 Feature: DB Appointment test
 
   Scenario: db validation
