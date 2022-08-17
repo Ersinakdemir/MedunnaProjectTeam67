@@ -1,4 +1,4 @@
-@US001_YeniKayit
+@US001_YeniKayit @smoke
 
 Feature: Yeni kayit olusturulabilinmeli
 
