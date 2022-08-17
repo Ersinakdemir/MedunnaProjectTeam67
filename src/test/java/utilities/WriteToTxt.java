@@ -1,6 +1,7 @@
 package utilities;
 
-import pojos.Appointment;
+
+import pojos.Appointment1;
 import pojos.AppointmentRequest;
 import pojos.Physician;
 import pojos.Registrant;
@@ -36,7 +37,7 @@ public class WriteToTxt {
 
     }
 
-    public static void saveAppointData(Appointment appointment){
+    public static void saveAppointData(Appointment1 appointment){
 
         try{
 
