@@ -6,9 +6,9 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/.idea/workspace.xml b/.idea/workspace.xml
---- a/.idea/workspace.xml	(revision b5b94a63dde28ae1a8f1064d0f98404698bf27a9)
-+++ b/.idea/workspace.xml	(date 1660248681775)
-@@ -4,17 +4,17 @@
+--- a/.idea/workspace.xml	(revision 46a5217ca46a1dd708f98d911eb6636c0f250b1e)
++++ b/.idea/workspace.xml	(date 1660588788513)
+@@ -4,17 +4,22 @@
      <option name="autoReloadType" value="SELECTIVE" />
    </component>
    <component name="ChangeListManager">
@@ -17,86 +17,108 @@ diff --git a/.idea/workspace.xml b/.idea/workspace.xml
 -      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
 -      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java" afterDir="false" />
 -      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" afterDir="false" />
--      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
--      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
--      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" afterDir="false" />
--      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
--      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" afterDir="false" />
--      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" afterDir="false" />
-+    <list default="true" id="25aead03-b90b-4d58-98ea-b0050c174a45" name="Changes" comment="">
-+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/US007_Page.java" afterDir="false" />
-+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java" afterDir="false" />
-+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US007_Api.feature" afterDir="false" />
-+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/dBFeatures/US007_DBTest.feature" afterDir="false" />
-+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US007_UITest.feature" afterDir="false" />
++    <list default="true" id="a33cb613-bb5c-4852-9653-bce919bbd6b3" name="Changes" comment="">
 +      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" afterDir="false" />
 +      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" afterDir="false" />
 +      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" afterDir="false" />
 +      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" afterDir="false" />
 +      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US09_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US09_Page.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US09_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US09_UiSteps.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US09_UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US09_UITest.feature" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US09_UITest.feature" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" beforeDir="false" />
      </list>
      <option name="SHOW_DIALOG" value="false" />
      <option name="HIGHLIGHT_CONFLICTS" value="true" />
-Index: src/test/java/pages/US007_Page.java
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
-diff --git a/src/test/java/pages/US007_Page.java b/src/test/java/pages/US007_Page.java
-new file mode 100644
---- /dev/null	(date 1660248524786)
-+++ b/src/test/java/pages/US007_Page.java	(date 1660248524786)
-@@ -0,0 +1,33 @@
-+package pages;
-+
-+import org.openqa.selenium.WebElement;
-+import org.openqa.selenium.support.FindBy;
-+
-+public class US007_Page {
-+
-+
-+    @FindBy(xpath = "//input[@id='firstName']")
-+    public WebElement AppointmentFirstNameTextBox;
-+
-+    @FindBy(xpath = "//input[@id='lastName']")
-+    public WebElement AppointmentLastNameTextBox;
-+
-+    @FindBy(xpath = "//input[@id='ssn']")
-+    public WebElement AppointmentSSNTextBox;
-+
-+    @FindBy(xpath = "//input[@id='email']")
-+    public WebElement AppointmentEmailTextBox;
-+
-+    @FindBy(xpath = "//input[@id='phone']")
-+    public WebElement AppointmentPhoneTextBox;
-+
-+    @FindBy(xpath = "//input[@id='appoDate']")
-+    public WebElement AppointmentDateTimeTextBox;
-+
-+    @FindBy(xpath = "//button[@id='register-submit']")
-+    public WebElement AppointmentRegisterButton;
-+
-+    @FindBy(xpath = "//*[contains(text(), 'Appointment registration saved!')]")
-+    public WebElement AppointmentToastContainerMassage;
-+
-+}
-Index: src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
-diff --git a/src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java b/src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java
-new file mode 100644
---- /dev/null	(date 1660248524822)
-+++ b/src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java	(date 1660248524822)
-@@ -0,0 +1,4 @@
-+package stepdefinitions.apiSteps;
-+
-+public class US007_ApiSteps {
-+}
-diff --git a/src/test/resources/features/apiFeatures/US007_Api.feature b/src/test/resources/features/apiFeatures/US007_Api.feature
-new file mode 100644
-diff --git a/src/test/resources/features/dBFeatures/US007_DBTest.feature b/src/test/resources/features/dBFeatures/US007_DBTest.feature
-new file mode 100644
-diff --git a/src/test/resources/features/uIFeatures/US007_UITest.feature b/src/test/resources/features/uIFeatures/US007_UITest.feature
-new file mode 100644
+@@ -62,15 +67,14 @@
+     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+   </component>
+   <component name="RunManager" selected="JUnit.Runner">
+-    <configuration name="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Feature: US09_UITest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US09_UITest.feature" />
+       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+-      <option name="NAME_FILTER" value="^TC001 Doktorun hasta icin test isteyebilmeli$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC001 Doktorun hasta icin test isteyebilmeli$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
++      <option name="SUGGESTED_NAME" value="Feature: US09_UITest" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -82,15 +86,14 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Scenario: Kullanici tüm hasta bilgilerini test edebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
+-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US09_UITest.feature" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+-      <option name="NAME_FILTER" value="^TC002 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC002 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
++      <option name="NAME_FILTER" value="^Kullanici tüm hasta bilgilerini test edebilmeli$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Kullanici tüm hasta bilgilerini test edebilmeli$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: Kullanici tüm hasta bilgilerini test edebilmeli" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -102,15 +105,15 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
+       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+-      <option name="NAME_FILTER" value="^TC003 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC003 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
++      <option name="NAME_FILTER" value="^TC001 Doktorun hasta icin test isteyebilmeli$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC001 Doktorun hasta icin test isteyebilmeli$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -173,17 +176,17 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="JUnit.Runner" />
++        <item itemvalue="Cucumber Java.Feature: US09_UITest" />
++        <item itemvalue="Cucumber Java.Scenario: Kullanici tüm hasta bilgilerini test edebilmeli" />
+         <item itemvalue="Cucumber Java.Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" />
+         <item itemvalue="Cucumber Java.Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
+-        <item itemvalue="Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+-        <item itemvalue="Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+       </list>
+     </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="" />
++      <changelist id="a33cb613-bb5c-4852-9653-bce919bbd6b3" name="Changes" comment="" />
+       <created>1660063945726</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
