@@ -110,4 +110,19 @@ public class US006_UISteps {
 
 
     }
+    @Then("Kullanici ilk kayit bilgilerini girerek tekar save yapar")
+    public void kullanici_ilk_kayit_bilgilerini_girerek_tekar_save_yapar() {
+        pages.settingsFirstNameKutusu.click();
+        pages.settingsFirstNameKutusu.clear();
+        pages.settingsFirstNameKutusu.sendKeys("UserMurat44");
+        pages.settingsLastNameKutusu.click();
+        pages.settingsLastNameKutusu.clear();
+        pages.settingsLastNameKutusu.sendKeys("Murat");
+        pages.settingsEmailKutusu.click();
+        pages.settingsEmailKutusu.clear();
+        pages.settingsEmailKutusu.sendKeys("usermurat@gmail.com");
+        pages.settingsSaveButonu.click();
+
+
+    }
 }

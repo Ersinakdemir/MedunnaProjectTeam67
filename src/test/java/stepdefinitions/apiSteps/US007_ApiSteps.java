@@ -9,7 +9,8 @@ import io.restassured.http.ContentType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.response.Response;
 import org.junit.Assert;
-import pojos.Appointment;
+
+import pojos.Appointment1;
 import pojos.AppointmentRequest;
 import utilities.ConfigurationReader;
 
@@ -115,7 +116,7 @@ public class US007_ApiSteps {
     @Then("AD user verify  API data")
     public void ad_user_verify_api_data() throws IOException {
         ObjectMapper obj = new ObjectMapper();
-        Appointment actualAppointment = obj.readValue(response.asString(),Appointment.class);
+        Appointment1 actualAppointment = obj.readValue(response.asString(),Appointment1.class);
         saveAppointData(actualAppointment);
 
         System.out.println("Actual Data: " + actualAppointment);

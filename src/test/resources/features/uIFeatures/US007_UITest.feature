@@ -1,4 +1,4 @@
-
+@E2E @smoke
 Feature: US07_Test Make An Appointment
   Background:
     Given user navigate to medunna page
