@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.847">
+    <testcase classname="US_09         Staff (Personel)," name="Staff (Personel)hasta bilgilerini görebilmeli" time="15.389">
+        <system-out>
+            <![CDATA[Given "medunna.com" sayfasina gidilir.......................................passed
+When Sing in segmesinden Staff olarak baglanilir............................passed
+Then My Pages sekmesine tiklanip............................................passed
+And In Patient e tiklanir...................................................passed
+And Gidilen sayfada Hasta bilgilerinin Görünür oldugu nu test eder..........passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
