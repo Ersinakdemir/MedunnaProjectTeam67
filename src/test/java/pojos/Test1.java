@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 
-public class Test {
+public class Test1 {
 
     /*  {
           "createdBy": "medunnaadmin",
