@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.62">
+    <testcase classname="Admin olarak; Country oluşturma / Okuma ve Silme" name="Kullanıcı yeni bir ülke oluşturabilir" time="9.373">
+        <system-out>
+            <![CDATA[Given Kullanici  Medunna sayfasina gider....................................passed
+Then Kullanici  giris simgesini tiklar......................................passed
+And Kullanici  acilan menuden sign in i tiklar..............................passed
+And Kullanici  Kullanici ismini girer.......................................passed
+And Kullanici  Kullanici sifresini girer....................................passed
+And Kullanici  sign in i butonunu tiklayarak kullanici sayfasina baglanir...passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
