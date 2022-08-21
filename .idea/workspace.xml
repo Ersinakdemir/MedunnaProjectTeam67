@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a33cb613-bb5c-4852-9653-bce919bbd6b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" afterDir="false" />
+    <list default="true" id="ea41ad30-1d1e-431c-bf45-462ffa66e1b6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US09_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US09_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US09_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US09_UiSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US09_UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US09_UITest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US09_UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US09_UITest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
