@@ -1,6 +1,6 @@
 Feature: Appointment Api Test
 
-  @ApiAppointment
+  @ApiAppointment @E2E
   Scenario: Appointment Api Testing
 
     Given AD user set path params

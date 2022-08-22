@@ -1,40 +1,28 @@
 package pojos;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-
-@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-
-
-public class Test1 {
-
-    /*  {
-          "createdBy": "medunnaadmin",
-              "createdDate": "2022-03-16T22:55:47.152296Z",
-              "id": 30198,
-              "name": "Na111",
-              "description": "",
-              "price": 50.00,
-              "defaultValMin": "66",
-              "defaultValMax": "100"
-      }
-     */
+public class TestItemsPost {
     private String createdBy;
     private String createdDate;
-    private Integer id;
     private String name;
     private String description;
-    private Double price;
+    private int price;
     private String defaultValMin;
     private String defaultValMax;
 
-    public Test1() {
+    public TestItemsPost() {
+    }
+
+    public TestItemsPost(String createdBy, String createdDate, String name, String description, int price, String defaultValMin, String defaultValMax) {
+        this.createdBy = createdBy;
+        this.createdDate = createdDate;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.defaultValMin = defaultValMin;
+        this.defaultValMax = defaultValMax;
     }
 
     public String getCreatedBy() {
@@ -53,13 +41,6 @@ public class Test1 {
         this.createdDate = createdDate;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -77,11 +58,11 @@ public class Test1 {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
@@ -99,5 +80,18 @@ public class Test1 {
 
     public void setDefaultValMax(String defaultValMax) {
         this.defaultValMax = defaultValMax;
+    }
+
+    @Override
+    public String toString() {
+        return "TestItemsPost{" +
+                "createdBy='" + createdBy + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", defaultValMin='" + defaultValMin + '\'' +
+                ", defaultValMax='" + defaultValMax + '\'' +
+                '}';
     }
 }

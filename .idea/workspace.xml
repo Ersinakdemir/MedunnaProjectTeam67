@@ -5,30 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/US006_Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US006_UISteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/TestItemsPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/US17_TestItems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US17_TestItemsApi.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2022_23_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2022_23_59__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_15_2022_4_37_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_15_2022_4_37_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_08_2022_00_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_08_2022_00_01__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojos/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojos/Test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/ApiRegistrantData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata/ApiRegistrantData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/appointement2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata/appointement2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/default-cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/failedRerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/json-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/AppointmentData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata/AppointmentData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US007_Api.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US007_Api.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/dBFeatures/US007_DBTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/dBFeatures/US007_DBTest.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US001_UiTest_Zakir.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US001_UiTest_Zakir.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US09_UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US09_UITest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US007_UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US007_UITest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pojos/Appointment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pojos/Test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/apiSteps/US007_ApiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/apiSteps/US007_ApiSteps.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testdata/AppointmentData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testdata/AppointmentData.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/WriteToTxt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/WriteToTxt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/xml-report/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,15 +83,15 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: US001_UiTest_Zakir">
-    <configuration name="Feature: US001_UiTest_Zakir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: US17_TestItemsApi">
+    <configuration name="Feature: US17_TestItemsApi" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US001_UiTest_Zakir.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US17_TestItemsApi.feature" />
+      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: US001_UiTest_Zakir" />
+      <option name="SUGGESTED_NAME" value="Feature: US17_TestItemsApi" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -104,14 +103,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: US006_UITest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Admin test items olusturabilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US17_TestItemsApi.feature" />
+      <option name="GLUE" value="Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: US006_UITest" />
+      <option name="NAME_FILTER" value="^Admin test items olusturabilmeli$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Admin test items olusturabilmeli$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Admin test items olusturabilmeli" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -123,15 +123,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Admin test ögelerini Api ile görüntüleye bilir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US17_TestItemsApi.feature" />
+      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir" />
+      <option name="NAME_FILTER" value="^Admin test ögelerini Api ile görüntüleye bilir$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Admin test ögelerini Api ile görüntüleye bilir$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Admin test ögelerini Api ile görüntüleye bilir" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -143,15 +143,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir." type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Appointment Api Testing" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US007_Api.feature" />
+      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir\.$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir\.$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir." />
+      <option name="NAME_FILTER" value="^Appointment Api Testing$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Appointment Api Testing$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Appointment Api Testing" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -163,22 +163,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC02 &quot;Firstname, Lastname ve Email&quot; guncelleme secenegi olmalidir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC02 \&quot;Firstname\, Lastname ve Email\&quot; guncelleme secenegi olmalidir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 \&quot;Firstname\, Lastname ve Email\&quot; guncelleme secenegi olmalidir$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC02 &quot;Firstname, Lastname ve Email&quot; guncelleme secenegi olmalidir" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="PATTERN" value="runner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.Runner" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -198,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: US001_UiTest_Zakir" />
-        <item itemvalue="Cucumber Java.Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir" />
-        <item itemvalue="Cucumber Java.Scenario: TC02 &quot;Firstname, Lastname ve Email&quot; guncelleme secenegi olmalidir" />
-        <item itemvalue="Cucumber Java.Feature: US006_UITest" />
-        <item itemvalue="Cucumber Java.Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir." />
+        <item itemvalue="Cucumber Java.Feature: US17_TestItemsApi" />
+        <item itemvalue="JUnit.Runner" />
+        <item itemvalue="Cucumber Java.Scenario: Admin test items olusturabilmeli" />
+        <item itemvalue="Cucumber Java.Scenario: Admin test ögelerini Api ile görüntüleye bilir" />
+        <item itemvalue="Cucumber Java.Scenario: Appointment Api Testing" />
       </list>
     </recent_temporary>
   </component>
