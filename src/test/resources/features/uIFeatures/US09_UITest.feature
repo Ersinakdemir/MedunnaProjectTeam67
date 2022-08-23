@@ -1,7 +1,7 @@
-@a
+
 Feature: US_09         Staff (Personel),
   hasta bilgilerini görebilmeli, düzenleyebilmeli ve silememelidir.
-
+@smok
   Scenario: Staff (Personel)hasta bilgilerini görebilmeli
 
     Given "medunna.com" sayfasina gidilir

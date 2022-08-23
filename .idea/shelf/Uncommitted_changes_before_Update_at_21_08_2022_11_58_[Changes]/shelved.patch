@@ -1,0 +1,26 @@
+Index: src/test/java/pojos/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pojos;\r\n\r\n\r\nimport com.fasterxml.jackson.annotation.JsonIgnoreProperties;\r\nimport lombok.AllArgsConstructor;\r\nimport lombok.Data;\r\nimport lombok.NoArgsConstructor;\r\n\r\n@Data\r\n@NoArgsConstructor\r\n@AllArgsConstructor\r\n@JsonIgnoreProperties(ignoreUnknown = true)\r\n\r\n\r\npublic class Test {\r\n\r\n    /*  {\r\n          \"createdBy\": \"medunnaadmin\",\r\n              \"createdDate\": \"2022-03-16T22:55:47.152296Z\",\r\n              \"id\": 30198,\r\n              \"name\": \"Na111\",\r\n              \"description\": \"\",\r\n              \"price\": 50.00,\r\n              \"defaultValMin\": \"66\",\r\n              \"defaultValMax\": \"100\"\r\n      }\r\n     */\r\n    private String createdBy;\r\n    private String createdDate;\r\n    private Integer id;\r\n    private String name;\r\n    private String description;\r\n    private Double price;\r\n    private String defaultValMin;\r\n    private String defaultValMax;\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/pojos/Test.java b/src/test/java/pojos/Test.java
+--- a/src/test/java/pojos/Test.java	(revision f94bf81d8d8830e96e36a57b37065f112dbe0d1f)
++++ b/src/test/java/pojos/Test.java	(date 1661075133207)
+@@ -27,12 +27,12 @@
+      */
+     private String createdBy;
+     private String createdDate;
++    private String defaultValMin;
++    private String defaultValMax;
++    private String description;
+     private Integer id;
+     private String name;
+-    private String description;
+     private Double price;
+-    private String defaultValMin;
+-    private String defaultValMax;
+ 
+ 
+ }
