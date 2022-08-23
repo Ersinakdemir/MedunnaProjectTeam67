@@ -4,8 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import utilities.DBUtils;
-import utilities.ReadTxt;
-import utilities.WriteToTxt;
+
+import utilities.ReadTxt3;
+import utilities.WriteToTxt3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,23 +48,23 @@ public class US010_DBSteps {
     public void appointments_tablosunun_column_sutununun_column_data_icerdigi_dogrulanir() {
 
 
-        List<Object> actualAppointmentIDs = ReadTxt.returnAppointmentIdsList(appointmentIDFile);
+        List<Object> actualAppointmentIDs = ReadTxt3.returnAppointmentIdsList(appointmentIDFile);
         List<Object> expectedAppointmentIDs = new ArrayList<>();
         expectedAppointmentIDs.add(166158);
         Assert.assertTrue(actualAppointmentIDs.containsAll(expectedAppointmentIDs));
        // Assert.assertFalse("ID UYUSMUYOR", actualAppointmentIDs.containsAll(expectedAppointmentIDs));
 
-        List<Object> actualAppointmentStartDate = ReadTxt.returnAppointmentStartDateList(startDateFile);
+        List<Object> actualAppointmentStartDate = ReadTxt3.returnAppointmentStartDateList(startDateFile);
         List<Object> expectedAppointmentStartDate = new ArrayList<>();
         expectedAppointmentStartDate.add("2022-08-18T03:00:00Z");
         Assert.assertFalse("START DATE UYUSMUYOR", actualAppointmentStartDate.containsAll(expectedAppointmentStartDate));
 
-        List<Object> actualAppointmentEndDate = ReadTxt.returnAppointmentEndDateList(endDateFile);
+        List<Object> actualAppointmentEndDate = ReadTxt3.returnAppointmentEndDateList(endDateFile);
         List<Object> expectedAppointmentEndDate = new ArrayList<>();
         expectedAppointmentEndDate.add("2022-08-18T04:00:00Z");
         Assert.assertFalse("END DATE UYUSMUYOR", actualAppointmentEndDate.containsAll(expectedAppointmentEndDate));
 
-        List<Object> actualAppointmentStatus = ReadTxt.returnAppointmentStatusList(statusFile);
+        List<Object> actualAppointmentStatus = ReadTxt3.returnAppointmentStatusList(statusFile);
         List<Object> expectedAppointmentStatus = new ArrayList<>();
         expectedAppointmentStatus.add("PENDING");
         Assert.assertTrue("STATUS UYUSMUYOR", actualAppointmentStatus.containsAll(expectedAppointmentStatus));
@@ -80,22 +81,22 @@ public class US010_DBSteps {
         System.out.println("=== ID ===");
         List<Object> idList = getColumnData(query,"id");
         System.out.println(idList+"\n");
-        WriteToTxt.saveAppointmentIDs(appointmentIDFile, idList);
+        WriteToTxt3.saveAppointmentIDs(appointmentIDFile, idList);
 
         System.out.println("=== START DATE ===");
         List<Object> startDateList = getColumnData(query,"start_date");
         System.out.println(startDateList+"\n");
-        WriteToTxt.saveAppointmentStartDate(startDateFile, startDateList);
+        WriteToTxt3.saveAppointmentStartDate(startDateFile, startDateList);
 
         System.out.println("=== END DATE ===");
         List<Object> endDateList = getColumnData(query,"end_date");
         System.out.println(endDateList+"\n");
-        WriteToTxt.saveAppointmentEndDate(endDateFile, endDateList);
+        WriteToTxt3.saveAppointmentEndDate(endDateFile, endDateList);
 
         System.out.println("==== STATUS ===");
         List<Object> statusList = getColumnData(query,"status");
         System.out.println(statusList+"\n");
-        WriteToTxt.saveAppointmentStatus(statusFile, statusList);
+        WriteToTxt3.saveAppointmentStatus(statusFile, statusList);
 
     }
 
