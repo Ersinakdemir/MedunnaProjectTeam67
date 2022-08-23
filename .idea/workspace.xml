@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/MedunnaSon.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
@@ -21,6 +22,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/US17_TestItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/US17_TestItems.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="" />
+>>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="okan" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,15 +52,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="JQLSearcherProjectManager">
-    <selected>-1</selected>
-    <searchers />
-  </component>
-  <component name="JiraServerManager">
-    <servers>
-      <JiraServer type="API_TOKEN" url="https://team67healtproject.atlassian.net/" />
-    </servers>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -74,6 +69,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -82,15 +78,16 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: US17_TestItemsApi">
-    <configuration name="Feature: US17_TestItemsApi" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Runner">
+    <configuration name="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US17_TestItemsApi.feature" />
-      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
+      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: US17_TestItemsApi" />
+      <option name="NAME_FILTER" value="^TC001 Doktorun hasta icin test isteyebilmeli$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC001 Doktorun hasta icin test isteyebilmeli$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -102,15 +99,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Admin test items olusturabilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US17_TestItemsApi.feature" />
-      <option name="GLUE" value="Hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
+      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^Admin test items olusturabilmeli$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Admin test items olusturabilmeli$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Admin test items olusturabilmeli" />
+      <option name="NAME_FILTER" value="^TC002 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC002 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -122,15 +119,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Admin test ögelerini Api ile görüntüleye bilir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US17_TestItemsApi.feature" />
-      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
+      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^Admin test ögelerini Api ile görüntüleye bilir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Admin test ögelerini Api ile görüntüleye bilir$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Admin test ögelerini Api ile görüntüleye bilir" />
+      <option name="NAME_FILTER" value="^TC003 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC003 Test içeriğinde \&quot;Glucose\&quot; testi oldugu test edilir$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -142,15 +139,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Appointment Api Testing" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US007_Api.feature" />
-      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" />
+      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^Appointment Api Testing$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Appointment Api Testing$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Appointment Api Testing" />
+      <option name="NAME_FILTER" value="^TC008 Doktor \&quot;Request Impatient\&quot; \(hastanın yatılı tedavi görmesi\) isteğinde bulunabilmeli$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC008 Doktor \&quot;Request Impatient\&quot; \(hastanın yatılı tedavi görmesi\) isteğinde bulunabilmeli$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -192,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: US17_TestItemsApi" />
         <item itemvalue="JUnit.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: Admin test items olusturabilmeli" />
-        <item itemvalue="Cucumber Java.Scenario: Admin test ögelerini Api ile görüntüleye bilir" />
-        <item itemvalue="Cucumber Java.Scenario: Appointment Api Testing" />
+        <item itemvalue="Cucumber Java.Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli" />
+        <item itemvalue="Cucumber Java.Scenario: TC001 Doktorun hasta icin test isteyebilmeli" />
+        <item itemvalue="Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+        <item itemvalue="Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
       </list>
     </recent_temporary>
   </component>
