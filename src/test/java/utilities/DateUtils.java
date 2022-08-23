@@ -10,10 +10,12 @@ public class DateUtils {
 //    }
 
 
-    public static String getDate(){
-        LocalDateTime dateObj = LocalDateTime.now();
-        DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    public static String getDate(LocalDateTime dateTime, String format){
+        DateTimeFormatter formatDate = DateTimeFormatter.ofPattern(format);
+        return dateTime.format(formatDate);
+    }
 
-        return dateObj.format(formatDate);
+    public static LocalDateTime addDayToDate(LocalDateTime dateTime, int day){
+        return dateTime.plusDays(day);
     }
 }

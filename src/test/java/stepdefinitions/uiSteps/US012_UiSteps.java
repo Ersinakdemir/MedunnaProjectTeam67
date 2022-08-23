@@ -34,12 +34,12 @@ public class US012_UiSteps {
 
     @Then("Kullanici  Kullanici ismini girer")
     public void kullanici_kullanici_ismini_girer() {
-        pages.userName.sendKeys("doktor67");
+        pages.userName.sendKeys(ConfigurationReader.getProperty("db_username"));
     }
 
     @Then("Kullanici  Kullanici sifresini girer")
     public void kullanici_kullanici_sifresini_girer() {
-        pages.password.sendKeys("Doktor67");
+        pages.password.sendKeys(ConfigurationReader.getProperty("db_password"));
     }
 
     @Then("Kullanici  sign in i butonunu tiklayarak kullanici sayfasina baglanir")
