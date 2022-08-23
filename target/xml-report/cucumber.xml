@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.986">
+    <testcase classname="US025 Hasta(Patient) Yeni Randevular olusturabilmeli" name="TC001 Hasta(Patient) Sing in yaptiktan sonra Randevu olusturur" time="12.829">
+        <system-out>
+            <![CDATA[Given Hasta Medunna url Anasayfasina gider..................................passed
+Then Hasta Dopdown menüyü Tıklar............................................passed
+And Hasta Signs in Butonuna Tıklar..........................................passed
+And Hasta Username ve Password girer ve Sİng in Butona Tıklar...............passed
+And Hasta başarılı giriş yaptığını dogrular.................................passed
+And Hasta MYPAGES ve devaminda Make Appointment ButtonaTıklar...............passed
+And Hasta Make an Appointment Sayfasinda oldugunu ve  gorunurlugunu dogrular.passed
+And Hasta Make an Appointment Sayfasinda oldugunu ve  gorunurlugunu dogrular.passed
+Given Hasta First Name girer................................................passed
+Then Hasta Last Name girer..................................................passed
+And Hasta SSN Bilgisini girer...............................................passed
+And Hasta E mail bilgisini girer............................................passed
+And Hasta Phone bilgisini girer.............................................passed
+And Hasta Appointment DateTime 5 gun sonrası icin girer.....................passed
+And Hasta Send an Appointment Request Butonunu Tiklar.......................passed
+And Hasta Randevusunun basarili bir sekilde olustunu dogrular...............passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

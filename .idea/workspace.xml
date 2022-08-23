@@ -5,20 +5,138 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/US025_Pages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/US07_AppointmentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/US_002_RegistrationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/US_02_AdminHomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Appointment1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/AppointmentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Country1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/InPatients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Patient1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/State1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/US_002_RegistrantPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/smokeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/US007_ApiSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/US_002_API_StepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/dbSteps/US007_DBSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/dbSteps/US_002_DB_StepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US025_UiSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US07_AppointmentUIStepDef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US_002_ValidationUsernameEmailStepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/ReusableMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/US_002_TXTWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US002_Api.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US007_Api.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/dBFeatures/US002_DBTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/dBFeatures/US007_DBTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US002_UiTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US007_UITest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US025_UiTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testdata/AppointmentDB.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/Appointements2.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/RoomGet.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US002_Api.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US09_TC01.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dBFeatures/US002_DBTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dBFeatures/US09_DBTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US001_UiTest_Zakir.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US002_UiTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US003_UITest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US006_UITest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US012_UiTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US013_UiTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US09_UITest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/AppointmentPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/RegisterPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US001_PageZ.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US003_Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US006_Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US012_13_Pages.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US_002_RegistrationPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US_02_AdminHomePage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Appointements2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Appointment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Country.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Patient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Physician.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Registrant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Room1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Room1Post.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/State.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/TestItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/US_002_RegistrantPojo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/apiSteps/Appointements.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/apiSteps/RoomApiGet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/apiSteps/US09_ApiSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/apiSteps/US_002_API_StepDefs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/dbSteps/US09_DBSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/dbSteps/US_002_DB_StepDefs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US001_UiSteps_Zakir.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US003_UiSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US006_UISteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US013_UiSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US_002_ValidationUsernameEmailStepDefs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/ApiRegistrantData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/AppointmentData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/DatabaseRegistrantData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/DoktorID.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/DoktorName.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/MedunnaLogo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/appointement2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/Api3Utills.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ApiUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/Autentication67.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/Authentication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ConfigurationReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/DBUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/DatabaseUtility.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/DateUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/PDFGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ReusableMethods$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ReusableMethods$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ReusableMethods.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/US_002_TXTWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/WriteToTxt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/WriteToTxt2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]/US012_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]/US012_Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]/US012_UiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]/US012_UiSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/US012_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/US012_UiSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US09_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US09_Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pojos/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojos/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/ReadTxt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/ReadTxt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/US010_ApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/US010_ApiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/dbSteps/US010_DBSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/dbSteps/US010_DBSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US006_UISteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US006_UISteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US09_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US09_UiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/DateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utilities/WriteToTxt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/WriteToTxt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/WriteToTxt3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/WriteToTxt3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US001_UiTest_Zakir.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US001_UiTest_Zakir.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US09_UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US09_UITest.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/AppointmentData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata/AppointmentData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,15 +196,59 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir">
-    <configuration name="Feature: US006_UITest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utilities" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber Java.Feature: US025_UiTest">
+    <configuration name="Feature: US001_UiTest_Zakir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US001_UiTest_Zakir.feature" />
       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: US006_UITest" />
+      <option name="SUGGESTED_NAME" value="Feature: US001_UiTest_Zakir" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: US025_UiTest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US025_UiTest.feature" />
+      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="MedunnaProjectTeam67" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: US025_UiTest" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: TC001 Hasta(Patient) Sing in yaptiktan sonra Randevu olusturur" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US025_UiTest.feature" />
+      <option name="GLUE" value="Hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="MedunnaProjectTeam67" />
+      <option name="NAME_FILTER" value="^TC001 Hasta\(Patient\) Sing in yaptiktan sonra Randevu olusturur$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC001 Hasta\(Patient\) Sing in yaptiktan sonra Randevu olusturur$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC001 Hasta(Patient) Sing in yaptiktan sonra Randevu olusturur" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -118,48 +280,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir." type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir\.$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 Kullanici bilgileri \&quot;firstName\, lastname and email\&quot; girerken doldurulan kullanici bilgileri olmalidir\.$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir." />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: TC02 &quot;Firstname, Lastname ve Email&quot; guncelleme secenegi olmalidir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US006_UITest.feature" />
-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC02 \&quot;Firstname\, Lastname ve Email\&quot; guncelleme secenegi olmalidir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 \&quot;Firstname\, Lastname ve Email\&quot; guncelleme secenegi olmalidir$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC02 &quot;Firstname, Lastname ve Email&quot; guncelleme secenegi olmalidir" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MedunnaSon" />
+      <module name="MedunnaProjectTeam67" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="runner.*" />
@@ -188,11 +310,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir" />
-        <item itemvalue="Cucumber Java.Scenario: TC02 &quot;Firstname, Lastname ve Email&quot; guncelleme secenegi olmalidir" />
-        <item itemvalue="Cucumber Java.Feature: US006_UITest" />
-        <item itemvalue="Cucumber Java.Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir." />
+        <item itemvalue="Cucumber Java.Feature: US025_UiTest" />
+        <item itemvalue="Cucumber Java.Scenario: TC001 Hasta(Patient) Sing in yaptiktan sonra Randevu olusturur" />
         <item itemvalue="JUnit.Runner" />
+        <item itemvalue="Cucumber Java.Feature: US001_UiTest_Zakir" />
+        <item itemvalue="Cucumber Java.Scenario: TC01 Kullanici bilgileri &quot;firstName, lastname and email&quot; girerken doldurulan kullanici bilgileri olmalidir" />
       </list>
     </recent_temporary>
   </component>

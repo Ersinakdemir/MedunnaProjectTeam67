@@ -17,7 +17,9 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertTrue;
 import static utilities.Authentication.generateToken;
-import static utilities.WriteToTxt.saveAppointData;
+import static utilities.WriteToTxt3.saveAppointData;
+
+
 
 public class US010_ApiSteps {
 

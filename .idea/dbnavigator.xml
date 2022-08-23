@@ -36,7 +36,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f">
-      <console name="Medunna DB" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select * from patient
+      <console name="Medunna DB" type="STANDARD" schema="information_schema" session="Main">select * from patient
 
 select * from physician
 
@@ -62,10 +62,10 @@ select * from country where id=80063
 
 select * from room
 
-select * from country]]></console>
+select * from country</console>
     </connection>
     <connection id="a71f1dfe-f911-4c13-a006-3e1b77e73068">
-      <console name="Medunna" type="STANDARD" schema="information_schema" session="Main" />
+      <console name="Medunna" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
