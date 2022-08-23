@@ -5,44 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US028_UiTest.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US007_Api.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dBFeatures/US007_DBTest.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US007_UITest.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US028_UiTest.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US07_AppointmentPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Appointment1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/AppointmentRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Country1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/InPatients.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Patient1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/State1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Test1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/runner/smokeTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/apiSteps/US007_ApiSteps.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/dbSteps/US007_DBSteps.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US07_AppointmentUIStepDef.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/testdata/AppointmentDB.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US001_UiTest_Zakir.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US001_UiTest_Zakir.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US09_UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US09_UITest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/US09_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pojos/Appointment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US09_UiSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testdata/AppointmentData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testdata/AppointmentData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/WriteToTxt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/WriteToTxt.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
