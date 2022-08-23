@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions","Hooks"},
 
-        tags = "@US028_uitest_Country_Negativ",
+        tags = "@US028_uitest_States/Cities_pozitif",
         dryRun = false
 )
 public class Runner {
