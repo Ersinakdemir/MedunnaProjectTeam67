@@ -1,7 +1,7 @@
 
 Feature: Admin olarak; Country oluşturma / Okuma ve Silme
 
-  @US028_uitest_Country
+  @US028_uitest_Country_Pozitif
   Scenario: TC01_Kullanıcı gecerli bir tarihle yeni bir ülke oluşturabilir
     Given Kullanici  Medunna sayfasina gider
     When Kullanici  giris simgesini tiklar
@@ -16,7 +16,7 @@ Feature: Admin olarak; Country oluşturma / Okuma ve Silme
     And Gecerli bir tarih girer
     Then Save tusuna basarak ulkenin eklendigini test eder
 
-  @US028_uitest_Country
+  @US028_uitest_Country_Negativ
   Scenario: TC02_Kullanıcı gecersiz bir tarihle yeni bir ülke olusturamaz
     Given Kullanici  Medunna sayfasina gider
     When Kullanici  giris simgesini tiklar

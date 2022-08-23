@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.62">
-    <testcase classname="Admin olarak; Country oluşturma / Okuma ve Silme" name="Kullanıcı yeni bir ülke oluşturabilir" time="9.373">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="13.117">
+    <testcase classname="Admin olarak; Country oluşturma / Okuma ve Silme" name="TC02_Kullanıcı gecersiz bir tarihle yeni bir ülke olusturamaz" time="12.583">
+        <failure message="" type="java.lang.AssertionError">
             <![CDATA[Given Kullanici  Medunna sayfasina gider....................................passed
-Then Kullanici  giris simgesini tiklar......................................passed
+When Kullanici  giris simgesini tiklar......................................passed
 And Kullanici  acilan menuden sign in i tiklar..............................passed
 And Kullanici  Kullanici ismini girer.......................................passed
 And Kullanici  Kullanici sifresini girer....................................passed
 And Kullanici  sign in i butonunu tiklayarak kullanici sayfasina baglanir...passed
+And Items&Titles botonunu tiklar............................................passed
+And Acilan menuden Countries secenegini tiklar..............................passed
+And Acilan pencereden Create or edit a Country butonuna tiklar..............passed
+And isim textbox una eklenecek ulkenin ismini girer.........................passed
+And Gecersiz bir tarih girer................................................passed
+Then Save tusuna basarak ulkenin eklenmedigini test eder....................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.uiSteps.US028_UiSteps.saveTusunaBasarakUlkeninEklenmediginiTestEder(US028_UiSteps.java:54)
+	at ✽.Save tusuna basarak ulkenin eklenmedigini test eder(file:///Users/pc/IdeaProjects/MedunnaProjectTeam67/./src/test/resources/features/uIFeatures/US028_UiTest.feature:32)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
