@@ -91,7 +91,7 @@ public class US17_TestItems {
         public void kullanici_test_items_icin_post_request_validation_yapar () {
 
             //1. validation
-           //response.then().assertThat().statusCode(20);
+            response.then().assertThat().statusCode(201);
             response.then().assertThat().body("price", equalTo(25.0))
                     .body("createdBy", equalTo("Eraa"))
                     .body("description", equalTo("olur ins"))

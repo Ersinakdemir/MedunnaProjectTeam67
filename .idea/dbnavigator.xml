@@ -25,42 +25,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f">
-        <schema name="pg_catalog" object-types="table, view, function" />
-        <schema name="public" object-types="table, view, function, column" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f">
-      <console name="Medunna DB" type="STANDARD" schema="public" session="Main"><![CDATA[select * from patient
-
-select * from physician
-
-select * from physician where id=42999
-
-select * from jhi_user
-
-select * from appointment
-
-select * from bill
-
-select * from c_state
-
-select * from c_test
-
-select * from c_test_item
-
-select * from c_test_result
-
-select * from cmessage
-
-select * from country where id=80063
-
-select * from room
-
-select * from country]]></console>
+      <console name="Medunna DB" type="STANDARD" schema="information_schema" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
