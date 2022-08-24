@@ -27,6 +27,16 @@ public class US025_UiSteps<DateTime> {
 
     US025_Pages us025_pages=new US025_Pages();
 
+    DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+
+    LocalDateTime dateTimeNow = LocalDateTime.now();
+    LocalDateTime dateTimePlus = LocalDateTime.now().plusDays(5);
+    LocalDateTime dateTimeSubstruct = LocalDateTime.now().plusDays(-5);
+
+    String dateTimeNow_FormattedString = dateTimeNow.format(dateFormat);
+    String dateTimePlus_FormattedString = dateTimePlus.format(dateFormat);
+    String dateTimeSubstruct_FormattedString = dateTimeSubstruct.format(dateFormat);
+
 
         @Given("Hasta Medunna url Anasayfasina gider")
         public void hasta_medunna_url_anasayfasina_gider() {
@@ -110,50 +120,59 @@ public class US025_UiSteps<DateTime> {
     }
 
     @And("Hasta Phone bilgisini girer")
-    public void hastaPhoneBilgisiniGirer() throws InterruptedException {
+    public void hastaPhoneBilgisiniGirer()  {
         us025_pages.Make_an_Appointment_Phone_Box.sendKeys(Keys.CONTROL+"a"+Keys.CLEAR);
         us025_pages.Make_an_Appointment_Phone_Box.sendKeys(ConfigurationReader.getProperty("PatientPhoneNumber"));
 
-        Thread.sleep(5000);
+
         
     }
 
-    @And("Hasta Appointment DateTime 5 gun sonras icin girer")
-    public void hastaAppointmentDateTimeGirer() throws InterruptedException {
 
-
-
-
-    }
 
     @And("Hasta Send an Appointment Request Butonunu Tiklar")
     public void hastaSendAnAppointmentRequestButonunuTiklar() {
+            us025_pages.SendAppointmentRequest_Button.click();
         
     }
 
     @And("Hasta Randevusunun basarili bir sekilde olustunu dogrular")
-    public void hastaRandevusununBasariliBirSekildeOlustunuDogrular() {
+    public void hastaRandevusununBasariliBirSekildeOlustunuDogrular() throws InterruptedException {
+            Thread.sleep(2000);
+            Assert.assertTrue(us025_pages.Appointment_Registration_Saved_Visible_Text.isDisplayed());
     }
 
     @And("Hasta Appointment DateTime {int} gun sonrası icin girer")
     public void hastaAppointmentDateTimeGunSonrasıIcinGirer(int arg0) throws InterruptedException, ParseException {
 
-        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
-        LocalDateTime dateTimeNow = LocalDateTime.now();
-        LocalDateTime dateTimePlus = LocalDateTime.now().plusDays(1);
-        LocalDateTime dateTimeSubstruct = LocalDateTime.now().plusDays(-1);
 
-        String dateTimeNow_FormattedString = dateTimeNow.format(dateFormat);
-        String dateTimePlus_FormattedString = dateTimePlus.format(dateFormat);
-        String dateTimeSubstruct_FormattedString = dateTimeSubstruct.format(dateFormat);
+
 
         System.out.println("dateTimeNow : " + dateTimeNow_FormattedString);
         System.out.println("dateTimePlus : " + dateTimePlus_FormattedString);
         System.out.println("dateTimeSubstruct : " + dateTimeSubstruct_FormattedString);
-        us025_pages.Make_an_Appointment_DateTime_Box.sendKeys(dateTimeSubstruct_FormattedString);
+        us025_pages.Make_an_Appointment_DateTime_Box.sendKeys(dateTimePlus_FormattedString);
 
         Thread.sleep(5000);
+    }
+
+    @And("Hasta Appointment DateTime {int} gun oncesi icin girer")
+    public void hastaAppointmentDateTimeGunOncesiIcinGirer(int arg0) throws InterruptedException {
+        us025_pages.Make_an_Appointment_DateTime_Box.sendKeys(dateTimeSubstruct_FormattedString);
+        Thread.sleep(2000);
+
+    }
+
+    @And("Hasta Randevusunun gecmis tarihli yapamayacagini dogrular")
+    public void hastaRandevusununGecmisTarihliYapamayacaginiDogrular() {
+       Assert.assertFalse("Gecmis tarihli randevu olusturulamaz",us025_pages.Appointment_Registration_Saved_Visible_Text.isEnabled());
+      //  Assert.assertFalse("Gecmis tarihli randevu olusturulamaz",us025_pages.Appointment_Registration_Saved_Visible_Text.isEnabled());
+    }
+
+    @Then("Hasta Homepage de bulunan Make an Appointment Scroll butonuna Tıklar")
+    public void hastaHomepageDeBulunanMakeAnAppointmentScrollButonunaTıklar() {
+            us025_pages.Homepage_MakeanAppointment_Scroll_Button.click();
     }
 }
 

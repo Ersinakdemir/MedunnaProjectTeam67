@@ -62,6 +62,9 @@ public class US025_Pages {
     @FindBy(xpath = "//strong[normalize-space()='Appointment registration saved!']")
     public WebElement Appointment_Registration_Saved_Visible_Text;
 
+    @FindBy(xpath = "//a[@class='appointment-btn scrollto']")
+    public WebElement Homepage_MakeanAppointment_Scroll_Button;
+
 
 
 
