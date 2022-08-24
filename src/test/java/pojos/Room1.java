@@ -42,19 +42,19 @@ public class Room1 {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Integer getId() {
+    public int getId() {
         return id;
     }
     public void setId(Integer id) {
         this.id = id;
     }
-    public Integer getPrice() {
+    public int getPrice() {
         return price;
     }
     public void setPrice(Integer price) {
         this.price = price;
     }
-    public Integer getRoomNumber() {
+    public int getRoomNumber() {
         return roomNumber;
     }
     public void setRoomNumber(Integer roomNumber) {
@@ -66,7 +66,7 @@ public class Room1 {
     public void setRoomType(String roomType) {
         this.roomType = roomType;
     }
-    public Boolean getStatus() {
+    public boolean getStatus() {
         return status;
     }
     public void setStatus(Boolean status) {
