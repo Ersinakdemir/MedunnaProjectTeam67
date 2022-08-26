@@ -1,4 +1,4 @@
-package stepdefinitions.uiSteps;
+/*package stepdefinitions.uiSteps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -201,3 +201,6 @@ public class US008_UiSteps {
         us008.SaveButonu.click();
     }
 }
+
+ */
+
