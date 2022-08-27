@@ -5,6 +5,7 @@ public class Appointment {
 
     private String firstname;
     private String lastname;
+    private int id;
     private String ssn;
     private String email;
     private String phoneNumber;
@@ -73,15 +74,26 @@ public class Appointment {
         this.date = date;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Appointment{" +
                 "firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
+                ", id='" + id + '\'' +
                 ", ssn='" + ssn + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", date='" + date + '\'' +
                 '}';
     }
+
+
 }
