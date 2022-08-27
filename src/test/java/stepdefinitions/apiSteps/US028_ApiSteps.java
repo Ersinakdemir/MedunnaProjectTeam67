@@ -7,6 +7,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import pojos.*;
+import utilities.ConfigurationReader;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -137,5 +138,30 @@ public class US028_ApiSteps {
         response.prettyPrint();
         JsonPath jsn=response.jsonPath();
        // assertEquals(stpost.getName(),jsn.getString("name"));
+    }
+
+    @Given("kullanici silinecek eyalet icin {string} ile delet request ister")
+    public void kullaniciSilinecekEyaletIcinIleDeletRequestIster(String id) {
+        response=given().headers(//headers olacak bu onemli
+                "Authorization",
+                "Bearer " + genereatToken(),
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON).when().delete("https://medunna.com/api/countries"+"/"+id);
+
+
+    }
+
+    @Given("kullanici silinecek ulke icin {string} ile delet request ister")
+    public void kullaniciSilinecekUlkeIcinIleDeletRequestIster(String id) {
+        response=given().headers(//headers olacak bu onemli
+                "Authorization",
+                "Bearer " + genereatToken(),
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON).when().delete("https://medunna.com/api/countries/"+id);
+
     }
 }
