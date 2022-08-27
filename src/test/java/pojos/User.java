@@ -1,51 +1,34 @@
 package pojos;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
 
-    /*
+   /*
     "user": {
-                "createdBy": "anonymousUser",
-                "createdDate": "2022-01-01T17:37:45.448161Z",
-                "id": 4378,
-                "login": "emirha",
-                "firstName": "ihsan",
-                "lastName": "emir",
-                "email": "emir@gmail.com",
+        "createdBy": "anonymousUser",
+                "createdDate": "2021-12-25T17:00:55.695854Z",
+                "id": 3314,
+                "login": "apl",
+                "firstName": "Pl",
+                "lastName": "Ali",
+                "email": "apl@email.com",
                 "activated": true,
                 "langKey": "en",
                 "imageUrl": null,
                 "resetDate": null,
-                "ssn": "333-02-2233"
-            },
-            "inPatients": null,
-            "country": null,
-            "cstate": null
-        },
-        "ctests": null
-    }
+                "ssn": "888-88-8766"
+    },
+    */
 
-     */
-
-    private  int id;
-    private String login;
-    private String firstname;
-    private String lastname;
-    private  String email;
-    private String ssn;
-
-
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+private int id;
+private String login;
+private String firstName;
+private String lastName;
+private String email;
+private String ssn;
 
     public String getLogin() {
         return login;
@@ -55,20 +38,20 @@ public class User {
         this.login = login;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -92,8 +75,8 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", login='" + login + '\'' +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", ssn='" + ssn + '\'' +
                 '}';
