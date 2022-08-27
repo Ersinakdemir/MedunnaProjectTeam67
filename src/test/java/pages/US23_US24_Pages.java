@@ -17,10 +17,13 @@ public class US23_US24_Pages {
     @FindBy(xpath = "//*[text()='Sign in']")
     public WebElement signInButton;
 
-    @FindBy(xpath = "//*[@id="username"]")
+  //  @FindBy(xpath = "//*[@id="username"]")
+    @FindBy(xpath = "//input[@name='username']")
     public WebElement username_box;
 
-    @FindBy(xpath ="//*[@id="password"]")
+
+    //@FindBy(xpath ="//*[@id="password"]")
+    @FindBy(xpath = "//input[@name='password']")
             public WebElement password_box;
 
 
@@ -45,4 +48,4 @@ public class US23_US24_Pages {
 
 
 
-}
+

@@ -5,9 +5,6 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import utilities.DBUtils;
 
-import utilities.ReadTxt3;
-import utilities.WriteToTxt3;
-
 import java.util.ArrayList;
 import java.util.List;
 
