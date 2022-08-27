@@ -17,20 +17,15 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1252" />
-      <charset value="windows-1252" />
+      <charset value="UTF-8" />
+      <charset value="UTF-8" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f">
-        <schema name="pg_catalog" object-types="table, view, function" />
-        <schema name="public" object-types="table, view, function, column" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f">
@@ -68,6 +63,13 @@ select * from country]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f" dataset="public.c_test" active-filter-id="2957e97f-7761-48df-b203-eb2ae878f295">
+      <filter id="2957e97f-7761-48df-b203-eb2ae878f295" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -114,7 +116,7 @@ select * from country]]></console>
           <database value="medunna_db" />
           <type value="USER_PASSWORD" />
           <user value="medunnadb_user" />
-          <deprecated-pwd value="TWVkdW5uYWRiX0AxMjk=" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />
