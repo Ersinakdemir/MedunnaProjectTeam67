@@ -7,7 +7,7 @@ public class State {
 
     private int id;
     private String name;
-    private Country country;
+    private CountryStat country;
 
 
 
@@ -27,11 +27,11 @@ public class State {
         this.name = name;
     }
 
-    public Country getCountry() {
+    public CountryStat getCountry() {
         return country;
     }
 
-    public void setCountry(Country country) {
+    public void setCountry(CountryStat country) {
         this.country = country;
     }
 

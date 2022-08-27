@@ -9,16 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Country1 {
-
+public class StatPost {
 
     private String name;
-
-
-
-    //"id": 1201,
-    //                "name": "US"
-
+    private Country1 country;
 
     public String getName() {
         return name;
@@ -28,4 +22,11 @@ public class Country1 {
         this.name = name;
     }
 
+    public Country1 getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country1 country) {
+        this.country = country;
+    }
 }
