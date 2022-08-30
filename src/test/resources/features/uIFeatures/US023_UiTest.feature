@@ -8,7 +8,7 @@ Feature:UC 23
 #    And Kullanici Kullanici My Pages yazisina tiklar.
 #    And Kullanici acilan alt menude Seach Patient yazisina tiklar.
 
-  Scenario: TC01 Kullanici(Staff) fatura olusturabilmeli
+  Scenario: TC01 Kullanici(Staff) fatura olusturabilmelim
     Given Kullanici anasayfaya gider
     Then Kullanici Account Menu iconuna tiklar
     And Kullanici Sign in butonuna tiklar
