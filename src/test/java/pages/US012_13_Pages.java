@@ -98,7 +98,7 @@ public class US012_13_Pages {
     @FindBy(xpath = "//*[text()='Show Test Results']")
     public WebElement showTests;
 
-    @FindBy(xpath = "(//a[@class='btn btn-info btn-sm'])[19]")
+    @FindBy(xpath = "(//a[@class='btn btn-info btn-sm'])[1]")
     public WebElement viewResults;
 
     @FindBy(xpath = "(//tr//th)[01]")
