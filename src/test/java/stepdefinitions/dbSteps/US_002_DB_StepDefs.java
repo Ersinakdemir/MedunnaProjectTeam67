@@ -9,11 +9,11 @@ import utilities.DBUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import static utilities.US_002_TXTWriter.readFile;
+// import static utilities.US_002_TXTWriter.readFile;
 
 public class US_002_DB_StepDefs {
 
-    @Given("user connects to the database US_002")
+   /*  @Given("user connects to the database US_002")
     public void user_connects_to_the_database_US_002() {
         DBUtils.createConnection();
 
@@ -32,6 +32,5 @@ public class US_002_DB_StepDefs {
     }
     @Then("user close the database connection US_002")
     public void user_close_the_database_connection_US_002() {
-        DBUtils.closeConnection();
+        DBUtils.closeConnection(); */
     }
-}

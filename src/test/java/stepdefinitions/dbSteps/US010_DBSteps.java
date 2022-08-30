@@ -22,7 +22,7 @@ public class US010_DBSteps {
 
 
 
-    @Given("Database ile Connection kurulur")
+  /*  @Given("Database ile Connection kurulur")
     public void database_ile_connection_kurulur() {
 
 
@@ -93,10 +93,10 @@ public class US010_DBSteps {
         System.out.println("==== STATUS ===");
         List<Object> statusList = getColumnData(query,"status");
         System.out.println(statusList+"\n");
-        WriteToTxt3.saveAppointmentStatus(statusFile, statusList);
+        WriteToTxt3.saveAppointmentStatus(statusFile, statusList);   */
 
     }
 
 
 
-    }
+
