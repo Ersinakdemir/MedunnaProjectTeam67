@@ -29,8 +29,10 @@ Feature: user_registration
 
   @delete_user
   Scenario: TC_04_deleting_a_user
-    Given user is on the registration page
-    Given user enters a valid SSN number as "ssn"
+    Given Admin20 navigates to medunna login page
+    When Admin20 signs in
+    And user is on the registration page
+    And user enters a valid SSN number as "ssn"
     And user enters a valid first name as "firstname"
     And user enters a valid last name as "lastname"
     And user enters an username as "username"

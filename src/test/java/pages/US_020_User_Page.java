@@ -12,6 +12,15 @@ public class US_020_User_Page {
 
     }
 
+    @FindBy (xpath = "//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
+    public WebElement deleteAlertSuccessYazisi;
+
+    @FindBy (xpath = "//div[text()='Internal server error.']")
+    public WebElement deleteAlertErrorYazisi;
+    @FindBy (xpath = "(//a[@class='btn btn-danger btn-sm'])[1]")
+    public WebElement patientDeleteButtonn;
+    @FindBy (id = "jhi-confirm-delete-patient")
+    public WebElement patientDeleteConfirmButtonn;
     @FindBy(xpath = "//*[@id='admin-menu']/a/span")
     public WebElement administration;
 
