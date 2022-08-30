@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b3bc3cfc-1733-4a94-9d8d-77b8437df390" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+
+>>>>>>> 29a77ab4ead54fa39d7d060bd29e21370b141761
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +74,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Cucumber Java.Feature: uS_20_User_Management_UI">
     <configuration name="Feature: uS_20_User_Management_UI" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
@@ -79,6 +84,9 @@
       <module name="MedunnaSon" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: uS_20_User_Management_UI" />
+=======
+
+>>>>>>> 29a77ab4ead54fa39d7d060bd29e21370b141761
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -90,6 +98,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Scenario: TC_01_seeing_a_new_user_info" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/uS_20_User_Management_UI.feature" />
@@ -99,6 +108,8 @@
       <option name="NAME_FILTER" value="^TC_01_seeing_a_new_user_info$" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_01_seeing_a_new_user_info$&quot;" />
       <option name="SUGGESTED_NAME" value="Scenario: TC_01_seeing_a_new_user_info" />
+=======
+
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -110,6 +121,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
+>>>>>>> 29a77ab4ead54fa39d7d060bd29e21370b141761
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+<<<<<<< HEAD
     <configuration name="Scenario: TC_02_giving_role_to_a_new_user (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/uS_20_User_Management_UI.feature" />
@@ -119,6 +144,9 @@
       <option name="NAME_FILTER" value="^TC_02_giving_role_to_a_new_user$" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_02_giving_role_to_a_new_user$&quot;" />
       <option name="SUGGESTED_NAME" value="Scenario: TC_02_giving_role_to_a_new_user" />
+=======
+
+>>>>>>> 29a77ab4ead54fa39d7d060bd29e21370b141761
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -185,18 +213,22 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Cucumber Java.Feature: uS_20_User_Management_UI" />
         <item itemvalue="Cucumber Java.Scenario: TC_01_seeing_a_new_user_info" />
         <item itemvalue="Cucumber Java.Scenario: TC_04_deleting_a_user" />
         <item itemvalue="Cucumber Java.Scenario: TC_03_activating_a_user" />
         <item itemvalue="Cucumber Java.Scenario: TC_02_giving_role_to_a_new_user (1)" />
+=======
+
+>>>>>>> 29a77ab4ead54fa39d7d060bd29e21370b141761
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b3bc3cfc-1733-4a94-9d8d-77b8437df390" name="Changes" comment="" />
+
       <created>1660063945726</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
