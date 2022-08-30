@@ -74,7 +74,7 @@ public class US023_UiSteps {
     public void kullanici_acilan_sayfada_payment_invoice_process_butonuna_tiklar() throws InterruptedException {
         Thread.sleep(1500);
         staff.paymentInvoiceProcessButton.click();
-        staff.showInvoiceButton.click();
+
 
 
     }
