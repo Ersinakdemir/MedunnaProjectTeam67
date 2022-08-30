@@ -4,13 +4,13 @@ package stepdefinitions.uiSteps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.US004_Pages;
+import pages.US004_027_Pages;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class US004_UISteps {
 
-    US004_Pages ui004 = new US004_Pages();
+    US004_027_Pages ui004 = new US004_027_Pages();
 
     @Given("The User goes to Medunna URL")
     public void the_user_goes_to_medunna_url() {

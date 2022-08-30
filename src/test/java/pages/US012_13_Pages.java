@@ -12,9 +12,7 @@ public class US012_13_Pages {
     public US012_13_Pages() {
 
         PageFactory.initElements(Driver.getDriver(), this);
-
     }
-
 
     @FindBy(xpath = "//li[@id='account-menu']")
     public WebElement signeIn;

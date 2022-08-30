@@ -24,6 +24,7 @@ public class Room1 {
     private  Integer roomNumber;
     private  String roomType;
     private Boolean status;
+
     public String getCreatedBy() {
         return createdBy;
     }

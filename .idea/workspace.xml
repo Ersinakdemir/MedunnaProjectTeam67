@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US004_UISteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US004_UISteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +65,34 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: US004">
-    <configuration name="Feature: US004" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: US027_Post">
+    <configuration name="Feature: US027_Post" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US027_Post.feature" />
+      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="MedunnaSon" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: US027_Post" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: US027_UI" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US027_UI.feature" />
       <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: US004" />
+      <option name="SUGGESTED_NAME" value="Feature: US027_UI" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -79,13 +104,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: US013_UiTest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC_001 User should validate creating and reading messages using API" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US027_Post.feature" />
+      <option name="GLUE" value="Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: US013_UiTest" />
+      <option name="NAME_FILTER" value="^TC_001 User should validate creating and reading messages using API$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_001 User should validate creating and reading messages using API$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC_001 User should validate creating and reading messages using API" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -97,33 +124,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC01 There should be a valid username and password validating the success message to login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC_003 Admin can update a message" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004_UI.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US027_UI.feature" />
+      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC01 There should be a valid username and password validating the success message to login$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 There should be a valid username and password validating the success message to login$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC01 There should be a valid username and password validating the success message to login" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004_UI.feature" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MedunnaSon" />
-      <option name="NAME_FILTER" value="^TC02 There should be a valid username and password validating the success message to login \(Negative Scenario\)$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 There should be a valid username and password validating the success message to login \(Negative Scenario\)$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" />
+      <option name="NAME_FILTER" value="^TC_003 Admin can update a message$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_003 Admin can update a message$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC_003 Admin can update a message" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -165,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: US004" />
+        <item itemvalue="Cucumber Java.Feature: US027_Post" />
         <item itemvalue="JUnit.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" />
-        <item itemvalue="Cucumber Java.Scenario: TC01 There should be a valid username and password validating the success message to login" />
-        <item itemvalue="Cucumber Java.Feature: US013_UiTest" />
+        <item itemvalue="Cucumber Java.Scenario: TC_001 User should validate creating and reading messages using API" />
+        <item itemvalue="Cucumber Java.Scenario: TC_003 Admin can update a message" />
+        <item itemvalue="Cucumber Java.Feature: US027_UI" />
       </list>
     </recent_temporary>
   </component>

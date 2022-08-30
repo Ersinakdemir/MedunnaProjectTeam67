@@ -1,0 +1,1333 @@
+Index: configuration.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>browser=chrome\r\nmedunna_login_url=https://medunna.com/\r\nmedunna_registration_url=https://medunna.com/account/register\r\nregistrant_filename=src/test/resources/testdata/Medunna.txt\r\nappointment_records=src/test/resources/testdata/AppointmentData.txt\r\nbase_url=https://medunna.com\r\nadminUserName=AdminMurat44\r\nadminPasword=123qscaA...\r\napi_registrant_data=src/test/resources/testdata/ApiRegistrantData.txt\r\nregistrant_endpoint=https://medunna.com/api/users?=size=2000\r\ntoken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYW5pZWxwYXRpZW50IiwiYXV0aCI6IlJPTEVfUEFUSUVOVCIsImV4cCI6MTY0Njc4OTQ1M30.DEasyhzyQjy9xfew5vxf067OPIAoGdbCD_bKl0lPDUBxv4Hbl9iEF6FgNV9a58FnTzOSkaRm9aygwPnCxV3PeA\r\napi_appointments=https://medunna.com/api/appointments?=size=2000\r\ndb_credentials_url=jdbc:postgresql://medunna.com:5432/medunna_db\r\ndb_username=medunnadb_user\r\ndb_password=Medunnadb_@129\r\ndatabase_registrant_data=src/test/resources/testdata/DatabaseRegistrantData.txt\r\napi_all_registrant_data=src/test/resources/testdata/ApiAllRegistrantData.txt\r\nregistrant_put_endpoint=https://medunna.com/api/users\r\nregistrant_delete_endpoint=https://medunna.com/api/users\r\napi_bearer_token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXJhdHRhbmMiLCJhdXRoIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1MDUyOTA4MX0.svIe6r47IuCcEdgBSoq-znJ_vtzVYZyvXmLGY9b0L6mbOY3rD7EZbl3KOjvAJVOV2QONfAwPkXrXo_khc03IBg\r\nregistrant_put_endpoint=https://medunna.com/api/rooms?=size=2000\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/configuration.properties b/configuration.properties
+--- a/configuration.properties	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ b/configuration.properties	(date 1661888980087)
+@@ -16,6 +16,7 @@
+ database_registrant_data=src/test/resources/testdata/DatabaseRegistrantData.txt
+ api_all_registrant_data=src/test/resources/testdata/ApiAllRegistrantData.txt
+ registrant_put_endpoint=https://medunna.com/api/users
++put_endpoint=https://medunna.com/api/c-messages
+ registrant_delete_endpoint=https://medunna.com/api/users
+ api_bearer_token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXJhdHRhbmMiLCJhdXRoIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1MDUyOTA4MX0.svIe6r47IuCcEdgBSoq-znJ_vtzVYZyvXmLGY9b0L6mbOY3rD7EZbl3KOjvAJVOV2QONfAwPkXrXo_khc03IBg
+ registrant_put_endpoint=https://medunna.com/api/rooms?=size=2000
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53_[Changes]/shelved.patch	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ /dev/null	(revision bdfc3e808219add6536da13beb7010613499b733)
+@@ -1,278 +0,0 @@
+-Index: configuration.properties
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>browser=chrome\nmedunna_login_url=https://medunna.com/\nmedunna_registration_url=https://medunna.com/account/register\nregistrant_filename=src/test/resources/testdata/Medunna.txt\nappointment_records=src/test/resources/testdata/AppointmentData.txt\nbase_url=https://medunna.com\napi_registrant_data=src/test/resources/testdata/ApiRegistrantData.txt\nregistrant_endpoint=https://medunna.com/api/users?=size=2000\ntoken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYW5pZWxwYXRpZW50IiwiYXV0aCI6IlJPTEVfUEFUSUVOVCIsImV4cCI6MTY0Njc4OTQ1M30.DEasyhzyQjy9xfew5vxf067OPIAoGdbCD_bKl0lPDUBxv4Hbl9iEF6FgNV9a58FnTzOSkaRm9aygwPnCxV3PeA\napi_appointments=https://medunna.com/api/appointments?=size=2000\ndb_credentials_url=jdbc:postgresql://medunna.com:5432/medunna_db\ndb_username=medunnadb_user\ndb_password=Medunnadb_@129\ndatabase_registrant_data=src/test/resources/testdata/DatabaseRegistrantData.txt\napi_all_registrant_data=src/test/resources/testdata/ApiAllRegistrantData.txt\nregistrant_put_endpoint=https://medunna.com/api/users\nregistrant_delete_endpoint=https://medunna.com/api/users\napi_bearer_token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXJhdHRhbmMiLCJhdXRoIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1MDUyOTA4MX0.svIe6r47IuCcEdgBSoq-znJ_vtzVYZyvXmLGY9b0L6mbOY3rD7EZbl3KOjvAJVOV2QONfAwPkXrXo_khc03IBg\n\n\n\n\n\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>ISO-8859-1
+-===================================================================
+-diff --git a/configuration.properties b/configuration.properties
+---- a/configuration.properties	(revision f581c3b3ba7c05579a345eb41f48637acb6b8f4e)
+-+++ b/configuration.properties	(date 1660152602972)
+-@@ -16,7 +16,7 @@
+- registrant_put_endpoint=https://medunna.com/api/users
+- registrant_delete_endpoint=https://medunna.com/api/users
+- api_bearer_token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXJhdHRhbmMiLCJhdXRoIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1MDUyOTA4MX0.svIe6r47IuCcEdgBSoq-znJ_vtzVYZyvXmLGY9b0L6mbOY3rD7EZbl3KOjvAJVOV2QONfAwPkXrXo_khc03IBg
+--
+-+registrant_put_endpoint=https://medunna.com/api/rooms
+- 
+- 
+- 
+-Index: src/test/java/stepdefinitions/apiSteps/RoomApiGet.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java b/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java
+-new file mode 100644
+---- /dev/null	(date 1660152617177)
+-+++ b/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java	(date 1660152617177)
+-@@ -0,0 +1,40 @@
+-+package stepdefinitions.apiSteps;
+-+
+-+import io.cucumber.java.en.Given;
+-+import io.cucumber.java.en.Then;
+-+import io.restassured.http.ContentType;
+-+import io.restassured.response.Response;
+-+import utilities.Authentication;
+-+import utilities.ConfigurationReader;
+-+import utilities.Driver;
+-+
+-+import static io.restassured.RestAssured.given;
+-+
+-+public class RoomApiGet {
+-+    Response response;
+-+    String token="\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkb2t0b3I2NyIsImF1dGgiOiJST0xFX1BIWVNJQ0lBTiIsImV4cCI6MTY2MDE1MTU3N30.VcMDqz0PRww6Czoq0b9CrAfbd_TtAtZ32zy6w46-cO0apkKc7YgYq4z9euMsK3A0Uzfr0ZI5DSAJUSuUzCq39w\"";
+-+
+-+    @Given("kullanici roomlar icin get request yapar")
+-+    public void kullanici_roomlar_icin_get_request_yapar() {
+-+       response=given().header(
+-+               "Authorization",
+-+               "Bearer " + token,
+-+               "Content-Type",
+-+               ContentType.JSON,
+-+               "Accept",
+-+               ContentType.JSON).when().get(ConfigurationReader.getProperty("registrant_put_endpoint"));
+-+
+-+       response.then().assertThat().statusCode(200);
+-+       response.prettyPrint();
+-+
+-+
+-+    }
+-+    @Given("kullanici gelen room datayi serealisation yapar")
+-+    public void kullanici_gelen_room_datayi_serealisation_yapar() {
+-+
+-+    }
+-+    @Then("kullanici room datasini valide eder")
+-+    public void kullanici_room_datasini_valide_eder() {
+-+
+-+    }
+-+}
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/pages/US012_Pages.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/pages/US012_Pages.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/runner/Runner.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/runner/Runner.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/utilities/Driver.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/utilities/Driver.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/default-cucumber-reports.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/default-cucumber-reports.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/failedRerun.txt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/failedRerun.txt\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/json-reports/cucumber.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/json-reports/cucumber.json\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/features/uIFeatures/US012_UiTest.feature\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/features/uIFeatures/US012_UiTest.feature\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/runner/Runner.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/runner/Runner.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/utilities/Driver.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/utilities/Driver.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/xml-report/cucumber.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/xml-report/cucumber.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitSEFilterConfiguration\">\n    <file-type-list>\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\n      <filtered-out-file-type name=\"TAG\" />\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\n    </file-type-list>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2D7xV3Roi9RJoKU9V6osnpqlTUG\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\n  </component>\n  <component name=\"RunManager\" selected=\"JUnit.Runner\">\n    <configuration name=\"Scenario: Doktorun hasta icin test isteyebilmeli\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\n      <module name=\"MedunnaSon\" />\n      <option name=\"NAME_FILTER\" value=\"^Doktorun hasta icin test isteyebilmeli$\" />\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Doktorun hasta icin test isteyebilmeli$&quot;\" />\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: Doktorun hasta icin test isteyebilmeli\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Scenario: TC001 Doktorun hasta icin test isteyebilmeli\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\n      <module name=\"MedunnaSon\" />\n      <option name=\"NAME_FILTER\" value=\"^TC001 Doktorun hasta icin test isteyebilmeli$\" />\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC001 Doktorun hasta icin test isteyebilmeli$&quot;\" />\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC001 Doktorun hasta icin test isteyebilmeli\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\n      <module name=\"MedunnaSon\" />\n      <option name=\"NAME_FILTER\" value=\"^TC002 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$\" />\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC002 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$&quot;\" />\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\n      <module name=\"MedunnaSon\" />\n      <option name=\"NAME_FILTER\" value=\"^TC003 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$\" />\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC003 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$&quot;\" />\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Runner\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"MedunnaSon\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"runner.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"runner\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"runner.Runner\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\n      <module name=\"untitled\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\n      <module name=\"untitled\" />\n      <option name=\"filePath\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.Runner\" />\n        <item itemvalue=\"Cucumber Java.Scenario: TC001 Doktorun hasta icin test isteyebilmeli\" />\n        <item itemvalue=\"Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\n        <item itemvalue=\"Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\n        <item itemvalue=\"Cucumber Java.Scenario: Doktorun hasta icin test isteyebilmeli\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\" />\n      <created>1660063945726</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1660063945726</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision f581c3b3ba7c05579a345eb41f48637acb6b8f4e)
+-+++ b/.idea/workspace.xml	(date 1660229597449)
+-@@ -5,21 +5,11 @@
+-   </component>
+-   <component name="ChangeListManager">
+-     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
+--      <change afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US012_Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US012_Pages.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US012_UiSteps.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/Driver.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/target/default-cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/target/failedRerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/target/json-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US012_UiTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/uIFeatures/US012_UiTest.feature" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/target/xml-report/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
+-+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" afterDir="false" />
+-+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
+-+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java" afterDir="false" />
+-+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-Index: src/test/java/pojos/Room1Post.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/test/java/pojos/Room1Post.java b/src/test/java/pojos/Room1Post.java
+-new file mode 100644
+---- /dev/null	(date 1660152617198)
+-+++ b/src/test/java/pojos/Room1Post.java	(date 1660152617198)
+-@@ -0,0 +1,57 @@
+-+package pojos;
+-+
+-+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+-+
+-+@JsonIgnoreProperties(ignoreUnknown = true)
+-+public class Room1Post {
+-+
+-+    private String createdBy;
+-+    private String createdDate;
+-+    private String description;
+-+    private  Integer price;
+-+    private  Integer roomNumber;
+-+    private  String roomType;
+-+    private Boolean status;
+-+    public String getCreatedBy() {
+-+        return createdBy;
+-+    }
+-+    public void setCreatedBy(String createdBy) {
+-+        this.createdBy = createdBy;
+-+    }
+-+    public String getCreatedDate() {
+-+        return createdDate;
+-+    }
+-+    public void setCreatedDate(String createdDate) {
+-+        this.createdDate = createdDate;
+-+    }
+-+    public String getDescription() {
+-+        return description;
+-+    }
+-+    public void setDescription(String description) {
+-+        this.description = description;
+-+    }
+-+    public Integer getPrice() {
+-+        return price;
+-+    }
+-+    public void setPrice(Integer price) {
+-+        this.price = price;
+-+    }
+-+    public Integer getRoomNumber() {
+-+        return roomNumber;
+-+    }
+-+    public void setRoomNumber(Integer roomNumber) {
+-+        this.roomNumber = roomNumber;
+-+    }
+-+    public String getRoomType() {
+-+        return roomType;
+-+    }
+-+    public void setRoomType(String roomType) {
+-+        this.roomType = roomType;
+-+    }
+-+    public Boolean getStatus() {
+-+        return status;
+-+    }
+-+    public void setStatus(Boolean status) {
+-+        this.status = status;
+-+    }
+-+}
+-Index: src/test/resources/features/apiFeatures/RoomGet.feature
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/test/resources/features/apiFeatures/RoomGet.feature b/src/test/resources/features/apiFeatures/RoomGet.feature
+-new file mode 100644
+---- /dev/null	(date 1660152617193)
+-+++ b/src/test/resources/features/apiFeatures/RoomGet.feature	(date 1660152617193)
+-@@ -0,0 +1,7 @@
+-+@RoomApi
+-+Feature: Room get
+-+
+-+  Scenario: Room api testi
+-+    Given kullanici roomlar icin get request yapar
+-+    And  kullanici gelen room datayi serealisation yapar
+-+    Then kullanici room datasini valide eder
+-\ No newline at end of file
+-Index: src/test/java/pojos/Room1.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/test/java/pojos/Room1.java b/src/test/java/pojos/Room1.java
+-new file mode 100644
+---- /dev/null	(date 1660152617187)
+-+++ b/src/test/java/pojos/Room1.java	(date 1660152617187)
+-@@ -0,0 +1,77 @@
+-+package pojos;
+-+
+-+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+-+
+-+@JsonIgnoreProperties(ignoreUnknown = true)
+-+public class Room1 {
+-+    /*
+-+            {
+-+            "createdBy": "string",
+-+            "createdDate": "2022-08-06T15:12:18.833Z",
+-+            "description": "string",
+-+            "id": 0,
+-+            "price": 0,
+-+            "roomNumber": 0,
+-+            "roomType": "TWIN",
+-+            "status": true
+-+          }
+-+     */
+-+    private String createdBy;
+-+    private String createdDate;
+-+    private String description;
+-+    private  Integer id;
+-+    private  Integer price;
+-+    private  Integer roomNumber;
+-+    private  String roomType;
+-+    private Boolean status;
+-+    public String getCreatedBy() {
+-+        return createdBy;
+-+    }
+-+    public void setCreatedBy(String createdBy) {
+-+        this.createdBy = createdBy;
+-+    }
+-+    public String getCreatedDate() {
+-+        return createdDate;
+-+    }
+-+    public void setCreatedDate(String createdDate) {
+-+        this.createdDate = createdDate;
+-+    }
+-+    public String getDescription() {
+-+        return description;
+-+    }
+-+    public void setDescription(String description) {
+-+        this.description = description;
+-+    }
+-+    public Integer getId() {
+-+        return id;
+-+    }
+-+    public void setId(Integer id) {
+-+        this.id = id;
+-+    }
+-+    public Integer getPrice() {
+-+        return price;
+-+    }
+-+    public void setPrice(Integer price) {
+-+        this.price = price;
+-+    }
+-+    public Integer getRoomNumber() {
+-+        return roomNumber;
+-+    }
+-+    public void setRoomNumber(Integer roomNumber) {
+-+        this.roomNumber = roomNumber;
+-+    }
+-+    public String getRoomType() {
+-+        return roomType;
+-+    }
+-+    public void setRoomType(String roomType) {
+-+        this.roomType = roomType;
+-+    }
+-+    public Boolean getStatus() {
+-+        return status;
+-+    }
+-+    public void setStatus(Boolean status) {
+-+        this.status = status;
+-+    }
+-+
+-+
+-+}
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34_[Changes]/shelved.patch	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ /dev/null	(revision bdfc3e808219add6536da13beb7010613499b733)
+@@ -1,49 +0,0 @@
+-Index: .idea/misc.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"ignoredFiles\">\r\n      <set>\r\n        <option value=\"$PROJECT_DIR$/untitled/pom.xml\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" project-jdk-name=\"11\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n  <component name=\"Talios.JiraConfigurationComponent\" enableIssueTracking=\"false\" autoRefresh=\"false\" useExternalBrowser=\"false\" refreshTimeout=\"0\" annotateissues=\"false\">\r\n    <servers />\r\n    <columns>\r\n      <column id=\"created\" position=\"0\" width=\"-1\" />\r\n      <column id=\"key\" position=\"1\" width=\"-1\" />\r\n      <column id=\"component\" position=\"2\" width=\"-1\" />\r\n      <column id=\"title\" position=\"3\" width=\"-1\" />\r\n      <column id=\"type\" position=\"4\" width=\"-1\" />\r\n      <column id=\"priority\" position=\"5\" width=\"-1\" />\r\n      <column id=\"status\" position=\"6\" width=\"-1\" />\r\n      <column id=\"resolution\" position=\"7\" width=\"-1\" />\r\n      <column id=\"assignee\" position=\"8\" width=\"-1\" />\r\n      <column id=\"reporter\" position=\"9\" width=\"-1\" />\r\n      <column id=\"updated\" position=\"10\" width=\"-1\" />\r\n      <column id=\"dueDate\" position=\"11\" width=\"-1\" />\r\n      <column id=\"version\" position=\"12\" width=\"-1\" />\r\n      <column id=\"fixVersion\" position=\"13\" width=\"-1\" />\r\n    </columns>\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/misc.xml b/.idea/misc.xml
+---- a/.idea/misc.xml	(revision 4813e3cd5f64f06995c2abad8bd203eefe7213bb)
+-+++ b/.idea/misc.xml	(date 1660516458100)
+-@@ -13,7 +13,7 @@
+-       </set>
+-     </option>
+-   </component>
+--  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="11" project-jdk-type="JavaSDK">
+-+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+-     <output url="file://$PROJECT_DIR$/out" />
+-   </component>
+-   <component name="Talios.JiraConfigurationComponent" enableIssueTracking="false" autoRefresh="false" useExternalBrowser="false" refreshTimeout="0" annotateissues="false">
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/pojos/Room1.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/pojos/Room1Post.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/configuration.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/configuration.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/runner/Runner.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/runner/Runner.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2D7xV3Roi9RJoKU9V6osnpqlTUG\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.Runner\">\r\n    <configuration name=\"Scenario: TC001 Doktorun hasta icin test isteyebilmeli\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\r\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC001 Doktorun hasta icin test isteyebilmeli$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC001 Doktorun hasta icin test isteyebilmeli$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC001 Doktorun hasta icin test isteyebilmeli\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\r\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC002 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC002 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\r\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC003 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC003 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature\" />\r\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC008 Doktor \\&quot;Request Impatient\\&quot; \\(hastanın yatılı tedavi görmesi\\) isteğinde bulunabilmeli$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC008 Doktor \\&quot;Request Impatient\\&quot; \\(hastanın yatılı tedavi görmesi\\) isteğinde bulunabilmeli$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Runner\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"MedunnaSon\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"runner.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"runner\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"runner.Runner\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"untitled\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"untitled\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.Runner\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC008 Doktor &quot;Request Impatient&quot; (hastanın yatılı tedavi görmesi) isteğinde bulunabilmeli\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC001 Doktorun hasta icin test isteyebilmeli\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\" />\r\n      <created>1660063945726</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1660063945726</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 4813e3cd5f64f06995c2abad8bd203eefe7213bb)
+-+++ b/.idea/workspace.xml	(date 1660516458043)
+-@@ -4,18 +4,7 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
+--      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" afterDir="false" />
+--      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
+--      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java" afterDir="false" />
+--      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US013_UiSteps.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" afterDir="false" />
+--    </list>
+-+    <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="" />
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ /dev/null	(revision bdfc3e808219add6536da13beb7010613499b733)
+@@ -1,14 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1" date="1660036804955" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 09/08/2022 11:18 [Changes]" />
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class" />
+-    <option name="AFTER_PATH" value="target/test-classes/stepdefinitions/uiSteps/US012_UiSteps.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/US012_UiSteps.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/test-classes/pages/US012_Page.class" />
+-    <option name="AFTER_PATH" value="target/test-classes/pages/US012_Page.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/US012_Page.class" />
+-  </binary>
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ /dev/null	(revision bdfc3e808219add6536da13beb7010613499b733)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_11_08_2022_16_53_[Changes]" date="1660229614059" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/08/2022 16:53 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: src/test/java/pages/US004_Pages.java
+===================================================================
+diff --git a/src/test/java/pages/US004_Pages.java b/src/test/java/pages/US004_Pages.java
+deleted file mode 100644
+--- a/src/test/java/pages/US004_Pages.java	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ /dev/null	(revision bdfc3e808219add6536da13beb7010613499b733)
+@@ -1,59 +0,0 @@
+-package pages;
+-
+-import org.openqa.selenium.WebElement;
+-import org.openqa.selenium.support.FindBy;
+-import org.openqa.selenium.support.PageFactory;
+-import utilities.Driver;
+-
+-public class US004_Pages {
+-
+-    public US004_Pages (){
+-        PageFactory.initElements(Driver.getDriver(), this);
+-    }
+-
+-    @FindBy(xpath="//*[@class='svg-inline--fa fa-user fa-w-14 ']")
+-    public WebElement findPeople;
+-
+-    @FindBy(xpath="//*[@id=\"login-item\"]/span")
+-    public WebElement signIn_First;
+-
+-    @FindBy(xpath="//*[@id=\"username\"]")
+-    public WebElement userNameUI;
+-
+-    @FindBy(xpath = "//*[@id=\"password\"]")
+-    public WebElement passwordUI;
+-
+-    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[3]/button[2]/span")
+-    public WebElement signIn_Second;
+-
+-    @FindBy(xpath = "//*[@id=\"admin-menu\"]/a/span")
+-    public WebElement admistaration;
+-
+-    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[2]/div[1]/div[1]/div/span")
+-    public WebElement failedToSignIn;
+-
+-    @FindBy(xpath="//*[@id=\"rememberMe\"]")
+-    public WebElement remember;
+-
+-    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[2]/div[3]/a/span")
+-    public WebElement fotgetButton;
+-
+-    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[2]/div[4]/span/span")
+-    public WebElement registerPhrases;
+-
+-    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[3]/button[1]/span")
+-    public WebElement cancelButton;
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-}
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ /dev/null	(revision bdfc3e808219add6536da13beb7010613499b733)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_14_08_2022_23_34_[Changes]" date="1660516567081" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 14/08/2022 23:34 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29_[Changes]1/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29_[Changes]1/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29_[Changes]1/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29_[Changes]1/shelved.patch	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ /dev/null	(revision bdfc3e808219add6536da13beb7010613499b733)
+@@ -1,346 +0,0 @@
+-Index: src/test/java/runner/Runner.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>package runner;\n\nimport io.cucumber.junit.Cucumber;\nimport io.cucumber.junit.CucumberOptions;\nimport org.junit.runner.RunWith;\n@RunWith(Cucumber.class)\n@CucumberOptions(\n        plugin = {\n                \"pretty\",\n                \"html:target/default-cucumber-reports.html\",\n                \"json:target/json-reports/cucumber.json\",\n                \"junit:target/xml-report/cucumber.xml\",\n                \"rerun:target/failedRerun.txt\"\n        },\n        features = \"./src/test/resources/features\",\n        glue = {\"stepdefinitions\",\"Hooks\"},\n        tags = \"@TC003\",\n        dryRun = false\n)\npublic class Runner {\n}
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/test/java/runner/Runner.java b/src/test/java/runner/Runner.java
+---- a/src/test/java/runner/Runner.java	
+-+++ b/src/test/java/runner/Runner.java	
+-@@ -14,7 +14,7 @@
+-         },
+-         features = "./src/test/resources/features",
+-         glue = {"stepdefinitions","Hooks"},
+--        tags = "@TC003",
+-+        tags = "@RoomApi",
+-         dryRun = false
+- )
+- public class Runner {
+-Index: configuration.properties
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>browser=chrome\nmedunna_login_url=https://medunna.com/\nmedunna_registration_url=https://medunna.com/account/register\nregistrant_filename=src/test/resources/testdata/Medunna.txt\nappointment_records=src/test/resources/testdata/AppointmentData.txt\nbase_url=https://medunna.com\napi_registrant_data=src/test/resources/testdata/ApiRegistrantData.txt\nregistrant_endpoint=https://medunna.com/api/users?=size=2000\ntoken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYW5pZWxwYXRpZW50IiwiYXV0aCI6IlJPTEVfUEFUSUVOVCIsImV4cCI6MTY0Njc4OTQ1M30.DEasyhzyQjy9xfew5vxf067OPIAoGdbCD_bKl0lPDUBxv4Hbl9iEF6FgNV9a58FnTzOSkaRm9aygwPnCxV3PeA\napi_appointments=https://medunna.com/api/appointments?=size=2000\ndb_credentials_url=jdbc:postgresql://medunna.com:5432/medunna_db\ndb_username=medunnadb_user\ndb_password=Medunnadb_@129\ndatabase_registrant_data=src/test/resources/testdata/DatabaseRegistrantData.txt\napi_all_registrant_data=src/test/resources/testdata/ApiAllRegistrantData.txt\nregistrant_put_endpoint=https://medunna.com/api/users\nregistrant_delete_endpoint=https://medunna.com/api/users\napi_bearer_token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXJhdHRhbmMiLCJhdXRoIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1MDUyOTA4MX0.svIe6r47IuCcEdgBSoq-znJ_vtzVYZyvXmLGY9b0L6mbOY3rD7EZbl3KOjvAJVOV2QONfAwPkXrXo_khc03IBg\n\n\n\n\n\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>ISO-8859-1
+-===================================================================
+-diff --git a/configuration.properties b/configuration.properties
+---- a/configuration.properties	
+-+++ b/configuration.properties	
+-@@ -16,7 +16,7 @@
+- registrant_put_endpoint=https://medunna.com/api/users
+- registrant_delete_endpoint=https://medunna.com/api/users
+- api_bearer_token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXJhdHRhbmMiLCJhdXRoIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1MDUyOTA4MX0.svIe6r47IuCcEdgBSoq-znJ_vtzVYZyvXmLGY9b0L6mbOY3rD7EZbl3KOjvAJVOV2QONfAwPkXrXo_khc03IBg
+--
+-+registrant_put_endpoint=https://medunna.com/api/rooms
+- 
+- 
+- 
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/runner/Runner.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/runner/Runner.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/default-cucumber-reports.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/default-cucumber-reports.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/json-reports/cucumber.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/json-reports/cucumber.json\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/xml-report/cucumber.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/xml-report/cucumber.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitSEFilterConfiguration\">\n    <file-type-list>\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\n      <filtered-out-file-type name=\"TAG\" />\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\n    </file-type-list>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2D7xV3Roi9RJoKU9V6osnpqlTUG\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\n  </component>\n  <component name=\"RunManager\" selected=\"JUnit.Runner\">\n    <configuration name=\"Scenario: Doktorun hasta icin test isteyebilmeli\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\n      <module name=\"MedunnaSon\" />\n      <option name=\"NAME_FILTER\" value=\"^Doktorun hasta icin test isteyebilmeli$\" />\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Doktorun hasta icin test isteyebilmeli$&quot;\" />\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: Doktorun hasta icin test isteyebilmeli\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\n      <module name=\"MedunnaSon\" />\n      <option name=\"NAME_FILTER\" value=\"^TC002 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$\" />\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC002 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$&quot;\" />\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature\" />\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\n      <module name=\"MedunnaSon\" />\n      <option name=\"NAME_FILTER\" value=\"^TC003 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$\" />\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC003 Test içeriğinde \\&quot;Glucose\\&quot; testi oldugu test edilir$&quot;\" />\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Runner\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"MedunnaSon\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"runner.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"runner\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"runner.Runner\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\n      <module name=\"untitled\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\n      <module name=\"untitled\" />\n      <option name=\"filePath\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.Runner\" />\n        <item itemvalue=\"Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\n        <item itemvalue=\"Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir\" />\n        <item itemvalue=\"Cucumber Java.Scenario: Doktorun hasta icin test isteyebilmeli\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\" />\n      <created>1660063945726</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1660063945726</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	
+-+++ b/.idea/workspace.xml	
+-@@ -5,10 +5,17 @@
+-   </component>
+-   <component name="ChangeListManager">
+-     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
+-+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" afterDir="false" />
+-+      <change afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
+-+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java" afterDir="false" />
+-+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/target/default-cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/target/failedRerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/target/json-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runner/Runner.class" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/target/xml-report/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-@@ -16,6 +23,13 @@
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-     <option name="LAST_RESOLUTION" value="IGNORE" />
+-   </component>
+-+  <component name="FileTemplateManagerImpl">
+-+    <option name="RECENT_TEMPLATES">
+-+      <list>
+-+        <option value="Class" />
+-+      </list>
+-+    </option>
+-+  </component>
+-   <component name="Git.Settings">
+-     <option name="RECENT_BRANCH_BY_REPOSITORY">
+-       <map>
+-@@ -49,7 +63,7 @@
+-     <property name="project.structure.side.proportion" value="0.2" />
+-     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+-   </component>
+--  <component name="RunManager" selected="JUnit.Runner">
+-+  <component name="RunManager" selected="Cucumber Java.Scenario: Room api testi">
+-     <configuration name="Scenario: Doktorun hasta icin test isteyebilmeli" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+-       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US012_UiTest.feature" />
+-@@ -59,6 +73,26 @@
+-       <option name="NAME_FILTER" value="^Doktorun hasta icin test isteyebilmeli$" />
+-       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Doktorun hasta icin test isteyebilmeli$&quot;" />
+-       <option name="SUGGESTED_NAME" value="Scenario: Doktorun hasta icin test isteyebilmeli" />
+-+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+-+      <extension name="coverage">
+-+        <pattern>
+-+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+-+          <option name="ENABLED" value="true" />
+-+        </pattern>
+-+      </extension>
+-+      <method v="2">
+-+        <option name="Make" enabled="true" />
+-+      </method>
+-+    </configuration>
+-+    <configuration name="Scenario: Room api testi" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+-+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+-+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/RoomGet.feature" />
+-+      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
+-+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+-+      <module name="MedunnaSon" />
+-+      <option name="NAME_FILTER" value="^Room api testi$" />
+-+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Room api testi$&quot;" />
+-+      <option name="SUGGESTED_NAME" value="Scenario: Room api testi" />
+-       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+-       <extension name="coverage">
+-         <pattern>
+-@@ -140,6 +174,7 @@
+-     </configuration>
+-     <recent_temporary>
+-       <list>
+-+        <item itemvalue="Cucumber Java.Scenario: Room api testi" />
+-         <item itemvalue="JUnit.Runner" />
+-         <item itemvalue="Cucumber Java.Scenario: TC002 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+-         <item itemvalue="Cucumber Java.Scenario: TC003 Test içeriğinde &quot;Glucose&quot; testi oldugu test edilir" />
+-Index: src/test/java/stepdefinitions/apiSteps/RoomApiGet.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java b/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java
+-new file mode 100644
+---- /dev/null	
+-+++ b/src/test/java/stepdefinitions/apiSteps/RoomApiGet.java	
+-@@ -0,0 +1,40 @@
+-+package stepdefinitions.apiSteps;
+-+
+-+import io.cucumber.java.en.Given;
+-+import io.cucumber.java.en.Then;
+-+import io.restassured.http.ContentType;
+-+import io.restassured.response.Response;
+-+import utilities.Authentication;
+-+import utilities.ConfigurationReader;
+-+import utilities.Driver;
+-+
+-+import static io.restassured.RestAssured.given;
+-+
+-+public class RoomApiGet {
+-+    Response response;
+-+    String token="\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkb2t0b3I2NyIsImF1dGgiOiJST0xFX1BIWVNJQ0lBTiIsImV4cCI6MTY2MDE1MTU3N30.VcMDqz0PRww6Czoq0b9CrAfbd_TtAtZ32zy6w46-cO0apkKc7YgYq4z9euMsK3A0Uzfr0ZI5DSAJUSuUzCq39w\"";
+-+
+-+    @Given("kullanici roomlar icin get request yapar")
+-+    public void kullanici_roomlar_icin_get_request_yapar() {
+-+       response=given().header(
+-+               "Authorization",
+-+               "Bearer " + token,
+-+               "Content-Type",
+-+               ContentType.JSON,
+-+               "Accept",
+-+               ContentType.JSON).when().get(ConfigurationReader.getProperty("registrant_put_endpoint"));
+-+
+-+       response.then().assertThat().statusCode(200);
+-+       response.prettyPrint();
+-+
+-+
+-+    }
+-+    @Given("kullanici gelen room datayi serealisation yapar")
+-+    public void kullanici_gelen_room_datayi_serealisation_yapar() {
+-+
+-+    }
+-+    @Then("kullanici room datasini valide eder")
+-+    public void kullanici_room_datasini_valide_eder() {
+-+
+-+    }
+-+}
+-Index: src/test/java/pojos/Room1.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/test/java/pojos/Room1.java b/src/test/java/pojos/Room1.java
+-new file mode 100644
+---- /dev/null	
+-+++ b/src/test/java/pojos/Room1.java	
+-@@ -0,0 +1,77 @@
+-+package pojos;
+-+
+-+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+-+
+-+@JsonIgnoreProperties(ignoreUnknown = true)
+-+public class Room1 {
+-+    /*
+-+            {
+-+            "createdBy": "string",
+-+            "createdDate": "2022-08-06T15:12:18.833Z",
+-+            "description": "string",
+-+            "id": 0,
+-+            "price": 0,
+-+            "roomNumber": 0,
+-+            "roomType": "TWIN",
+-+            "status": true
+-+          }
+-+     */
+-+    private String createdBy;
+-+    private String createdDate;
+-+    private String description;
+-+    private  Integer id;
+-+    private  Integer price;
+-+    private  Integer roomNumber;
+-+    private  String roomType;
+-+    private Boolean status;
+-+    public String getCreatedBy() {
+-+        return createdBy;
+-+    }
+-+    public void setCreatedBy(String createdBy) {
+-+        this.createdBy = createdBy;
+-+    }
+-+    public String getCreatedDate() {
+-+        return createdDate;
+-+    }
+-+    public void setCreatedDate(String createdDate) {
+-+        this.createdDate = createdDate;
+-+    }
+-+    public String getDescription() {
+-+        return description;
+-+    }
+-+    public void setDescription(String description) {
+-+        this.description = description;
+-+    }
+-+    public Integer getId() {
+-+        return id;
+-+    }
+-+    public void setId(Integer id) {
+-+        this.id = id;
+-+    }
+-+    public Integer getPrice() {
+-+        return price;
+-+    }
+-+    public void setPrice(Integer price) {
+-+        this.price = price;
+-+    }
+-+    public Integer getRoomNumber() {
+-+        return roomNumber;
+-+    }
+-+    public void setRoomNumber(Integer roomNumber) {
+-+        this.roomNumber = roomNumber;
+-+    }
+-+    public String getRoomType() {
+-+        return roomType;
+-+    }
+-+    public void setRoomType(String roomType) {
+-+        this.roomType = roomType;
+-+    }
+-+    public Boolean getStatus() {
+-+        return status;
+-+    }
+-+    public void setStatus(Boolean status) {
+-+        this.status = status;
+-+    }
+-+
+-+
+-+}
+-Index: src/test/resources/features/apiFeatures/RoomGet.feature
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/test/resources/features/apiFeatures/RoomGet.feature b/src/test/resources/features/apiFeatures/RoomGet.feature
+-new file mode 100644
+---- /dev/null	
+-+++ b/src/test/resources/features/apiFeatures/RoomGet.feature	
+-@@ -0,0 +1,7 @@
+-+@RoomApi
+-+Feature: Room get
+-+
+-+  Scenario: Room api testi
+-+    Given kullanici roomlar icin get request yapar
+-+    And  kullanici gelen room datayi serealisation yapar
+-+    Then kullanici room datasini valide eder
+-\ No newline at end of file
+-Index: src/test/java/pojos/Room1Post.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/test/java/pojos/Room1Post.java b/src/test/java/pojos/Room1Post.java
+-new file mode 100644
+---- /dev/null	
+-+++ b/src/test/java/pojos/Room1Post.java	
+-@@ -0,0 +1,57 @@
+-+package pojos;
+-+
+-+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+-+
+-+@JsonIgnoreProperties(ignoreUnknown = true)
+-+public class Room1Post {
+-+
+-+    private String createdBy;
+-+    private String createdDate;
+-+    private String description;
+-+    private  Integer price;
+-+    private  Integer roomNumber;
+-+    private  String roomType;
+-+    private Boolean status;
+-+    public String getCreatedBy() {
+-+        return createdBy;
+-+    }
+-+    public void setCreatedBy(String createdBy) {
+-+        this.createdBy = createdBy;
+-+    }
+-+    public String getCreatedDate() {
+-+        return createdDate;
+-+    }
+-+    public void setCreatedDate(String createdDate) {
+-+        this.createdDate = createdDate;
+-+    }
+-+    public String getDescription() {
+-+        return description;
+-+    }
+-+    public void setDescription(String description) {
+-+        this.description = description;
+-+    }
+-+    public Integer getPrice() {
+-+        return price;
+-+    }
+-+    public void setPrice(Integer price) {
+-+        this.price = price;
+-+    }
+-+    public Integer getRoomNumber() {
+-+        return roomNumber;
+-+    }
+-+    public void setRoomNumber(Integer roomNumber) {
+-+        this.roomNumber = roomNumber;
+-+    }
+-+    public String getRoomType() {
+-+        return roomType;
+-+    }
+-+    public void setRoomType(String roomType) {
+-+        this.roomType = roomType;
+-+    }
+-+    public Boolean getStatus() {
+-+        return status;
+-+    }
+-+    public void setStatus(Boolean status) {
+-+        this.status = status;
+-+    }
+-+}
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ /dev/null	(revision bdfc3e808219add6536da13beb7010613499b733)
+@@ -1,9 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_10_08_2022_19_29_[Changes]1" date="1660152622585" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29_[Changes]1/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 10/08/2022 19:29 [Changes]" />
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/test-classes/runner/Runner.class" />
+-    <option name="AFTER_PATH" value="target/test-classes/runner/Runner.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29_[Changes]1/Runner.class" />
+-  </binary>
+-</changelist>
+\ No newline at end of file
+Index: src/test/java/pages/US012_13_Pages.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pages;\r\n\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.support.FindBy;\r\nimport org.openqa.selenium.support.PageFactory;\r\nimport utilities.Driver;\r\n\r\nimport java.util.List;\r\n\r\npublic class US012_13_Pages {\r\n\r\n    public US012_13_Pages() {\r\n\r\n        PageFactory.initElements(Driver.getDriver(), this);\r\n\r\n    }\r\n\r\n\r\n    @FindBy(xpath = \"//li[@id='account-menu']\")\r\n    public WebElement signeIn;\r\n\r\n    @FindBy(id = \"login-item\")\r\n    public WebElement login;\r\n\r\n    @FindBy(name = \"username\")\r\n    public WebElement userName;\r\n\r\n    @FindBy(name = \"password\")\r\n    public WebElement password;\r\n\r\n    @FindBy(xpath = \"//button[@type='submit']\")\r\n    public WebElement signIn_boutton;\r\n\r\n    @FindBy(xpath = \"//li[@id='entity-menu']\")\r\n    public WebElement myPage;\r\n\r\n    @FindBy(xpath = \"//span[text()='My Appointments']\")\r\n    public WebElement myAppointments;\r\n\r\n    @FindBy(xpath = \"//span[text()='Edit']\")\r\n    public WebElement Edit;\r\n\r\n    @FindBy(xpath = \"//a[@class='btn btn-success btn-sm']\")\r\n    public WebElement requestATest;\r\n\r\n    @FindBy(xpath = \"//h2[text()='Test Items']\")\r\n    public WebElement testItemsTextVisible;\r\n\r\n    @FindBy(xpath = \"//li[@id='account-menu']\")\r\n    public WebElement accountMenu;\r\n\r\n    @FindBy(xpath = \"//span[text()='Sign out']\")\r\n    public WebElement signOut;\r\n\r\n    @FindBy(xpath = \"//thead//tr//th[2]\")\r\n    public WebElement tests;\r\n\r\n    @FindBy(xpath = \"//input[@name='1402']\")\r\n    public WebElement ureaTest;\r\n\r\n    @FindBy(xpath = \"//input[@name='1403']\")\r\n    public WebElement creatinineTes;\r\n\r\n    @FindBy(xpath = \"//input[@name='1404']\")\r\n    public WebElement sodiumTest;\r\n\r\n    @FindBy(xpath = \"//input[@name='1405']\")\r\n    public WebElement potassiumTest;\r\n\r\n    @FindBy(xpath = \"//input[@name='1406']\")\r\n    public WebElement totalproteinTest;\r\n\r\n    @FindBy(xpath = \"//input[@name='1408']\")\r\n    public WebElement hemoglobinTest;\r\n\r\n    @FindBy(xpath = \"//input[@name='1407']\")\r\n    public WebElement albuminTest;\r\n\r\n    @FindBy(xpath = \"//tr//td[2]\")\r\n    public List<WebElement> testList;\r\n\r\n    @FindBy(xpath = \"//input[@name='129700']\")\r\n    public WebElement glucoseTest;\r\n\r\n    @FindBy(xpath = \"//button[@type='submit']\")\r\n    public WebElement saveButton;\r\n\r\n    @FindBy(id = \"app-view-container\")\r\n    public WebElement verifyTextAlert;\r\n\r\n    @FindBy(xpath = \"//span[text()='Search Patient']\")\r\n    public WebElement searchPatient;\r\n\r\n    @FindBy(xpath = \"//input[@name='ssn']\")\r\n    public WebElement ssnBox;\r\n\r\n    @FindBy(xpath = \"//span[text()='Show Appointments']\")\r\n    public WebElement showAppointments;\r\n\r\n    @FindBy(xpath = \"//*[text()='Show Test Results']\")\r\n    public WebElement showTests;\r\n\r\n    @FindBy(xpath = \"(//a[@class='btn btn-info btn-sm'])[19]\")\r\n    public WebElement viewResults;\r\n\r\n    @FindBy(xpath = \"(//tr//th)[01]\")\r\n    public WebElement id;\r\n\r\n    @FindBy(xpath = \"(//tr//th)[02]\")\r\n    public WebElement name;\r\n\r\n    @FindBy(xpath = \"(//tr//th)[04]\")\r\n    public WebElement default_max_value;\r\n\r\n    @FindBy(xpath = \"(//tr//th)[05]\")\r\n    public WebElement default_min_value;\r\n\r\n    @FindBy(xpath = \"(//tr//th)[06]\")\r\n    public WebElement test;\r\n\r\n    @FindBy(xpath = \"(//tr//th)[07]\")\r\n    public WebElement description ;\r\n\r\n    @FindBy(xpath = \"(//tr//th)[08]\")\r\n    public WebElement date ;\r\n\r\n    @FindBy(xpath = \"//tbody//tr//td[1]\")\r\n    public List<WebElement> testId;\r\n\r\n    @FindBy(xpath = \"//tbody//tr//td[2]\")\r\n    public List<WebElement> testName;\r\n\r\n    @FindBy(xpath = \"//tbody//tr//td[5]\")\r\n    public List<WebElement> testDefault_max_value;\r\n\r\n    @FindBy(xpath = \"//tbody//tr//td[4]\")\r\n    public List<WebElement> testDefault_min_value;\r\n\r\n    @FindBy(xpath = \"//tbody//tr//td[6]\")\r\n    public List<WebElement> testTest;\r\n\r\n    @FindBy(xpath = \"//tbody//tr//td[7]\")\r\n    public List<WebElement> testDescription;\r\n\r\n    @FindBy(xpath = \"//tbody//tr//td[8]\")\r\n    public List<WebElement> testDate;\r\n\r\n   @FindBy(xpath = \"//*[text()='Request Inpatient']\")\r\n    public WebElement requestInpatient;\r\n\r\n   @FindBy(xpath = \"//div[@class='Toastify__toast-body']\")\r\n    public WebElement inpatienMsj;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/pages/US012_13_Pages.java b/src/test/java/pages/US012_13_Pages.java
+--- a/src/test/java/pages/US012_13_Pages.java	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ b/src/test/java/pages/US012_13_Pages.java	(date 1661888980134)
+@@ -12,9 +12,7 @@
+     public US012_13_Pages() {
+ 
+         PageFactory.initElements(Driver.getDriver(), this);
+-
+     }
+-
+ 
+     @FindBy(xpath = "//li[@id='account-menu']")
+     public WebElement signeIn;
+Index: src/test/java/stepdefinitions/uiSteps/US004_UISteps.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package stepdefinitions.uiSteps;\r\n\r\n\r\nimport io.cucumber.java.en.Given;\r\nimport io.cucumber.java.en.Then;\r\nimport org.junit.Assert;\r\nimport pages.US004_Pages;\r\nimport utilities.ConfigurationReader;\r\nimport utilities.Driver;\r\n\r\npublic class US004_UISteps {\r\n\r\n    US004_Pages ui004 = new US004_Pages();\r\n\r\n    @Given(\"The User goes to Medunna URL\")\r\n    public void the_user_goes_to_medunna_url() {\r\n        Driver.getDriver().get(ConfigurationReader.getProperty(\"medunna_login_url\"));\r\n\r\n    }\r\n\r\n    @Then(\"The user navigates the sign in the page\")\r\n    public void the_user_navigates_the_sign_in_the_page() {\r\n        ui004.findPeople.click();\r\n\r\n    }\r\n\r\n    @Then(\"The user clicks on the sign-in button\")\r\n    public void the_user_clicks_on_the_sign_in_button() {\r\n        ui004.signIn_First.click();\r\n\r\n    }\r\n\r\n    @Then(\"The user fills the Username box\")\r\n    public void the_user_fills_the_username_box() throws InterruptedException {\r\n        ui004.userNameUI.sendKeys(ConfigurationReader.getProperty(\"adminUserName\"));\r\n        Thread.sleep(2000);\r\n    }\r\n\r\n    @Then(\"The user fills the Password box\")\r\n    public void the_user_fills_the_password_box() throws InterruptedException {\r\n        //    ui004.passwordUI.sendKeys(\"123qscaA...\");\r\n        ui004.passwordUI.sendKeys(ConfigurationReader.getProperty(\"adminPasword\"));\r\n        Thread.sleep(2000);\r\n    }\r\n\r\n    @Then(\"The user clicks on the sign-in button below the page\")\r\n    public void the_user_clicks_on_the_sign_in_button_below_the_page() throws InterruptedException {\r\n        ui004.signIn_Second.click();\r\n        Thread.sleep(1000);\r\n\r\n    }\r\n\r\n    @Then(\"The user verifies sign-in is done successfully\")\r\n    public void the_user_verifies_sign_in_is_done_successfully() {\r\n        Assert.assertTrue(ui004.admistaration.isDisplayed());\r\n    }\r\n\r\n    @Then(\"The user fills the Username with a wrong data\")\r\n    public void the_user_fills_the_with_a_wrong_data() {\r\n        ui004.userNameUI.sendKeys(\"Burak\");\r\n        ui004.signIn_Second.click();\r\n    }\r\n\r\n    @Then(\"The user verifies sign-in isn't done successfull\")\r\n    public void the_user_verifies_sign_in_isn_t_done_successfull() {\r\n        Assert.assertTrue(ui004.failedToSignIn.isDisplayed());\r\n    }\r\n\r\n    @Then(\"The user tests that the remember me button can be clicked\")\r\n    public void the_user_tests_that_the_remember_me_button_can_be_clicked() {\r\n        ui004.remember.click();\r\n    }\r\n\r\n    @Then(\"The user verifies that the phrase of the {string}  exists\")\r\n    public void the_user_verifies_that_the_phrase_of_the_exists(String forgetButton) {\r\n        String searchedPhrases = forgetButton;\r\n        String actualButton = ui004.fotgetButton.getText();\r\n        Assert.assertTrue(searchedPhrases.contains(actualButton));\r\n    }\r\n\r\n    @Then(\"The user verifies that the phrase of the {string} exists\")\r\n    public void the_user_verifies_that_the_phrase_of_the_existss(String registerPhrases) {\r\n        String searchedPhrases2 = registerPhrases;\r\n        String actualPhrases = ui004.registerPhrases.getText();\r\n        Assert.assertTrue(searchedPhrases2.contains(actualPhrases));\r\n    }\r\n\r\n    @Then(\"The user verifies that {string} button exists on the page\")\r\n    public void the_user_verifies_that_button_exists_on_the_page(String cancelButton) {\r\n        String expectedCancelButton = cancelButton;\r\n        String actuelCancelButton = ui004.cancelButton.getText();\r\n\r\n        Assert.assertTrue(expectedCancelButton.contains(actuelCancelButton));\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/stepdefinitions/uiSteps/US004_UISteps.java b/src/test/java/stepdefinitions/uiSteps/US004_UISteps.java
+--- a/src/test/java/stepdefinitions/uiSteps/US004_UISteps.java	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ b/src/test/java/stepdefinitions/uiSteps/US004_UISteps.java	(date 1661888980149)
+@@ -4,13 +4,13 @@
+ import io.cucumber.java.en.Given;
+ import io.cucumber.java.en.Then;
+ import org.junit.Assert;
+-import pages.US004_Pages;
++import pages.US004_027_Pages;
+ import utilities.ConfigurationReader;
+ import utilities.Driver;
+ 
+ public class US004_UISteps {
+ 
+-    US004_Pages ui004 = new US004_Pages();
++    US004_027_Pages ui004 = new US004_027_Pages();
+ 
+     @Given("The User goes to Medunna URL")
+     public void the_user_goes_to_medunna_url() {
+Index: .idea/dbnavigator.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DBNavigator.Project.DataEditorManager\">\r\n    <record-view-column-sorting-type value=\"BY_INDEX\" />\r\n    <value-preview-text-wrapping value=\"false\" />\r\n    <value-preview-pinned value=\"false\" />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.DataExportManager\">\r\n    <export-instructions>\r\n      <create-header value=\"true\" />\r\n      <friendly-headers value=\"false\" />\r\n      <quote-values-containing-separator value=\"true\" />\r\n      <quote-all-values value=\"false\" />\r\n      <value-separator value=\"\" />\r\n      <file-name value=\"\" />\r\n      <file-location value=\"\" />\r\n      <scope value=\"GLOBAL\" />\r\n      <destination value=\"FILE\" />\r\n      <format value=\"EXCEL\" />\r\n      <charset value=\"windows-1254\" />\r\n    </export-instructions>\r\n  </component>\r\n  <component name=\"DBNavigator.Project.DatabaseBrowserManager\">\r\n    <autoscroll-to-editor value=\"false\" />\r\n    <autoscroll-from-editor value=\"true\" />\r\n    <show-object-properties value=\"true\" />\r\n    <loaded-nodes />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.DatabaseConsoleManager\">\r\n    <connection id=\"8b436d45-dea5-42da-be42-8a5bf7bd9b1f\">\r\n      <console name=\"Medunna DB\" type=\"STANDARD\" schema=\"public\" session=\"Main\"><![CDATA[select * from patient\r\n\r\nselect * from physician\r\n\r\nselect * from physician where id=42999\r\n\r\nselect * from jhi_user\r\n\r\nselect * from appointment\r\n\r\nselect * from bill\r\n\r\nselect * from c_state\r\n\r\nselect * from c_test\r\n\r\nselect * from c_test_item\r\n\r\nselect * from c_test_result\r\n\r\nselect * from cmessage\r\n\r\nselect * from country where id=80063\r\n\r\nselect * from room\r\n\r\nselect * from country]]></console>\r\n    </connection>\r\n  </component>\r\n  <component name=\"DBNavigator.Project.DatabaseFileManager\">\r\n    <open-files>\r\n      <object connection-id=\"8b436d45-dea5-42da-be42-8a5bf7bd9b1f\" object-ref=\"consoles/Medunna DB\" />\r\n    </open-files>\r\n  </component>\r\n  <component name=\"DBNavigator.Project.DatabaseSessionManager\">\r\n    <connection id=\"8b436d45-dea5-42da-be42-8a5bf7bd9b1f\" />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.EditorStateManager\">\r\n    <last-used-providers />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.ExecutionManager\">\r\n    <retain-sticky-names value=\"false\" />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.MethodExecutionManager\">\r\n    <method-browser />\r\n    <execution-history>\r\n      <group-entries value=\"true\" />\r\n      <execution-inputs />\r\n    </execution-history>\r\n    <argument-values-cache />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.ObjectDependencyManager\">\r\n    <last-used-dependency-type value=\"INCOMING\" />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.ObjectQuickFilterManager\">\r\n    <last-used-operator value=\"EQUAL\" />\r\n    <filters />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.ParserDiagnosticsManager\">\r\n    <diagnostics-history />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.ScriptExecutionManager\" clear-outputs=\"true\">\r\n    <recently-used-interfaces />\r\n  </component>\r\n  <component name=\"DBNavigator.Project.Settings\">\r\n    <connections>\r\n      <connection id=\"8b436d45-dea5-42da-be42-8a5bf7bd9b1f\" active=\"true\">\r\n        <database>\r\n          <name value=\"Medunna DB\" />\r\n          <description value=\"\" />\r\n          <database-type value=\"POSTGRES\" />\r\n          <config-type value=\"BASIC\" />\r\n          <database-version value=\"10.15\" />\r\n          <driver-source value=\"BUILTIN\" />\r\n          <driver-library value=\"\" />\r\n          <driver value=\"\" />\r\n          <url-type value=\"DATABASE\" />\r\n          <host value=\"medunna.com\" />\r\n          <port value=\"5432\" />\r\n          <database value=\"medunna_db\" />\r\n          <type value=\"USER_PASSWORD\" />\r\n          <user value=\"medunnadb_user\" />\r\n          <deprecated-pwd value=\"TWVkdW5uYWRiX0AxMjk=\" />\r\n        </database>\r\n        <properties>\r\n          <auto-commit value=\"false\" />\r\n        </properties>\r\n        <ssh-settings>\r\n          <active value=\"false\" />\r\n          <proxy-host value=\"\" />\r\n          <proxy-port value=\"22\" />\r\n          <proxy-user value=\"\" />\r\n          <deprecated-proxy-pwd value=\"\" />\r\n          <auth-type value=\"PASSWORD\" />\r\n          <key-file value=\"\" />\r\n          <key-passphrase value=\"\" />\r\n        </ssh-settings>\r\n        <ssl-settings>\r\n          <active value=\"false\" />\r\n          <certificate-authority-file value=\"\" />\r\n          <client-certificate-file value=\"\" />\r\n          <client-key-file value=\"\" />\r\n        </ssl-settings>\r\n        <details>\r\n          <charset value=\"UTF-8\" />\r\n          <session-management value=\"true\" />\r\n          <ddl-file-binding value=\"true\" />\r\n          <database-logging value=\"false\" />\r\n          <connect-automatically value=\"true\" />\r\n          <restore-workspace value=\"true\" />\r\n          <restore-workspace-deep value=\"true\" />\r\n          <environment-type value=\"default\" />\r\n          <connectivity-timeout value=\"5\" />\r\n          <idle-time-to-disconnect value=\"30\" />\r\n          <idle-time-to-disconnect-pool value=\"5\" />\r\n          <credential-expiry-time value=\"10\" />\r\n          <max-connection-pool-size value=\"7\" />\r\n          <alternative-statement-delimiter value=\"\" />\r\n        </details>\r\n        <object-filters hide-empty-schemas=\"false\" hide-pseudo-columns=\"false\">\r\n          <object-type-filter use-master-settings=\"true\">\r\n            <object-type name=\"SCHEMA\" enabled=\"true\" />\r\n            <object-type name=\"USER\" enabled=\"true\" />\r\n            <object-type name=\"ROLE\" enabled=\"true\" />\r\n            <object-type name=\"PRIVILEGE\" enabled=\"true\" />\r\n            <object-type name=\"CHARSET\" enabled=\"true\" />\r\n            <object-type name=\"TABLE\" enabled=\"true\" />\r\n            <object-type name=\"VIEW\" enabled=\"true\" />\r\n            <object-type name=\"MATERIALIZED_VIEW\" enabled=\"true\" />\r\n            <object-type name=\"NESTED_TABLE\" enabled=\"true\" />\r\n            <object-type name=\"COLUMN\" enabled=\"true\" />\r\n            <object-type name=\"INDEX\" enabled=\"true\" />\r\n            <object-type name=\"CONSTRAINT\" enabled=\"true\" />\r\n            <object-type name=\"DATASET_TRIGGER\" enabled=\"true\" />\r\n            <object-type name=\"DATABASE_TRIGGER\" enabled=\"true\" />\r\n            <object-type name=\"SYNONYM\" enabled=\"true\" />\r\n            <object-type name=\"SEQUENCE\" enabled=\"true\" />\r\n            <object-type name=\"PROCEDURE\" enabled=\"true\" />\r\n            <object-type name=\"FUNCTION\" enabled=\"true\" />\r\n            <object-type name=\"PACKAGE\" enabled=\"true\" />\r\n            <object-type name=\"TYPE\" enabled=\"true\" />\r\n            <object-type name=\"TYPE_ATTRIBUTE\" enabled=\"true\" />\r\n            <object-type name=\"ARGUMENT\" enabled=\"true\" />\r\n            <object-type name=\"DIMENSION\" enabled=\"true\" />\r\n            <object-type name=\"CLUSTER\" enabled=\"true\" />\r\n            <object-type name=\"DBLINK\" enabled=\"true\" />\r\n          </object-type-filter>\r\n          <object-name-filters />\r\n        </object-filters>\r\n      </connection>\r\n    </connections>\r\n    <browser-settings>\r\n      <general>\r\n        <display-mode value=\"TABBED\" />\r\n        <navigation-history-size value=\"100\" />\r\n        <show-object-details value=\"false\" />\r\n      </general>\r\n      <filters>\r\n        <object-type-filter>\r\n          <object-type name=\"SCHEMA\" enabled=\"true\" />\r\n          <object-type name=\"USER\" enabled=\"true\" />\r\n          <object-type name=\"ROLE\" enabled=\"true\" />\r\n          <object-type name=\"PRIVILEGE\" enabled=\"true\" />\r\n          <object-type name=\"CHARSET\" enabled=\"true\" />\r\n          <object-type name=\"TABLE\" enabled=\"true\" />\r\n          <object-type name=\"VIEW\" enabled=\"true\" />\r\n          <object-type name=\"MATERIALIZED_VIEW\" enabled=\"true\" />\r\n          <object-type name=\"NESTED_TABLE\" enabled=\"true\" />\r\n          <object-type name=\"COLUMN\" enabled=\"true\" />\r\n          <object-type name=\"INDEX\" enabled=\"true\" />\r\n          <object-type name=\"CONSTRAINT\" enabled=\"true\" />\r\n          <object-type name=\"DATASET_TRIGGER\" enabled=\"true\" />\r\n          <object-type name=\"DATABASE_TRIGGER\" enabled=\"true\" />\r\n          <object-type name=\"SYNONYM\" enabled=\"true\" />\r\n          <object-type name=\"SEQUENCE\" enabled=\"true\" />\r\n          <object-type name=\"PROCEDURE\" enabled=\"true\" />\r\n          <object-type name=\"FUNCTION\" enabled=\"true\" />\r\n          <object-type name=\"PACKAGE\" enabled=\"true\" />\r\n          <object-type name=\"TYPE\" enabled=\"true\" />\r\n          <object-type name=\"TYPE_ATTRIBUTE\" enabled=\"true\" />\r\n          <object-type name=\"ARGUMENT\" enabled=\"true\" />\r\n          <object-type name=\"DIMENSION\" enabled=\"true\" />\r\n          <object-type name=\"CLUSTER\" enabled=\"true\" />\r\n          <object-type name=\"DBLINK\" enabled=\"true\" />\r\n        </object-type-filter>\r\n      </filters>\r\n      <sorting>\r\n        <object-type name=\"COLUMN\" sorting-type=\"NAME\" />\r\n        <object-type name=\"FUNCTİON\" sorting-type=\"NAME\" />\r\n        <object-type name=\"PROCEDURE\" sorting-type=\"NAME\" />\r\n        <object-type name=\"ARGUMENT\" sorting-type=\"POSITION\" />\r\n      </sorting>\r\n      <default-editors>\r\n        <object-type name=\"VİEW\" editor-type=\"SELECTION\" />\r\n        <object-type name=\"PACKAGE\" editor-type=\"SELECTION\" />\r\n        <object-type name=\"TYPE\" editor-type=\"SELECTION\" />\r\n      </default-editors>\r\n    </browser-settings>\r\n    <navigation-settings>\r\n      <lookup-filters>\r\n        <lookup-objects>\r\n          <object-type name=\"SCHEMA\" enabled=\"true\" />\r\n          <object-type name=\"USER\" enabled=\"false\" />\r\n          <object-type name=\"ROLE\" enabled=\"false\" />\r\n          <object-type name=\"PRİVİLEGE\" enabled=\"false\" />\r\n          <object-type name=\"CHARSET\" enabled=\"false\" />\r\n          <object-type name=\"TABLE\" enabled=\"true\" />\r\n          <object-type name=\"VİEW\" enabled=\"true\" />\r\n          <object-type name=\"MATERİALİZED VİEW\" enabled=\"true\" />\r\n          <object-type name=\"İNDEX\" enabled=\"true\" />\r\n          <object-type name=\"CONSTRAİNT\" enabled=\"true\" />\r\n          <object-type name=\"DATASET TRİGGER\" enabled=\"true\" />\r\n          <object-type name=\"DATABASE TRİGGER\" enabled=\"true\" />\r\n          <object-type name=\"SYNONYM\" enabled=\"false\" />\r\n          <object-type name=\"SEQUENCE\" enabled=\"true\" />\r\n          <object-type name=\"PROCEDURE\" enabled=\"true\" />\r\n          <object-type name=\"FUNCTİON\" enabled=\"true\" />\r\n          <object-type name=\"PACKAGE\" enabled=\"true\" />\r\n          <object-type name=\"TYPE\" enabled=\"true\" />\r\n          <object-type name=\"DİMENSİON\" enabled=\"false\" />\r\n          <object-type name=\"CLUSTER\" enabled=\"false\" />\r\n          <object-type name=\"DBLİNK\" enabled=\"true\" />\r\n        </lookup-objects>\r\n        <force-database-load value=\"false\" />\r\n        <prompt-connection-selection value=\"true\" />\r\n        <prompt-schema-selection value=\"true\" />\r\n      </lookup-filters>\r\n    </navigation-settings>\r\n    <dataset-grid-settings>\r\n      <general>\r\n        <enable-zooming value=\"true\" />\r\n        <enable-column-tooltip value=\"true\" />\r\n      </general>\r\n      <sorting>\r\n        <nulls-first value=\"true\" />\r\n        <max-sorting-columns value=\"4\" />\r\n      </sorting>\r\n      <tracking-columns>\r\n        <columnNames value=\"\" />\r\n        <visible value=\"true\" />\r\n        <editable value=\"false\" />\r\n      </tracking-columns>\r\n    </dataset-grid-settings>\r\n    <dataset-editor-settings>\r\n      <text-editor-popup>\r\n        <active value=\"false\" />\r\n        <active-if-empty value=\"false\" />\r\n        <data-length-threshold value=\"100\" />\r\n        <popup-delay value=\"1000\" />\r\n      </text-editor-popup>\r\n      <values-actions-popup>\r\n        <show-popup-button value=\"true\" />\r\n        <element-count-threshold value=\"1000\" />\r\n        <data-length-threshold value=\"250\" />\r\n      </values-actions-popup>\r\n      <general>\r\n        <fetch-block-size value=\"100\" />\r\n        <fetch-timeout value=\"30\" />\r\n        <trim-whitespaces value=\"true\" />\r\n        <convert-empty-strings-to-null value=\"true\" />\r\n        <select-content-on-cell-edit value=\"true\" />\r\n        <large-value-preview-active value=\"true\" />\r\n      </general>\r\n      <filters>\r\n        <prompt-filter-dialog value=\"true\" />\r\n        <default-filter-type value=\"BASIC\" />\r\n      </filters>\r\n      <qualified-text-editor text-length-threshold=\"300\">\r\n        <content-types>\r\n          <content-type name=\"Text\" enabled=\"true\" />\r\n          <content-type name=\"Properties\" enabled=\"true\" />\r\n          <content-type name=\"XML\" enabled=\"true\" />\r\n          <content-type name=\"DTD\" enabled=\"true\" />\r\n          <content-type name=\"HTML\" enabled=\"true\" />\r\n          <content-type name=\"XHTML\" enabled=\"true\" />\r\n          <content-type name=\"Java\" enabled=\"true\" />\r\n          <content-type name=\"SQL\" enabled=\"true\" />\r\n          <content-type name=\"PL/SQL\" enabled=\"true\" />\r\n          <content-type name=\"JSON\" enabled=\"true\" />\r\n          <content-type name=\"JSON5\" enabled=\"true\" />\r\n          <content-type name=\"Groovy\" enabled=\"true\" />\r\n          <content-type name=\"AIDL\" enabled=\"true\" />\r\n          <content-type name=\"YAML\" enabled=\"true\" />\r\n          <content-type name=\"Manifest\" enabled=\"true\" />\r\n        </content-types>\r\n      </qualified-text-editor>\r\n      <record-navigation>\r\n        <navigation-target value=\"VIEWER\" />\r\n      </record-navigation>\r\n    </dataset-editor-settings>\r\n    <code-editor-settings>\r\n      <general>\r\n        <show-object-navigation-gutter value=\"false\" />\r\n        <show-spec-declaration-navigation-gutter value=\"true\" />\r\n        <enable-spellchecking value=\"true\" />\r\n        <enable-reference-spellchecking value=\"false\" />\r\n      </general>\r\n      <confirmations>\r\n        <save-changes value=\"false\" />\r\n        <revert-changes value=\"true\" />\r\n      </confirmations>\r\n    </code-editor-settings>\r\n    <code-completion-settings>\r\n      <filters>\r\n        <basic-filter>\r\n          <filter-element type=\"RESERVED_WORD\" id=\"keyword\" selected=\"true\" />\r\n          <filter-element type=\"RESERVED_WORD\" id=\"function\" selected=\"true\" />\r\n          <filter-element type=\"RESERVED_WORD\" id=\"parameter\" selected=\"true\" />\r\n          <filter-element type=\"RESERVED_WORD\" id=\"datatype\" selected=\"true\" />\r\n          <filter-element type=\"RESERVED_WORD\" id=\"exception\" selected=\"true\" />\r\n          <filter-element type=\"OBJECT\" id=\"schema\" selected=\"true\" />\r\n          <filter-element type=\"OBJECT\" id=\"role\" selected=\"true\" />\r\n          <filter-element type=\"OBJECT\" id=\"user\" selected=\"true\" />\r\n          <filter-element type=\"OBJECT\" id=\"privilege\" selected=\"true\" />\r\n          <user-schema>\r\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\r\n          </user-schema>\r\n          <public-schema>\r\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"false\" />\r\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"false\" />\r\n          </public-schema>\r\n          <any-schema>\r\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\r\n          </any-schema>\r\n        </basic-filter>\r\n        <extended-filter>\r\n          <filter-element type=\"RESERVED_WORD\" id=\"keyword\" selected=\"true\" />\r\n          <filter-element type=\"RESERVED_WORD\" id=\"function\" selected=\"true\" />\r\n          <filter-element type=\"RESERVED_WORD\" id=\"parameter\" selected=\"true\" />\r\n          <filter-element type=\"RESERVED_WORD\" id=\"datatype\" selected=\"true\" />\r\n          <filter-element type=\"RESERVED_WORD\" id=\"exception\" selected=\"true\" />\r\n          <filter-element type=\"OBJECT\" id=\"schema\" selected=\"true\" />\r\n          <filter-element type=\"OBJECT\" id=\"user\" selected=\"true\" />\r\n          <filter-element type=\"OBJECT\" id=\"role\" selected=\"true\" />\r\n          <filter-element type=\"OBJECT\" id=\"privilege\" selected=\"true\" />\r\n          <user-schema>\r\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\r\n          </user-schema>\r\n          <public-schema>\r\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\r\n          </public-schema>\r\n          <any-schema>\r\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\r\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\r\n          </any-schema>\r\n        </extended-filter>\r\n      </filters>\r\n      <sorting enabled=\"true\">\r\n        <sorting-element type=\"RESERVED_WORD\" id=\"keyword\" />\r\n        <sorting-element type=\"RESERVED_WORD\" id=\"datatype\" />\r\n        <sorting-element type=\"OBJECT\" id=\"column\" />\r\n        <sorting-element type=\"OBJECT\" id=\"table\" />\r\n        <sorting-element type=\"OBJECT\" id=\"view\" />\r\n        <sorting-element type=\"OBJECT\" id=\"materialized view\" />\r\n        <sorting-element type=\"OBJECT\" id=\"index\" />\r\n        <sorting-element type=\"OBJECT\" id=\"constraint\" />\r\n        <sorting-element type=\"OBJECT\" id=\"trigger\" />\r\n        <sorting-element type=\"OBJECT\" id=\"synonym\" />\r\n        <sorting-element type=\"OBJECT\" id=\"sequence\" />\r\n        <sorting-element type=\"OBJECT\" id=\"procedure\" />\r\n        <sorting-element type=\"OBJECT\" id=\"function\" />\r\n        <sorting-element type=\"OBJECT\" id=\"package\" />\r\n        <sorting-element type=\"OBJECT\" id=\"type\" />\r\n        <sorting-element type=\"OBJECT\" id=\"dimension\" />\r\n        <sorting-element type=\"OBJECT\" id=\"cluster\" />\r\n        <sorting-element type=\"OBJECT\" id=\"dblink\" />\r\n        <sorting-element type=\"OBJECT\" id=\"schema\" />\r\n        <sorting-element type=\"OBJECT\" id=\"role\" />\r\n        <sorting-element type=\"OBJECT\" id=\"user\" />\r\n        <sorting-element type=\"RESERVED_WORD\" id=\"function\" />\r\n        <sorting-element type=\"RESERVED_WORD\" id=\"parameter\" />\r\n      </sorting>\r\n      <format>\r\n        <enforce-code-style-case value=\"true\" />\r\n      </format>\r\n    </code-completion-settings>\r\n    <execution-engine-settings>\r\n      <statement-execution>\r\n        <fetch-block-size value=\"100\" />\r\n        <execution-timeout value=\"20\" />\r\n        <debug-execution-timeout value=\"600\" />\r\n        <focus-result value=\"false\" />\r\n        <prompt-execution value=\"false\" />\r\n      </statement-execution>\r\n      <script-execution>\r\n        <command-line-interfaces />\r\n        <execution-timeout value=\"300\" />\r\n      </script-execution>\r\n      <method-execution>\r\n        <execution-timeout value=\"30\" />\r\n        <debug-execution-timeout value=\"600\" />\r\n        <parameter-history-size value=\"10\" />\r\n      </method-execution>\r\n    </execution-engine-settings>\r\n    <operation-settings>\r\n      <transactions>\r\n        <uncommitted-changes>\r\n          <on-project-close value=\"ASK\" />\r\n          <on-disconnect value=\"ASK\" />\r\n          <on-autocommit-toggle value=\"ASK\" />\r\n        </uncommitted-changes>\r\n        <multiple-uncommitted-changes>\r\n          <on-commit value=\"ASK\" />\r\n          <on-rollback value=\"ASK\" />\r\n        </multiple-uncommitted-changes>\r\n      </transactions>\r\n      <session-browser>\r\n        <disconnect-session value=\"ASK\" />\r\n        <kill-session value=\"ASK\" />\r\n        <reload-on-filter-change value=\"false\" />\r\n      </session-browser>\r\n      <compiler>\r\n        <compile-type value=\"KEEP\" />\r\n        <compile-dependencies value=\"ASK\" />\r\n        <always-show-controls value=\"false\" />\r\n      </compiler>\r\n      <debugger>\r\n        <debugger-type value=\"ASK\" />\r\n        <use-generic-runners value=\"true\" />\r\n      </debugger>\r\n    </operation-settings>\r\n    <ddl-file-settings>\r\n      <extensions>\r\n        <mapping file-type-id=\"VIEW\" extensions=\"vw\" />\r\n        <mapping file-type-id=\"TRIGGER\" extensions=\"trg\" />\r\n        <mapping file-type-id=\"PROCEDURE\" extensions=\"prc\" />\r\n        <mapping file-type-id=\"FUNCTION\" extensions=\"fnc\" />\r\n        <mapping file-type-id=\"PACKAGE\" extensions=\"pkg\" />\r\n        <mapping file-type-id=\"PACKAGE_SPEC\" extensions=\"pks\" />\r\n        <mapping file-type-id=\"PACKAGE_BODY\" extensions=\"pkb\" />\r\n        <mapping file-type-id=\"TYPE\" extensions=\"tpe\" />\r\n        <mapping file-type-id=\"TYPE_SPEC\" extensions=\"tps\" />\r\n        <mapping file-type-id=\"TYPE_BODY\" extensions=\"tpb\" />\r\n      </extensions>\r\n      <general>\r\n        <lookup-ddl-files value=\"true\" />\r\n        <create-ddl-files value=\"false\" />\r\n        <synchronize-ddl-files value=\"true\" />\r\n        <use-qualified-names value=\"false\" />\r\n        <make-scripts-rerunnable value=\"true\" />\r\n      </general>\r\n    </ddl-file-settings>\r\n    <general-settings>\r\n      <regional-settings>\r\n        <date-format value=\"MEDIUM\" />\r\n        <number-format value=\"UNGROUPED\" />\r\n        <locale value=\"SYSTEM_DEFAULT\" />\r\n        <use-custom-formats value=\"false\" />\r\n      </regional-settings>\r\n      <environment>\r\n        <environment-types>\r\n          <environment-type id=\"development\" name=\"Development\" description=\"Development environment\" color=\"-2430209/-12296320\" readonly-code=\"false\" readonly-data=\"false\" />\r\n          <environment-type id=\"integration\" name=\"Integration\" description=\"Integration environment\" color=\"-2621494/-12163514\" readonly-code=\"true\" readonly-data=\"false\" />\r\n          <environment-type id=\"production\" name=\"Production\" description=\"Productive environment\" color=\"-11574/-10271420\" readonly-code=\"true\" readonly-data=\"true\" />\r\n          <environment-type id=\"other\" name=\"Other\" description=\"\" color=\"-1576/-10724543\" readonly-code=\"false\" readonly-data=\"false\" />\r\n        </environment-types>\r\n        <visibility-settings>\r\n          <connection-tabs value=\"true\" />\r\n          <dialog-headers value=\"true\" />\r\n          <object-editor-tabs value=\"true\" />\r\n          <script-editor-tabs value=\"false\" />\r\n          <execution-result-tabs value=\"true\" />\r\n        </visibility-settings>\r\n      </environment>\r\n    </general-settings>\r\n  </component>\r\n  <component name=\"DBNavigator.Project.StatementExecutionManager\">\r\n    <execution-variables />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dbnavigator.xml b/.idea/dbnavigator.xml
+--- a/.idea/dbnavigator.xml	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ b/.idea/dbnavigator.xml	(date 1661888980181)
+@@ -18,6 +18,7 @@
+       <destination value="FILE" />
+       <format value="EXCEL" />
+       <charset value="windows-1254" />
++      <charset value="windows-1254" />
+     </export-instructions>
+   </component>
+   <component name="DBNavigator.Project.DatabaseBrowserManager">
+@@ -58,9 +59,7 @@
+     </connection>
+   </component>
+   <component name="DBNavigator.Project.DatabaseFileManager">
+-    <open-files>
+-      <object connection-id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f" object-ref="consoles/Medunna DB" />
+-    </open-files>
++    <open-files />
+   </component>
+   <component name="DBNavigator.Project.DatabaseSessionManager">
+     <connection id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f" />
+@@ -94,7 +93,7 @@
+   </component>
+   <component name="DBNavigator.Project.Settings">
+     <connections>
+-      <connection id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f" active="true">
++      <connection id="8b436d45-dea5-42da-be42-8a5bf7bd9b1f" active="true" signed="true">
+         <database>
+           <name value="Medunna DB" />
+           <description value="" />
+@@ -110,7 +109,7 @@
+           <database value="medunna_db" />
+           <type value="USER_PASSWORD" />
+           <user value="medunnadb_user" />
+-          <deprecated-pwd value="TWVkdW5uYWRiX0AxMjk=" />
++          <deprecated-pwd value="" />
+         </database>
+         <properties>
+           <auto-commit value="false" />
+@@ -148,7 +147,7 @@
+           <alternative-statement-delimiter value="" />
+         </details>
+         <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+-          <object-type-filter use-master-settings="true">
++          <object-type-filter>
+             <object-type name="SCHEMA" enabled="true" />
+             <object-type name="USER" enabled="true" />
+             <object-type name="ROLE" enabled="true" />
+@@ -216,12 +215,12 @@
+       </filters>
+       <sorting>
+         <object-type name="COLUMN" sorting-type="NAME" />
+-        <object-type name="FUNCTİON" sorting-type="NAME" />
++        <object-type name="FUNCTION" sorting-type="NAME" />
+         <object-type name="PROCEDURE" sorting-type="NAME" />
+         <object-type name="ARGUMENT" sorting-type="POSITION" />
+       </sorting>
+       <default-editors>
+-        <object-type name="VİEW" editor-type="SELECTION" />
++        <object-type name="VIEW" editor-type="SELECTION" />
+         <object-type name="PACKAGE" editor-type="SELECTION" />
+         <object-type name="TYPE" editor-type="SELECTION" />
+       </default-editors>
+@@ -232,24 +231,24 @@
+           <object-type name="SCHEMA" enabled="true" />
+           <object-type name="USER" enabled="false" />
+           <object-type name="ROLE" enabled="false" />
+-          <object-type name="PRİVİLEGE" enabled="false" />
++          <object-type name="PRIVILEGE" enabled="false" />
+           <object-type name="CHARSET" enabled="false" />
+           <object-type name="TABLE" enabled="true" />
+-          <object-type name="VİEW" enabled="true" />
+-          <object-type name="MATERİALİZED VİEW" enabled="true" />
+-          <object-type name="İNDEX" enabled="true" />
+-          <object-type name="CONSTRAİNT" enabled="true" />
+-          <object-type name="DATASET TRİGGER" enabled="true" />
+-          <object-type name="DATABASE TRİGGER" enabled="true" />
++          <object-type name="VIEW" enabled="true" />
++          <object-type name="MATERIALIZED VIEW" enabled="true" />
++          <object-type name="INDEX" enabled="true" />
++          <object-type name="CONSTRAINT" enabled="true" />
++          <object-type name="DATASET TRIGGER" enabled="true" />
++          <object-type name="DATABASE TRIGGER" enabled="true" />
+           <object-type name="SYNONYM" enabled="false" />
+           <object-type name="SEQUENCE" enabled="true" />
+           <object-type name="PROCEDURE" enabled="true" />
+-          <object-type name="FUNCTİON" enabled="true" />
++          <object-type name="FUNCTION" enabled="true" />
+           <object-type name="PACKAGE" enabled="true" />
+           <object-type name="TYPE" enabled="true" />
+-          <object-type name="DİMENSİON" enabled="false" />
++          <object-type name="DIMENSION" enabled="false" />
+           <object-type name="CLUSTER" enabled="false" />
+-          <object-type name="DBLİNK" enabled="true" />
++          <object-type name="DBLINK" enabled="true" />
+         </lookup-objects>
+         <force-database-load value="false" />
+         <prompt-connection-selection value="true" />
+@@ -265,11 +264,11 @@
+         <nulls-first value="true" />
+         <max-sorting-columns value="4" />
+       </sorting>
+-      <tracking-columns>
+-        <columnNames value="" />
++      <audit-columns>
++        <column-names value="" />
+         <visible value="true" />
+         <editable value="false" />
+-      </tracking-columns>
++      </audit-columns>
+     </dataset-grid-settings>
+     <dataset-editor-settings>
+       <text-editor-popup>
+Index: src/test/java/pages/US004_027_Pages.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/pages/US004_027_Pages.java b/src/test/java/pages/US004_027_Pages.java
+new file mode 100644
+--- /dev/null	(date 1661888980243)
++++ b/src/test/java/pages/US004_027_Pages.java	(date 1661888980243)
+@@ -0,0 +1,122 @@
++package pages;
++
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.support.FindBy;
++import org.openqa.selenium.support.PageFactory;
++import utilities.Driver;
++
++public class US004_027_Pages {
++
++    public US004_027_Pages(){
++        PageFactory.initElements(Driver.getDriver(), this);
++    }
++
++    @FindBy(xpath="//*[@class='svg-inline--fa fa-user fa-w-14 ']")
++    public WebElement findPeople;
++
++    @FindBy(xpath="//*[@id=\"login-item\"]/span")
++    public WebElement signIn_First;
++
++    @FindBy(xpath="//*[@id=\"username\"]")
++    public WebElement userNameUI;
++
++    @FindBy(xpath = "//*[@id=\"password\"]")
++    public WebElement passwordUI;
++
++    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[3]/button[2]/span")
++    public WebElement signIn_Second;
++
++    @FindBy(xpath = "//*[@id=\"admin-menu\"]/a/span")
++    public WebElement admistaration;
++
++    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[2]/div[1]/div[1]/div/span")
++    public WebElement failedToSignIn;
++
++    @FindBy(xpath="//*[@id=\"rememberMe\"]")
++    public WebElement remember;
++
++    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[2]/div[3]/a/span")
++    public WebElement fotgetButton;
++
++    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[2]/div[4]/span/span")
++    public WebElement registerPhrases;
++
++    @FindBy(xpath="//*[@id=\"login-page\"]/div/form/div[3]/button[1]/span")
++    public WebElement cancelButton;
++
++    @FindBy(xpath="//*[@id=\"entity-menu\"]/a/span")
++    public WebElement temsAndTitles;
++
++    @FindBy (xpath="//*[@id=\"entity-menu\"]/div/a[9]/span")
++    public WebElement messagesInDropDown;
++
++    @FindBy(xpath="//*[@id=\"jh-create-entity\"]")
++    public WebElement createMessageButton;
++
++    @FindBy(xpath="//*[@id=\"c-message-name\"]")
++    public WebElement nameForCreate;
++
++    @FindBy(xpath="//*[@id=\"c-message-email\"]")
++    public WebElement emailForCreate;
++
++    @FindBy(xpath="//*[@id=\"c-message-subject\"]")
++    public WebElement subjectForCreate;
++
++    @FindBy(xpath="//*[@id=\"c-message-message\"]")
++    public WebElement messageForCreate;
++
++    @FindBy(xpath="//*[@id=\"save-entity\"]/span")
++    public WebElement saveForCreate;
++
++    @FindBy(xpath="//*[@id=\"root\"]/div/div/div[1]/div")
++    public WebElement verifyForCreating;
++
++    @FindBy(xpath="//*[@id=\"app-view-container\"]/div/div/div/div/div/div/div[1]/table/thead/tr/th[1]/span")
++    public WebElement idTop;
++
++    @FindBy(xpath="//*[@id=\"app-view-container\"]/div/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[6]/div/a[2]/span/span")
++    public WebElement edit;
++
++    @FindBy(xpath="//*[@id=\"c-message-name\"]")
++    public WebElement nameForEdit;
++
++    @FindBy(xpath="//*[@id=\"c-message-email\"]")
++    public WebElement emailForEdit;
++
++    @FindBy(xpath="//*[@id=\"c-message-subject\"]")
++    public WebElement subjectForEdit;
++
++    @FindBy(xpath="//*[@id=\"c-message-message\"]")
++    public WebElement messageForEdit;
++
++    @FindBy(xpath="//*[@id=\"save-entity\"]/span")
++    public WebElement saveForEdit;
++
++    @FindBy(xpath="//*[@id=\"root\"]/div/div/div[1]/div")
++    public WebElement successfulEdit;
++
++    @FindBy(xpath="//*[@id=\"app-view-container\"]/div/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[6]/div/a[3]/span/span")
++    public WebElement deleteButton;
++
++    @FindBy(xpath="//*[@id=\"jhi-confirm-delete-cMessage\"]/span")
++    public WebElement deleteConfirm;
++
++    @FindBy(xpath="//*[@id=\"root\"]/div/div/div[1]/div")
++    public WebElement deleteSuccessful;
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++}
+Index: src/test/java/pojos/Room1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pojos;\r\n\r\nimport com.fasterxml.jackson.annotation.JsonIgnoreProperties;\r\n\r\n@JsonIgnoreProperties(ignoreUnknown = true)\r\npublic class Room1 {\r\n    /*\r\n            {\r\n            \"createdBy\": \"string\",\r\n            \"createdDate\": \"2022-08-06T15:12:18.833Z\",\r\n            \"description\": \"string\",\r\n            \"id\": 0,\r\n            \"price\": 0,\r\n            \"roomNumber\": 0,\r\n            \"roomType\": \"TWIN\",\r\n            \"status\": true\r\n          }\r\n     */\r\n    private String createdBy;\r\n    private String createdDate;\r\n    private String description;\r\n    private  Integer id;\r\n    private  Integer price;\r\n    private  Integer roomNumber;\r\n    private  String roomType;\r\n    private Boolean status;\r\n    public String getCreatedBy() {\r\n        return createdBy;\r\n    }\r\n    public void setCreatedBy(String createdBy) {\r\n        this.createdBy = createdBy;\r\n    }\r\n    public String getCreatedDate() {\r\n        return createdDate;\r\n    }\r\n    public void setCreatedDate(String createdDate) {\r\n        this.createdDate = createdDate;\r\n    }\r\n    public String getDescription() {\r\n        return description;\r\n    }\r\n    public void setDescription(String description) {\r\n        this.description = description;\r\n    }\r\n    public Integer getId() {\r\n        return id;\r\n    }\r\n    public void setId(Integer id) {\r\n        this.id = id;\r\n    }\r\n    public Integer getPrice() {\r\n        return price;\r\n    }\r\n    public void setPrice(Integer price) {\r\n        this.price = price;\r\n    }\r\n    public Integer getRoomNumber() {\r\n        return roomNumber;\r\n    }\r\n    public void setRoomNumber(Integer roomNumber) {\r\n        this.roomNumber = roomNumber;\r\n    }\r\n    public String getRoomType() {\r\n        return roomType;\r\n    }\r\n    public void setRoomType(String roomType) {\r\n        this.roomType = roomType;\r\n    }\r\n    public Boolean getStatus() {\r\n        return status;\r\n    }\r\n    public void setStatus(Boolean status) {\r\n        this.status = status;\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/pojos/Room1.java b/src/test/java/pojos/Room1.java
+--- a/src/test/java/pojos/Room1.java	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ b/src/test/java/pojos/Room1.java	(date 1661888980196)
+@@ -24,6 +24,7 @@
+     private  Integer roomNumber;
+     private  String roomType;
+     private Boolean status;
++
+     public String getCreatedBy() {
+         return createdBy;
+     }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2D7xV3Roi9RJoKU9V6osnpqlTUG\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Cucumber Java.Feature: US004\">\r\n    <configuration name=\"Feature: US004\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004.feature\" />\r\n      <option name=\"GLUE\" value=\"stepdefinitions.uiSteps Hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Feature: US004\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Feature: US013_UiTest\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Feature: US013_UiTest\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC01 There should be a valid username and password validating the success message to login\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004_UI.feature\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC01 There should be a valid username and password validating the success message to login$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 There should be a valid username and password validating the success message to login$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC01 There should be a valid username and password validating the success message to login\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004_UI.feature\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"MedunnaSon\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC02 There should be a valid username and password validating the success message to login \\(Negative Scenario\\)$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 There should be a valid username and password validating the success message to login \\(Negative Scenario\\)$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Runner\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"MedunnaSon\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"runner.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"runner\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"runner.Runner\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"untitled\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"untitled\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Cucumber Java.Feature: US004\" />\r\n        <item itemvalue=\"JUnit.Runner\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC01 There should be a valid username and password validating the success message to login\" />\r\n        <item itemvalue=\"Cucumber Java.Feature: US013_UiTest\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"83cde5c1-b436-4f49-b42c-d164923f1d1a\" name=\"Changes\" comment=\"\" />\r\n      <created>1660063945726</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1660063945726</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ b/.idea/workspace.xml	(date 1661888980212)
+@@ -5,8 +5,27 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="83cde5c1-b436-4f49-b42c-d164923f1d1a" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/pages/US004_027_Pages.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_23_34__Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/US012_Page.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/US012_UiSteps.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18__Changes_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29_[Changes]1/Runner.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29_[Changes]1/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2022_19_29__Changes_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_08_2022_16_53__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US004_Pages.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US012_13_Pages.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojos/Room1Post.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US004_UISteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/uiSteps/US004_UISteps.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -59,15 +78,15 @@
+     <property name="project.structure.side.proportion" value="0.2" />
+     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+   </component>
+-  <component name="RunManager" selected="Cucumber Java.Feature: US004">
+-    <configuration name="Feature: US004" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="Cucumber Java.Feature: US027_Post">
++    <configuration name="Feature: US027_Post" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004.feature" />
+-      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US027_Post.feature" />
++      <option name="GLUE" value="stepdefinitions.apiSteps Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+-      <option name="SUGGESTED_NAME" value="Feature: US004" />
++      <option name="SUGGESTED_NAME" value="Feature: US027_Post" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -79,13 +98,14 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Feature: US013_UiTest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Feature: US027_UI" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US013_UiTest.feature" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US027_UI.feature" />
++      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+-      <option name="SUGGESTED_NAME" value="Feature: US013_UiTest" />
++      <option name="SUGGESTED_NAME" value="Feature: US027_UI" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -97,14 +117,15 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: TC01 There should be a valid username and password validating the success message to login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Scenario: TC_001 User should validate creating and reading messages using API" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004_UI.feature" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US027_Post.feature" />
++      <option name="GLUE" value="Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+-      <option name="NAME_FILTER" value="^TC01 There should be a valid username and password validating the success message to login$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 There should be a valid username and password validating the success message to login$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: TC01 There should be a valid username and password validating the success message to login" />
++      <option name="NAME_FILTER" value="^TC_001 User should validate creating and reading messages using API$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_001 User should validate creating and reading messages using API$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: TC_001 User should validate creating and reading messages using API" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -116,14 +137,15 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Scenario: TC_003 Admin can update a message" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US004_UI.feature" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uIFeatures/US027_UI.feature" />
++      <option name="GLUE" value="stepdefinitions.uiSteps Hooks" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="MedunnaSon" />
+-      <option name="NAME_FILTER" value="^TC02 There should be a valid username and password validating the success message to login \(Negative Scenario\)$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 There should be a valid username and password validating the success message to login \(Negative Scenario\)$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" />
++      <option name="NAME_FILTER" value="^TC_003 Admin can update a message$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_003 Admin can update a message$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: TC_003 Admin can update a message" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -165,11 +187,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Cucumber Java.Feature: US004" />
++        <item itemvalue="Cucumber Java.Feature: US027_Post" />
+         <item itemvalue="JUnit.Runner" />
+-        <item itemvalue="Cucumber Java.Scenario: TC02 There should be a valid username and password validating the success message to login (Negative Scenario)" />
+-        <item itemvalue="Cucumber Java.Scenario: TC01 There should be a valid username and password validating the success message to login" />
+-        <item itemvalue="Cucumber Java.Feature: US013_UiTest" />
++        <item itemvalue="Cucumber Java.Scenario: TC_001 User should validate creating and reading messages using API" />
++        <item itemvalue="Cucumber Java.Scenario: TC_003 Admin can update a message" />
++        <item itemvalue="Cucumber Java.Feature: US027_UI" />
+       </list>
+     </recent_temporary>
+   </component>
+Index: src/test/java/pojos/Room1Post.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pojos;\r\n\r\nimport com.fasterxml.jackson.annotation.JsonIgnoreProperties;\r\n\r\n@JsonIgnoreProperties(ignoreUnknown = true)\r\npublic class Room1Post {\r\n\r\n    private String createdBy;\r\n    private String createdDate;\r\n    private String description;\r\n    private  Integer price;\r\n    private  Integer roomNumber;\r\n    private  String roomType;\r\n    private Boolean status;\r\n    public String getCreatedBy() {\r\n        return createdBy;\r\n    }\r\n    public void setCreatedBy(String createdBy) {\r\n        this.createdBy = createdBy;\r\n    }\r\n    public String getCreatedDate() {\r\n        return createdDate;\r\n    }\r\n    public void setCreatedDate(String createdDate) {\r\n        this.createdDate = createdDate;\r\n    }\r\n    public String getDescription() {\r\n        return description;\r\n    }\r\n    public void setDescription(String description) {\r\n        this.description = description;\r\n    }\r\n    public Integer getPrice() {\r\n        return price;\r\n    }\r\n    public void setPrice(Integer price) {\r\n        this.price = price;\r\n    }\r\n    public Integer getRoomNumber() {\r\n        return roomNumber;\r\n    }\r\n    public void setRoomNumber(Integer roomNumber) {\r\n        this.roomNumber = roomNumber;\r\n    }\r\n    public String getRoomType() {\r\n        return roomType;\r\n    }\r\n    public void setRoomType(String roomType) {\r\n        this.roomType = roomType;\r\n    }\r\n    public Boolean getStatus() {\r\n        return status;\r\n    }\r\n    public void setStatus(Boolean status) {\r\n        this.status = status;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/pojos/Room1Post.java b/src/test/java/pojos/Room1Post.java
+--- a/src/test/java/pojos/Room1Post.java	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ b/src/test/java/pojos/Room1Post.java	(date 1661888980259)
+@@ -12,6 +12,7 @@
+     private  Integer roomNumber;
+     private  String roomType;
+     private Boolean status;
++
+     public String getCreatedBy() {
+         return createdBy;
+     }
+Index: src/test/java/runner/Runner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package runner;\r\n\r\nimport io.cucumber.junit.Cucumber;\r\nimport io.cucumber.junit.CucumberOptions;\r\nimport org.junit.runner.RunWith;\r\n@RunWith(Cucumber.class)\r\n@CucumberOptions(\r\n        plugin = {\r\n                \"pretty\",\r\n                \"html:target/default-cucumber-reports.html\",\r\n                \"json:target/json-reports/cucumber.json\",\r\n                \"junit:target/xml-report/cucumber.xml\",\r\n                \"rerun:target/failedRerun.txt\"\r\n        },\r\n        features = \"./src/test/resources/features\",\r\n        glue = {\"stepdefinitions\",\"Hooks\"},\r\n        tags = \"@US004\",\r\n        dryRun = false\r\n)\r\npublic class Runner {\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/runner/Runner.java b/src/test/java/runner/Runner.java
+--- a/src/test/java/runner/Runner.java	(revision bdfc3e808219add6536da13beb7010613499b733)
++++ b/src/test/java/runner/Runner.java	(date 1661888980259)
+@@ -14,7 +14,7 @@
+         },
+         features = "./src/test/resources/features",
+         glue = {"stepdefinitions","Hooks"},
+-        tags = "@US004",
++        tags = "@op",
+         dryRun = false
+ )
+ public class Runner {
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_11_18_[Changes]1/shelved.patch
+deleted file mode 100644

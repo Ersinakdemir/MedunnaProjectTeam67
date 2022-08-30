@@ -12,6 +12,7 @@ public class Room1Post {
     private  Integer roomNumber;
     private  String roomType;
     private Boolean status;
+
     public String getCreatedBy() {
         return createdBy;
     }
