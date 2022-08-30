@@ -107,12 +107,6 @@ Feature: US_018 Create new Physicians /Update existing Physicians /View and Dele
       | AdminMurat44 | 123qscaA... |
 
 
-  @TC_01806_Api
-  Scenario: Validate a physician using API
-    Given C User set the path params for phyisician
-    And C user enters expected data for phyisician
-    Then C user verify API records for phyisician
-
 
   @TC_01807_Db
   Scenario Outline: Validate a physician using DB
