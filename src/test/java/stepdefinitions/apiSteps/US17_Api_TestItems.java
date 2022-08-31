@@ -1,6 +1,7 @@
 package stepdefinitions.apiSteps;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -10,14 +11,12 @@ import pojos.TestItemsPost;
 import utilities.ConfigurationReader;
 
 import java.io.IOException;
-import java.util.Timer;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static utilities.Authentication.generateToken;
-import static utilities.WriteToTxt.saveAppointmentData;
 
-public class US17_TestItems {
+public class US17_Api_TestItems {
     //{
     //  "createdBy": "string",
     //  "createdDate": "2022-08-20T13:24:51.270Z",
@@ -28,10 +27,12 @@ public class US17_TestItems {
     //  "name": "string",
     //  "price": 0
     //}
-
+    Faker faker = new Faker();
     Response response;
     TestItemsPost testItemsPost = new TestItemsPost();
     Test1[] testItemsGet;
+    int price = 75;
+    String name = faker.name().name();
 
     @Given("Ad kulanici test items icin get riquest olusturur")
     public void ad_kulanici_test_items_icin_get_riquest_olusturur() {
@@ -67,13 +68,13 @@ public class US17_TestItems {
     @Given("kullanici test items icin post request yapar")
     public void kullanici_test_items_icin_post_request_yapar() {
         //Set the ecpected data
-        testItemsPost.setCreatedBy("Eraa");
-        testItemsPost.setPrice(25);
-        testItemsPost.setDefaultValMax("76");
+        testItemsPost.setCreatedBy("team67");
+        testItemsPost.setPrice(price);
+        testItemsPost.setDefaultValMax("86");
         testItemsPost.setDefaultValMin("56");
-        testItemsPost.setName("Ali");
+        testItemsPost.setName(name);
         testItemsPost.setDescription("olur ins");
-        testItemsPost.setCreatedDate("2023-01-07T00:00:00Z");
+        testItemsPost.setCreatedDate("2022-08-29T00:00:00Z");
         System.out.println(generateToken());
         response = given().headers(
                         "Authorization",
@@ -92,11 +93,37 @@ public class US17_TestItems {
 
             //1. validation
             response.then().assertThat().statusCode(201);
-            response.then().assertThat().body("price", equalTo(25.0))
-                    .body("createdBy", equalTo("Eraa"))
+            response.then().assertThat().body("price", equalTo(price))
+                    .body("createdBy", equalTo("team67"))
                     .body("description", equalTo("olur ins"))
-                    .body("name", equalTo("Ali"));
+                    .body("name", equalTo(name));
         }
+    Test1 test1put = new Test1();
 
+    @Given("kullanici test items icin put request yapar")
+    public void kullanici_test_items_icin_put_request_yapar() {
+        //test1put.setCreatedBy("era");
+        test1put.getId(30199);
+        test1put.setPrice(86);
+        response = given().headers(
+                "Authorization",
+                "Bearer " + generateToken(),
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON).body(test1put).contentType(ContentType.JSON).when()
+                .put(ConfigurationReader.getProperty("test_items_endpoint"));
+
+
+    }
+    @Then("kullanici test items icin put request validation yapar")
+    public void kullanici_test_items_icin_put_request_validation_yapar() throws IOException {
+        ObjectMapper obj =new ObjectMapper();
+        //testItemsGet =obj.readValue(response.asString(),Test1[].class);
+        test1put =obj.readValue(response.asString(),Test1.class);
+        System.out.println(test1put.getId(30199));
+        response.then().assertThat().statusCode(200);
+
+    }
 
 }

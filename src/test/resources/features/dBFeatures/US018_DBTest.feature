@@ -1,4 +1,4 @@
-@TC_01807_Db
+Feature:
 Scenario Outline: Validate a physician using DB
 
 Given MKT user creates a connection with db

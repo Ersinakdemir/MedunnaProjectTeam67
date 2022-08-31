@@ -216,4 +216,9 @@ public class DBUtils {
         }
         return columns;
     }
+
+    public static void main(String[] args) {
+
+    }
+
 }

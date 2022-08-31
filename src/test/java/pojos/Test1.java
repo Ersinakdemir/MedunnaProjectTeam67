@@ -2,13 +2,11 @@ package pojos;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 
-@AllArgsConstructor
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 
@@ -30,11 +28,23 @@ public class Test1 {
     private Integer id;
     private String name;
     private String description;
-    private Double price;
+    private double price;
     private String defaultValMin;
     private String defaultValMax;
 
     public Test1() {
+    }
+
+    public Test1(String createdBy, String createdDate, Integer id, String name,
+                 String description, double price, String defaultValMin, String defaultValMax) {
+        this.createdBy = createdBy;
+        this.createdDate = createdDate;
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.defaultValMin = defaultValMin;
+        this.defaultValMax = defaultValMax;
     }
 
     public String getCreatedBy() {
@@ -53,7 +63,7 @@ public class Test1 {
         this.createdDate = createdDate;
     }
 
-    public Integer getId() {
+    public Integer getId(int i) {
         return id;
     }
 
@@ -77,11 +87,11 @@ public class Test1 {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -100,4 +110,5 @@ public class Test1 {
     public void setDefaultValMax(String defaultValMax) {
         this.defaultValMax = defaultValMax;
     }
+
 }

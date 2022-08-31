@@ -9,3 +9,8 @@ Feature: Test items Oluştur / Güncelle / Sil
 
     Given kullanici test items icin post request yapar
     Then kullanici test items icin post request validation yapar
+
+  Scenario: Admin test itemi güncelleye bilmeli
+
+    Given kullanici test items icin put request yapar
+    Then kullanici test items icin put request validation yapar
