@@ -7,7 +7,7 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class US09_Page {
+public class US09_Page  {
     public US09_Page (){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -18,7 +18,7 @@ public class US09_Page {
     @FindBy (id = "login-item")
     public  WebElement singIn;
 
-    @FindBy(xpath = "//input[@name='username']")
+    @FindBy(xpath = "//input[@name='username']")    //      //*[@id="username"]
     public WebElement userNameBox;
 
     @FindBy(xpath = "//input[@name='password']")

@@ -18,17 +18,17 @@ public class US09_UiSteps {
     US09_Page us09_page =new US09_Page();
     Faker faker =new Faker();
     String firstName = faker.name().firstName();
-    String lastName = faker.name().lastName();
-    String birtDate = faker.date().birthday().toString() + "12:34";
-    String email =faker.internet().emailAddress();
-    String phoneNummer = faker.phoneNumber().phoneNumber();
-    String gender = "MALE";
-    String bloodGroup = "A+";
-    String address = faker.address().toString();
-    String description = "ins yasarsin";
-    String user = "ahmet";
-    String country = faker.country().name();
-    String city = faker.address().cityName();
+    String lastName =  faker.name().lastName();
+    String birtDate =  (faker.date().birthday().toString() + "12:34");
+    String email =  faker.internet().emailAddress();
+    String phoneNummer =  faker.phoneNumber().phoneNumber();
+    String gender =  "MALE";
+    String bloodGroup =  "A+";
+    String address =  faker.address().toString();
+    String description =  "ins yasarsin";
+    String user =  "ahmet";
+    String country =  faker.country().name();
+    String city =  faker.address().cityName();
     Actions actions = new Actions(Driver.getDriver());
     @Given("{string} sayfasina gidilir")
     public void sayfasina_gidilir(String string) {

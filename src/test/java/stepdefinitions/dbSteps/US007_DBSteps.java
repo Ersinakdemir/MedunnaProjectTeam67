@@ -5,7 +5,6 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
 import utilities.DBUtils;
-import utilities.WriteToTxt;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class US007_DBSteps {
     public static void main(String[] args) {
-        DBUtils.createConnection();
+        /*DBUtils.createConnection();
         String query = "select * from appointment";
         List<Object> id = DBUtils.getColumnData(query, "id");
 
@@ -55,7 +54,7 @@ public class US007_DBSteps {
 
     @Then("ADuser close DB connection")
     public void a_duser_close_db_connection() {
-        DBUtils.closeConnection();
+        DBUtils.closeConnection();*/
     }
 
 
