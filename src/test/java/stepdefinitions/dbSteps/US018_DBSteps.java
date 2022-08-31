@@ -26,6 +26,7 @@ public class US018_DBSteps {
     public void adValidatesDbRegistrantData(String ssn) {
         Map<String, Object>expectedData = new HashMap<String, Object>();
         expectedData.put("ssn", ssn);
+
         try {
             readAllRegistrantInDBDataMap(expectedData);
             saveRegistrantDataDB(registrantMap);

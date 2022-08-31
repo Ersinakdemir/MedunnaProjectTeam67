@@ -13,8 +13,8 @@ import java.util.stream.Collectors;
 //            .map(s -> s.split("="))
 //            .collect(Collectors.toMap(s -> s[0], s -> s[1]));
 public class ReadToTxt18 {
-    private static final String filePath = "src/test/resources/testData/RegistrantData.txt";
-    private static final String filePathDB = "src/test/resources/testData/RegistrantDataDB.txt";
+    private static final String filePath = "src/test/resources/testData/RegistrantDB.txt";
+    private static final String filePathDB = "src/test/resources/testData/RegistrantDB.txt";
 
     public static Map<String, Object> readRegistrantInfoBySsnToMap(String ssn) {
 
