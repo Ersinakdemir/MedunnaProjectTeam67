@@ -19,7 +19,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
 import static utilities.Autentication67.genereatToken;
-
+//2
 public class RoomApiGet {
     Response response;
     String token="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZWFtNjciLCJhdXRoIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY2MDMxODE5OH0.ZFGsSx7A94ANsMaiUowlmeJv0B73uXwdk_2kfwTqZpclFoeo_CtE24Th9cnT8GSpRJlkBERn25IQ086WqlZ3_Q";

@@ -20,7 +20,7 @@ import static Hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 import static utilities.WriteToTxt.saveAppointData;
 import static utilities.WriteToTxt.saveAppointmentData;
-
+//3
 
 public class US007_ApiSteps {
     static Faker faker = new Faker();

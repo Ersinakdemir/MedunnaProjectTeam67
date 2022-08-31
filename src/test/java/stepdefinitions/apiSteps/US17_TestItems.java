@@ -16,7 +16,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static utilities.Authentication.generateToken;
 import static utilities.WriteToTxt.saveAppointmentData;
-
+//6
 public class US17_TestItems {
     //{
     //  "createdBy": "string",
